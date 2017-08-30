@@ -1,0 +1,103 @@
+# Xcode
+*/build
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+project.xcworkspace
+*.xccheckout
+*.xcscmblueprint
+
+# osx noise
+.DS_Store
+profile
+
+build
+Build
+Logs
+CoreSimulator-Logs
+DTXConnection-Logs
+Builds
+Development
+Releases
+Products
+artifacts
+documentation/
+Samples*
+PSPDFKit.framework
+docset-installed.txt
+*.zip
+
+# automated git versioning
+InfoPlist.h
+
+.git2
+.idea
+
+.Rakeconfig
+.Rakeconfig.staging
+.bundle/*
+!.bundle/config
+junit.xml
+Resources/PSPDFKit.dmg
+
+second_curtain_log
+
+# ignore static libraries
+Experimental/*/*.a
+!Extras/SQLCipher/binaries/*.a
+
+PSPDFKit.embeddedframework
+
+#sublime
+pspdfkit.sublime-workspace
+Resources/pstool/coverage-reports/
+Resources/pstool/.bundle
+Resources/pstool/vendor/bundle
+buildlog*
+
+# Address sanitizer
+*.gcda
+*.gcno
+
+# jenkins output
+xcodebuild.txt
+
+*.dSYM
+
+#jazzy
+jazzy-docs/build
+jazzy-docs/docs
+
+# fastlane
+fastlane/README.md
+fastlane/report.xml
+
+# Slather coverage
+slather-report
+
+# Ruby coverage
+coverage
+
+# Ruby documentation
+/doc/
+/.yardoc
+
+# Generated public PSPDFCatalog project
+/PSPDFCatalog.xcodeproj
+
+# Test snapshots
+TestSnapshots
+
+# Cordova directory gets created by `rake cordova`
+Cordova
+
+# PSPDFKit frameworks
+Frameworks/PSPDF*

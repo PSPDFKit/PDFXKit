@@ -1,0 +1,12 @@
+*.xib -whitespace
+*.nib -whitespace
+*.pdf -whitespace
+*.pbxproj -whitespace
+*Info.plist -whitespace
+*.storyboard -whitespace
+
+Frameworks/**/CodeResources -whitespace
+Frameworks/**/*.plist -whitespace
+Frameworks/**/*.h -whitespace
+Frameworks/**/*.md -whitespace
+Frameworks/**/*.stringsdict -whitespace
