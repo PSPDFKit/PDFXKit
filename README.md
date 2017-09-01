@@ -23,6 +23,10 @@ Now follow the regular [Carthage setup routine](https://github.com/Carthage/Cart
 to add `PSPDFKit.framework` and `PDFXKit.framework` as a dependency to your
 project. Afterwards you should be able to build your project without errors.
 
+### Using Cocoapods
+
+Not supported yet.
+
 ### Manual Set-Up
 
 First, build the PDFXKit framework:
