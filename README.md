@@ -11,13 +11,15 @@ a [free trial](https://pspdfkit.com/try/).
 
 We assume you are familiar with Carthage otherwise please consult the Carthage
 documentation first. You'll have to add PSPDFKit as well as PDFXKit as a
-dependency to your `Cartfile`:
+dependency to your `Cartfile`.
 
 ``` Ruby
-# Replace YOUR_CARTHAGE_KEY_GOES_HERE with your own
-binary "https://customers.pspdfkit.com/carthage/YOUR_CARTHAGE_KEY_GOES_HERE/PSPDFKit.json"
+# Replace YOUR_CARTHAGE_KEY with your own
+binary "https://customers.pspdfkit.com/carthage/YOUR_CARTHAGE_KEY/PSPDFKit.json"
 git "git@github.com:PSPDFKit/PDFXKit.git" "master"
 ```
+
+**Note:** make sure to replace `YOUR_CARTHAGE_KEY` with your own key provided by PSPDFKit GmbH.
 
 Now follow the regular [Carthage setup routine](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
 to add `PSPDFKit.framework` and `PDFXKit.framework` as a dependency to your
@@ -44,13 +46,13 @@ the `PSPDFKit.framework` and `PDFXKit.framework` to your project:
 * Perform steps (1) and (2) from the above *Getting Started* guide, Section
   [Integrating the Dynamic Framework](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/#toc_integrating-the-dynamic-framework),
   and add PDFXKit to your app similar to how you did it with PSPDFKit above.
-  Make sure to adapt the path for the "Run Script" build phase.
+  **Note:** make sure to adapt the path for the "Run Script" build phase for PDFXKit.
 
-Your should now be able to build & run your app.
+You should now be able to build & run your app.
 
-### Adapting to PDFXKit
+### Switch to PDFXKit
 
-We need to perform a couple of smaller changes in order to make your project use
+We need to perform a couple of small changes in order to make your project use
 PDFXKit instead of the system PDFKit.
 
 First, update all source files to import `PDFXKit` instead of the `PDFKit`
@@ -78,7 +80,7 @@ If you are using Swift:
 Build & run your project, your app is now using PDFXKit with PSPDFKit under the
 hood.
 
-## Working on PDFXKit
+## Contributing
 
 If you want to work on PDFXKit, perform the following steps:
 
@@ -89,4 +91,5 @@ If you want to work on PDFXKit, perform the following steps:
 
 ## License
 
-Copyright © 2017 PSPDFKit GmbH. All rights reserved.
+The PDFXKit wrapper is released under a modified version of the BSD license, see
+[LICENSE.md](LICENSE.md) found at the root of this git repo.
