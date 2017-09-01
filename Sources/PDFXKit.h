@@ -6,7 +6,9 @@
 //  this file.
 //
 
+#ifndef PDFX_APPLE_PDFKIT_SOURCE_COMPATIBLE
 #define PDFX_APPLE_PDFKIT_SOURCE_COMPATIBLE 1
+#endif
 
 #import <PDFXKit/PDFXAction.h>
 #import <PDFXKit/PDFXActionGoTo.h>
