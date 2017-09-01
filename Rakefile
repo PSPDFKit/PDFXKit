@@ -1,7 +1,10 @@
 #
 # Copyright (c) 2017 PSPDFKit GmbH. All rights reserved.
 #
-
+# The PSPDFKit Sample applications are licensed with a modified BSD license.
+# Please see License for details. This notice may not be removed from
+# this file.
+#
 # General Guidelines
 # ------------------
 #
@@ -49,6 +52,8 @@ VERBOSE = ENV['verbose'] || false
 
 # ------------------------------------------------------------- Constants ------
 
+SDK_SIM = "iphoneos11"
+SDK_IOS = "iphonesimulator11"
 XCODE_FLAGS = "-configuration Release -scheme PDFXKit -derivedDataPath \"#{DIRECTORY}/Xcode\""
 
 # ---------------------------------------------------------------- Colors ------
@@ -70,25 +75,33 @@ WARNING = YELLOW + "Warning:" + RESET
 
 # ----------------------------------------------------------------- Tasks ------
 
+desc "Check prerequisites"
 task :check do
-  tell "Checking if PSPDFKit.framework present"
+  tell "Checking whether PSPDFKit.framework present"
   assert File.directory?("Frameworks/PSPDFKit.framework"), """
-    #{ERROR} Couldn't find #{BOLD}PSPDFKit.framework#{RESET}. Please download the
+    #{ERROR} couldn't find #{BOLD}PSPDFKit.framework#{RESET}. Please download the
     PSPDFKit framework and copy it into the #{BOLD}Frameworks/#{RESET} folder.
     https://pspdfkit.com
+  """
+
+  tell "Checking whether iOS SDK 11 present"
+  assert `xcodebuild -showsdks | grep iphoneos11`.to_s.strip.length > 0, """
+  #{ERROR} couldn't find iOS 11 SDK. Please make sure you have the appropriate
+  version of Xcode installed and use xcode-select to make it the default on
+  the command line.
   """
 end
 
 desc "Compile PDFXKit framework (simulator)"
 task 'compile:simulator' => [:prepare, :check] do
   tell "Compiling PSPDFKit framework (simulator)"
-  run "xcodebuild #{XCODE_FLAGS} -sdk iphonesimulator", :time => true, :quiet => true
+  run "xcrun -sdk #{SDK_SIM} xcodebuild #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Compile PDFXKit framework (device)"
 task 'compile:device' => [:prepare, :check] do
   tell "Compiling PSPDFKit framework (device)"
-  run "xcodebuild #{XCODE_FLAGS} -sdk iphoneos", :time => true, :quiet => true
+  run "xcrun -sdk #{SDK_IOS} xcodebuild #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Compile univeral PDFXKit framework"
@@ -99,35 +112,6 @@ task :compile => ['compile:simulator', 'compile:device'] do
   run "cp -R #{DIRECTORY}/Xcode/Build/Products/Release-iphonesimulator/PDFXKit.framework/Modules/ #{DIRECTORY}/PDFXKit.framework/Modules/"
   run %{lipo -create -output "#{DIRECTORY}/PDFXKit.framework/PDFXKit" "#{DIRECTORY}/Xcode/Build/Products/Release-iphonesimulator/PDFXKit.framework/PDFXKit" "#{DIRECTORY}/Xcode/Build/Products/Release-iphoneos/PDFXKit.framework/PDFXKit"}
 end
-
-
-# desc "build the framework"
-# task :build => [:prepare] do
-#   xcode_flags = "-scheme PDFXKit -configuration Release -derivedDataPath #{DIRECTORY}/Xcode"
-#
-#   run "mkdir -p #{DIRECTORY}/Xcode"
-#
-#   put "Building PSPDFKit framework (simulator) ... "
-#   run "xcodebuild #{xcode_flags} -sdk iphonesimulator"
-#   puts OK
-#
-#   put "Building PSPDFKit framework (device) ... "
-#   run "xcodebuild #{xcode_flags} -sdk iphoneos"
-#   puts OK
-#
-#   put "Building PSPDFKit framework (universal) ... "
-#   run "rm -rf #{DIRECTORY}/PDFXKit.framework"
-#   run "cp -R #{DIRECTORY}/Xcode/Build/Products/Release-iphoneos/PDFXKit.framework #{DIRECTORY}/"
-#   run "cp -R #{DIRECTORY}/Xcode/Build/Products/Release-iphonesimulator/PDFXKit.framework/Modules/ #{DIRECTORY}/PDFXKit.framework/Modules/"
-#   puts OK
-#
-#   put "Preparing PSPDFKit framework (universal) ... "
-#   run "rm -rf #{DIRECTORY}/PDFXKit.framework/PDFXKit"
-#   run "lipo -create -output #{DIRECTORY}/PDFXKit.framework/PDFXKit"
-#
-#   lipo -create -output "${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}" "${BUILD_PRODUCTS}/Debug-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}" "${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}"
-#
-# end
 
 desc "show help"
 task :help do
