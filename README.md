@@ -1,21 +1,64 @@
 # PDFXKit
 
-Required PSPDFKit version: 6.9.
+PDFXKit is a drop-in replacement for [Apple
+PDFKit](https://developer.apple.com/documentation/pdfkit) using the industry
+leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
+version requires [PSPDFKit 6.9 for iOS](https://pspdfkit.com/blog/2017/pspdfkit-ios-6-9/).
 
 ## Introduction
 
-*TODO: document.*
+Apple's PDFKit provides a great starting point if you need to integrate PDF
+support into your macOS or iOS app. It is a system library and as such the
+easiest to integrate.
+
+PSPDFKit on the other hand goes much further offering you a cross-platform
+drop-in solution with many additional UI components, advanced PDF features,
+and first class support directly from the developers.
+
+To simplify migrating a code base from PDFKit to PSPDFKit as much as possible,
+we provide a wrapper called [PDFXKit][]. It is a drop-in replacement with little
+or no changes required allowing you to program against the PDFKit API while
+using PSPDFKit under the hood.
+
+For more details, please consult the
+[Migrating from Apple PDFKit](https://pspdfkit.com/guides/ios/current/migration-guides/migrating-from-apple-pdfkit/)
+migration guide.
 
 ## Getting Started
 
 Make sure you have access to PSPDFKit either as a customer or by signing up for
 a [free trial](https://pspdfkit.com/try/).
 
+### Using Cocoapods
+
+We assume you are familiar with [Cocoapods](https://cocoapods.org), otherwise
+please consult the documentation first. You'll have to add PSPDFKit as well as
+PDFXKit as a dependency to your `Podfile`.
+
+``` Ruby
+# Replace `YourAppName` with your app's target name.
+target :YourAppName do
+  use_frameworks!
+
+  # Replace `YOUR_COCOAPODS_KEY` with your own.
+  pod 'PSPDFKit', podspec: 'https://customers.pspdfkit.com/cocoapods/YOUR_COCOAPODS_KEY/latest.podspec'
+  pod 'PDFXKit', :git => "git@github.com:PSPDFKit/PDFXKit.git", :branch => "master"
+end
+```
+
+**Note:** make sure to replace `YourAppName` with your app name and
+`YOUR_CARTHAGE_KEY` with your own key provided by PSPDFKit GmbH.
+
+Now run `pod install`. Afterwards you should be able to build & run your project
+without errors. Next you'll have to adapt your project to use PDFXKit as
+described in Section [Switch to PDFXKit](#switch-to-pdfxkit).
+
 ### Using Carthage
 
-We assume you are familiar with Carthage otherwise please consult the Carthage
-documentation first. You'll have to add PSPDFKit as well as PDFXKit as a
-dependency to your `Cartfile`.
+We assume you are familiar with
+[Carthage](https://github.com/Carthage/Carthage), otherwise please consult the
+Carthage documentation first. You'll have to add PSPDFKit as well as PDFXKit as
+a dependency to your `Cartfile`.
 
 ``` Ruby
 # Replace YOUR_CARTHAGE_KEY with your own
@@ -28,12 +71,14 @@ git "git@github.com:PSPDFKit/PDFXKit.git" "master"
 Now follow the regular [Carthage setup routine](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
 to add `PSPDFKit.framework` and `PDFXKit.framework` as a dependency to your
 project. Afterwards you should be able to build your project without errors.
+Next you'll have to adapt your project to use PDFXKit as described in Section
+[Switch to PDFXKit](#switch-to-pdfxkit).
 
-### Using Cocoapods
-
-Not supported yet.
 
 ### Manual Set-Up
+
+**Note:** manual set-up is only for experts, we assume you know what you are
+doing. If you are unsure, please use Cocoapods or Carthage instead.
 
 First, build the PDFXKit framework:
 
@@ -64,16 +109,16 @@ framework using Xcode's project-wide search & replace:
 
 * Open your project in Xcode
 * Bring up the search & replace panel (Menu `Find` -> `Find and Replace in Project...`)
-* If you have Swift sources: search & replace `import PDFKit` with `import PDFXKit`
-* If you have Objective-C sources: search & replace `#import <PDFKit/PDFKit.h>` with `#import <PDFXKit/PDFXKit.h>`
+* Search & replace `import PDFKit` with `import PDFXKit`
+* Search & replace `#import <PDFKit/PDFKit.h>` with `#import <PDFXKit/PDFXKit.h>`
 
 If you are using storyboards or xibs, update all custom classes:
 
 * Open each storyboard and replace all custom classes set to `PDFView` and
-`PDFThumbnailView` to `PDFXView` and `PDFXThumbnailView`
+  `PDFThumbnailView` to `PDFXView` and `PDFXThumbnailView`.
 
 * Open each xib and replace all custom classes set to `PDFView` and
-`PDFThumbnailView` to `PDFXView` and `PDFXThumbnailView`
+  `PDFThumbnailView` to `PDFXView` and `PDFXThumbnailView`
 
 If you are using Swift:
 
@@ -86,7 +131,10 @@ hood.
 
 ## Limitations
 
-*TODO: document.*
+PDFXKit is alpha software, many parts aren't implemented yet. Please take a
+look at the headers, all unimplemented or only partially implemented symbols are
+annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
+`PDFX_PARTIALLY_IMPLEMENTED_PRIORITY_...` macros.
 
 ## Contributing
 
@@ -101,26 +149,28 @@ Technical notes:
 
 * All PDFXKit source files live in the `Sources` directory, no nesting.
 
-* Each class has a `+Swift.h` header for Swift-only stuff which isn't exposed
+* Each class has a `...+Swift.h` header for Swift-only stuff which isn't exposed
   to Objective-C. Example: `PDFXDocument+Swift.h`.
 
-* Each class has a `+PSPDFKit.h` header for public PSPDFKit stuff, i.e. any
+* Each class has a `...+PSPDFKit.h` header for public PSPDFKit stuff, i.e. any
   interfaces that expose access to PSPDFKit when using PDFXKit. Example:
   `PDFXDocument+PSPDFKit.h`.
 
-* Some of the classes have a `+Private.h` header for internal stuff, i.e.
+* Some of the classes have a `...+Private.h` header for internal stuff, i.e.
   needed by PDFXKit classes internally but shouldn't be exposed publicly.
   Example: `PDFXPage+Private.h`, exposes properties only allowed to be
   accessible by `PDFXDocument`.
 
-## Knwon Issues
+## Known Issues
 
 **Linker warning when building without Carthage**. In order to support Carthage
 out-of-the-box with per-customer PSPDFKit URL, we've added the _parent_
 Carthage build folder to the "Framework Search Paths". When building without
 Carthage, this produces the following warning:
 
+```
 ld: warning: directory not found for option '-F/Users/konstantinbe/Projects/PSPDFKit/PDFXKit/../../../Carthage/Build/iOS'
+```
 
 ## License
 
