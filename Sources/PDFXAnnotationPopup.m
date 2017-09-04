@@ -9,7 +9,6 @@
 #import "PDFXAnnotationPopup+PSPDFKit.h"
 #import "PDFXPlatform+Private.h"
 #import "PSPDFKit+PDFXKit.h"
-#import <PDFKit/PDFKit.h>
 
 @implementation PDFXAnnotationPopup
 

@@ -9,7 +9,6 @@
 #import "PDFXAppearanceCharacteristics+PSPDFKit.h"
 #import "PDFXPlatform+Private.h"
 #import "PSPDFKit+PDFXKit.h"
-#import <PDFKit/PDFKit.h>
 
 PDFXAppearanceCharacteristicsKey PDFXAppearanceCharacteristicsKeyBackgroundColor = @"BG";
 PDFXAppearanceCharacteristicsKey PDFXAppearanceCharacteristicsKeyBorderColor = @"BC";

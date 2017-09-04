@@ -9,7 +9,6 @@
 #import "PDFXBorder+PSPDFKit.h"
 #import "PDFXPlatform+Private.h"
 #import "PSPDFKit+PDFXKit.h"
-#import <PDFKit/PDFKit.h>
 
 PDFXBorderKey PDFXBorderKeyDashPattern = @"D";
 PDFXBorderKey PDFXBorderKeyLineWidth = @"W";

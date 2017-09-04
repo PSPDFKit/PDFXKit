@@ -9,7 +9,6 @@
 #import "PDFXAnnotation+PSPDFKit.h"
 #import "PDFXPlatform+Private.h"
 #import "PSPDFKit+PDFXKit.h"
-#import <PDFKit/PDFKit.h>
 
 PDFXAnnotationKey PDFXAnnotationKeyAppearanceDictionary = @"/AP";
 PDFXAnnotationKey PDFXAnnotationKeyAppearanceState = @"/AS";

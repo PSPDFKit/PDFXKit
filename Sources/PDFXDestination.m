@@ -21,8 +21,10 @@ CGFloat const kPDFXDestinationUnspecifiedValue = 3.4028234663852886e+38;
 #pragma mark - Initializing the Class
 
 + (void)initialize {
-    if (kPDFXDestinationUnspecifiedValue != kPDFDestinationUnspecifiedValue) {
-        [NSException raise:NSInternalInconsistencyException format:@"The constant kPDFXDestinationUnspecifiedValue = '%@' should equal kPDFDestinationUnspecifiedValue = '%@' but doesn't.", @(kPDFXDestinationUnspecifiedValue), @(kPDFDestinationUnspecifiedValue)];
+    if (@available(iOS 11, *)) {
+        if (kPDFXDestinationUnspecifiedValue != kPDFDestinationUnspecifiedValue) {
+            [NSException raise:NSInternalInconsistencyException format:@"The constant kPDFXDestinationUnspecifiedValue = '%@' should equal kPDFDestinationUnspecifiedValue = '%@' but doesn't.", @(kPDFXDestinationUnspecifiedValue), @(kPDFDestinationUnspecifiedValue)];
+        }
     }
 }
 

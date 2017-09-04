@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B33361B81F5D0C7500A3F726 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33361B71F5D0C7500A3F726 /* PDFKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B335CBDD1F5714E40079F177 /* PDFs in Resources */ = {isa = PBXBuildFile; fileRef = B335CBDC1F5714DA0079F177 /* PDFs */; };
 		B340BCD91F3F8F08001D4992 /* PDFXDocumentDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B340BCD21F3F8E54001D4992 /* PDFXDocumentDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B343B5241F4578030040B726 /* PDFXDocument+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B343B4FE1F4575820040B726 /* PDFXDocument+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -148,6 +149,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B33361B71F5D0C7500A3F726 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		B335CBDC1F5714DA0079F177 /* PDFs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PDFs; sourceTree = "<group>"; };
 		B340BCD21F3F8E54001D4992 /* PDFXDocumentDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFXDocumentDelegate.h; sourceTree = "<group>"; };
 		B343B4FE1F4575820040B726 /* PDFXDocument+Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXDocument+Swift.h"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33361B81F5D0C7500A3F726 /* PDFKit.framework in Frameworks */,
 				B3C7228A1F55CAE6009F5BE0 /* PSPDFKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +475,7 @@
 		B3AD77561F4CA5040002E789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B33361B71F5D0C7500A3F726 /* PDFKit.framework */,
 				B3C7228B1F55CAE6009F5BE0 /* PSPDFKit.framework */,
 			);
 			path = Frameworks;
@@ -822,7 +826,6 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "InfoPlists/PDFXKitExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -854,7 +857,6 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "InfoPlists/PDFXKitExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -906,7 +908,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -952,7 +954,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
