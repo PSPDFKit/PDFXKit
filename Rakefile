@@ -1,9 +1,8 @@
 #
 # Copyright (c) 2017 PSPDFKit GmbH. All rights reserved.
 #
-# The PSPDFKit Sample applications are licensed with a modified BSD license.
-# Please see License for details. This notice may not be removed from
-# this file.
+# The PDFXKit is licensed with a modified BSD license. Please see License for
+# details. This notice may not be removed from this file.
 #
 # General Guidelines
 # ------------------
@@ -21,7 +20,7 @@
 #
 # Keep intermediate results. If you need to modify a previous result, copy it
 # first. This will ease debugging if something goes wrong and allows you to
-# comment out certain stages of the script to safe time when working on it.
+# comment out certain stages of the script to save time when working on it.
 #
 # When working within a deep-ish path, consider cd-ing into the directory first.
 # You have to do this for each run call, simply prepend your actual command
