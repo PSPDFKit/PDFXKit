@@ -2,6 +2,10 @@
 
 Required PSPDFKit version: 6.9.
 
+## Introduction
+
+*TODO: document.*
+
 ## Getting Started
 
 Make sure you have access to PSPDFKit either as a customer or by signing up for
@@ -80,6 +84,10 @@ If you are using Swift:
 Build & run your project, your app is now using PDFXKit with PSPDFKit under the
 hood.
 
+## Limitations
+
+*TODO: document.*
+
 ## Contributing
 
 If you want to work on PDFXKit, perform the following steps:
@@ -88,6 +96,31 @@ If you want to work on PDFXKit, perform the following steps:
 * Copy `PSPDFKit.framework` from the release DMG into `PDFXKit/Frameworks`
 * Open `PDFXKit.xcodeproj` in Xcode >= 9
 * Build & run `PDFXKitExample` (iOS)
+
+Technical notes:
+
+* All PDFXKit source files live in the `Sources` directory, no nesting.
+
+* Each class has a `+Swift.h` header for Swift-only stuff which isn't exposed
+  to Objective-C. Example: `PDFXDocument+Swift.h`.
+
+* Each class has a `+PSPDFKit.h` header for public PSPDFKit stuff, i.e. any
+  interfaces that expose access to PSPDFKit when using PDFXKit. Example:
+  `PDFXDocument+PSPDFKit.h`.
+
+* Some of the classes have a `+Private.h` header for internal stuff, i.e.
+  needed by PDFXKit classes internally but shouldn't be exposed publicly.
+  Example: `PDFXPage+Private.h`, exposes properties only allowed to be
+  accessible by `PDFXDocument`.
+
+## Knwon Issues
+
+**Linker warning when building without Carthage**. In order to support Carthage
+out-of-the-box with per-customer PSPDFKit URL, we've added the _parent_
+Carthage build folder to the "Framework Search Paths". When building without
+Carthage, this produces the following warning:
+
+ld: warning: directory not found for option '-F/Users/konstantinbe/Projects/PSPDFKit/PDFXKit/../../../Carthage/Build/iOS'
 
 ## License
 
