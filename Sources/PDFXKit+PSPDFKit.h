@@ -22,4 +22,3 @@
 #import <PDFXKit/PDFXSelection+PSPDFKit.h>
 #import <PDFXKit/PDFXThumbnailView+PSPDFKit.h>
 #import <PDFXKit/PDFXView+PSPDFKit.h>
-#import <PDFXKit/PDFXCompatibility+PSPDFKit.h>

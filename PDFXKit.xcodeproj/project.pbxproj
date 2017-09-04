@@ -115,7 +115,6 @@
 		B3D17AFC1F419EC900526C56 /* PDFXSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = B39445001F3CF08C00620E45 /* PDFXSelection.m */; };
 		B3D17AFD1F419EC900526C56 /* PDFXThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = B34B4BA01F3C94180081DF9B /* PDFXThumbnailView.m */; };
 		B3D17AFE1F419EC900526C56 /* PDFXView.m in Sources */ = {isa = PBXBuildFile; fileRef = B38DD6FD1F3B20D000C435A8 /* PDFXView.m */; };
-		B3D17B021F41F19C00526C56 /* PDFXAnnotationPopup.m in Headers */ = {isa = PBXBuildFile; fileRef = B3D17B011F41F19C00526C56 /* PDFXAnnotationPopup.m */; };
 		B3D17B031F41F29200526C56 /* PDFXAnnotationPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D17AFF1F41F19B00526C56 /* PDFXAnnotationPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3D17B041F41F2D300526C56 /* PDFXAnnotationPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D17B011F41F19C00526C56 /* PDFXAnnotationPopup.m */; };
 		B3DF8BE41F55907100D53379 /* PDFXKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3AC203F1F3AE6C500D46641 /* PDFXKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -558,7 +557,6 @@
 				B3B4A10F1F3CA20900E73645 /* PDFXActionRemoteGoTo.h in Headers */,
 				B343B5511F457A720040B726 /* PDFXBorder+PSPDFKit.h in Headers */,
 				B343B53F1F4579550040B726 /* PDFXBorder+Swift.h in Headers */,
-				B3D17B021F41F19C00526C56 /* PDFXAnnotationPopup.m in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
