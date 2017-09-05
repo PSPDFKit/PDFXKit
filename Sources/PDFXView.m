@@ -28,7 +28,7 @@ NSNotificationName const PDFXViewDisplayBoxChangedNotification = @"PDFXViewDispl
 NSNotificationName const PDFXViewVisiblePagesChangedNotification = @"PDFXViewVisiblePagesChanged";
 
 // HACK: this is a private PSPDFKit notification which will be made public in
-// the next release.
+// the near future.
 NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFViewControllerDidChangePageNotification";
 
 @interface PDFXView ()
@@ -69,7 +69,7 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
     [_pspdfViewController.view.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
     [_pspdfViewController.view.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
 
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(pspdfViewControllerDidChangePageNotification:) name:@"" object:_pspdfViewController];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(pspdfViewControllerDidChangePageNotification:) name:PSPDFViewControllerDidChangePageNotification object:_pspdfViewController];
 }
 
 #pragma mark - Associating a Document
