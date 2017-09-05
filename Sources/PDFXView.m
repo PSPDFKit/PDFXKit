@@ -31,7 +31,20 @@ NSNotificationName const PDFXViewVisiblePagesChangedNotification = @"PDFXViewVis
 // the next release.
 NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFViewControllerDidChangePageNotification";
 
+@interface PDFXView ()
+
+@property (nonatomic) BOOL shouldApplyHackToSupportStoryboardsAndXibs;
+
+@end
+
 @implementation PDFXView
+
+#pragma mark - Nib Support
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.shouldApplyHackToSupportStoryboardsAndXibs = YES;
+}
 
 #pragma mark - Life-Cycle
 
@@ -619,5 +632,22 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
 #pragma mark - PSPDFViewControllerDelegate
 
 // Nothing here yet.
+
+#pragma mark - Managing View Hierarchy
+
+- (void)didMoveToWindow {
+    [super didMoveToWindow];
+    if (self.window != nil && self.shouldApplyHackToSupportStoryboardsAndXibs) {
+        // HACK: quick and dirty hack to workaround missing viewWill/DidAppear
+        // calls for PSPDFViewController when instantiated from a storyboard or
+        // xib.
+        //
+        // TODO: patch the view controller hierarchy and hook up the
+        // PSPDFViewController. So far it works without.
+        [self.pspdfViewController beginAppearanceTransition:YES animated:NO];
+        [self.pspdfViewController endAppearanceTransition];
+        self.shouldApplyHackToSupportStoryboardsAndXibs = NO;
+    }
+}
 
 @end
