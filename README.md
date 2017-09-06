@@ -7,7 +7,7 @@ version requires [PSPDFKit 6.9 for iOS](https://pspdfkit.com/blog/2017/pspdfkit-
 
 **Note**: [PSPDFKit](http://pspdfkit.com) is a *commercial* product and requires
 a [paid license](https://pspdfkit.com/sales/). Please sign up for a [free trial](http://pspdfkit.com/try)
-to receive an evaluation license.
+to receive an evaluation license if you haven't a production license yet.
 
 ## Introduction
 
