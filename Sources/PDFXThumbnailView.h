@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, PDFXThumbnailLayoutMode) {
     PDFXThumbnailLayoutModeHorizontal = 1
 };
 
-NSNotificationName const PDFXThumbnailViewDocumentEditedNotification;
+PDFX_EXTERN NSNotificationName const PDFXThumbnailViewDocumentEditedNotification;
 
 @interface PDFXThumbnailView :  PDFXPlatformView <NSCoding>
 
