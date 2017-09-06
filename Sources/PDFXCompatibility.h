@@ -6,8 +6,6 @@
 //  this file.
 //
 
-#if defined(PDFX_APPLE_PDFKIT_SOURCE_COMPATIBLE) && PDFX_APPLE_PDFKIT_SOURCE_COMPATIBLE
-
 #pragma mark - Classes
 
 #define PDFAction PDFXAction
@@ -63,5 +61,3 @@
 #pragma mark - Other
 
 #define kPDFDestinationUnspecifiedValue kPDFXDestinationUnspecifiedValue
-
-#endif

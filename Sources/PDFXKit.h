@@ -36,4 +36,6 @@
 // time being.
 #import <PDFXKit/PDFXKit+Swift.h>
 
+#if PDFX_APPLE_PDFKIT_SOURCE_COMPATIBLE
 #import <PDFXKit/PDFXCompatibility.h>
+#endif
