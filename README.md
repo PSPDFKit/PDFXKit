@@ -129,6 +129,11 @@ If you are using Swift:
 Build & run your project, your app is now using PDFXKit with PSPDFKit under the
 hood.
 
+Now make sure your app works as expected. Specifically, there might be a
+conflict with your gesture recognizers. If so, implement the
+`gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` delegate method
+for the conflicting gesture recognizer and return `true`.
+
 ## Limitations
 
 PDFXKit is alpha software, many parts aren't implemented yet. Please take a
@@ -171,6 +176,11 @@ Carthage, this produces the following warning:
 ```
 ld: warning: directory not found for option '-F/Users/konstantinbe/Projects/PSPDFKit/PDFXKit/../../../Carthage/Build/iOS'
 ```
+
+**Conflicting gesture recognizers**. Your gesture recognizers might be in
+conflict with some of PSPDFKit's recognizers. If so, implement the
+`gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` delegate method
+for the conflicting gesture recognizer and return `true`.
 
 ## License
 
