@@ -70,13 +70,16 @@ We assume you are familiar with
 Carthage documentation first. You'll have to add PSPDFKit as well as PDFXKit as
 a dependency to your `Cartfile`.
 
+PDFXKit supports Xcode 9 only, which is currently in Beta. Therefore, you'll
+have to set Xcode 9 to be used on the command line: `sudo xcode-select -s <PATH_TO_XCODE_9_BETA>/Xcode-beta.app/Contents/Developer`.
+
 ``` Ruby
-# Replace YOUR_CARTHAGE_KEY with your own
-binary "https://customers.pspdfkit.com/carthage/YOUR_CARTHAGE_KEY/PSPDFKit.json"
+# Replace YOUR_COCOAPODS_KEY with your own
+binary "https://customers.pspdfkit.com/carthage/YOUR_COCOAPODS_KEY/PSPDFKit.json"
 git "git@github.com:PSPDFKit/PDFXKit.git" "master"
 ```
 
-**Note:** make sure to replace `YOUR_CARTHAGE_KEY` with your own key provided
+**Note:** make sure to replace `YOUR_COCOAPODS_KEY` with your own key provided
 by PSPDFKit GmbH. You can find your key either in [customer
 portal](https://customers.pspdfkit.com/) or by requesting an
 [evaluation license](https://pspdfkit.com/try/).
