@@ -5,6 +5,10 @@ PDFKit](https://developer.apple.com/documentation/pdfkit) using the industry
 leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
 version requires [PSPDFKit 6.9 for iOS](https://pspdfkit.com/blog/2017/pspdfkit-ios-6-9/).
 
+**Note**: [PSPDFKit](http://pspdfkit.com) is a *commercial* product and requires
+a [paid license](https://pspdfkit.com/sales/). Please sign up for a [free trial](http://pspdfkit.com/try)
+to receive an evaluation license.
+
 ## Introduction
 
 Apple's PDFKit provides a great starting point if you need to integrate PDF
