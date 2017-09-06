@@ -51,7 +51,9 @@ end
 ```
 
 **Note:** make sure to replace `YourAppName` with your app name and
-`YOUR_COCOAPODS_KEY` with your own key provided by PSPDFKit GmbH.
+`YOUR_COCOAPODS_KEY` with your own key provided by PSPDFKit GmbH. You can find
+your key either in [customer portal](https://customers.pspdfkit.com/) or by
+requesting an [evaluation license](https://pspdfkit.com/try/).
 
 Now run `pod install`. Afterwards you should be able to build & run your project
 without errors. Next you'll have to adapt your project to use PDFXKit as
@@ -70,8 +72,10 @@ binary "https://customers.pspdfkit.com/carthage/YOUR_CARTHAGE_KEY/PSPDFKit.json"
 git "git@github.com:PSPDFKit/PDFXKit.git" "master"
 ```
 
-**Note:** make sure to replace `YOUR_CARTHAGE_KEY` with your own key provided by
-PSPDFKit GmbH.
+**Note:** make sure to replace `YOUR_CARTHAGE_KEY` with your own key provided
+by PSPDFKit GmbH. You can find your key either in [customer
+portal](https://customers.pspdfkit.com/) or by requesting an
+[evaluation license](https://pspdfkit.com/try/).
 
 Now follow the regular [Carthage setup routine](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
 to add `PSPDFKit.framework` and `PDFXKit.framework` as a dependency to your
