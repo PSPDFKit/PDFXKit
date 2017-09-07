@@ -106,21 +106,27 @@ First, build the PDFXKit framework:
 You should now have the `PDFXFKit.framework` in the `Build` folder. Next, add
 the `PSPDFKit.framework` and `PDFXKit.framework` to your project:
 
-* Follow the [Getting Started](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/) instructions for PSPDFKit.
+* Follow the [*Getting Started*](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/) instructions for PSPDFKit.
 
 * Perform steps (1) and (2) from the above *Getting Started* guide, Section
   [Integrating the Dynamic Framework](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/#toc_integrating-the-dynamic-framework),
-  and add PDFXKit to your app similar to how you did it with PSPDFKit above.
+  and add PDFXKit to your app similar to how you did it with PSPDFKit above. You
+  may also want to set up your [test targets](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/#toc_test-targets) accordingly.
   **Note:** make sure to adapt the path for the "Run Script" build phase for PDFXKit.
 
 You should now be able to build & run your app.
 
 ### Switch to PDFXKit
 
-We need to perform a couple of small changes in order to make your project use
+First, register the PSPDFKit license for your project as described in
+[*Adding the License
+Key*](https://pspdfkit.com/guides/ios/current/getting-started/adding-the-license-key/)
+guide.
+
+Now we need to perform a couple of small changes in order to make your project use
 PDFXKit instead of the system PDFKit.
 
-First, update all source files to import `PDFXKit` instead of the `PDFKit`
+Update all source files to import `PDFXKit` instead of the `PDFKit`
 framework using Xcode's project-wide search & replace:
 
 * Open your project in Xcode
