@@ -40,10 +40,6 @@ We assume you are familiar with [Cocoapods](https://cocoapods.org), otherwise
 please consult the documentation first. You'll have to add PSPDFKit as well as
 PDFXKit as a dependency to your `Podfile`.
 
-PDFXKit supports Xcode 9 only, which is currently in Beta. This might cause bugs
-with the current Cocoapods release. Therefore, you'll have to use a
-**prerelease** version of **Cocoapods**: `gem install cocoapods --pre`.
-
 ``` Ruby
 # Replace `YourAppName` with your app's target name.
 target :YourAppName do
@@ -71,8 +67,12 @@ We assume you are familiar with
 Carthage documentation first. You'll have to add PSPDFKit as well as PDFXKit as
 a dependency to your `Cartfile`.
 
+---
+
 PDFXKit supports Xcode 9 only, which is currently in Beta. Therefore, you'll
 have to set Xcode 9 to be used on the command line: `sudo xcode-select -s <PATH_TO_XCODE_9_BETA>/Xcode-beta.app/Contents/Developer`.
+
+---
 
 ``` Ruby
 # Replace YOUR_COCOAPODS_KEY with your own
