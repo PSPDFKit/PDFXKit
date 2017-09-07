@@ -67,12 +67,12 @@ We assume you are familiar with
 Carthage documentation first. You'll have to add PSPDFKit as well as PDFXKit as
 a dependency to your `Cartfile`.
 
----
+--------------------------------------------------------------------------------
 
 *PDFXKit supports Xcode 9 only, which is currently in Beta. Therefore, you'll
 have to set Xcode 9 to be used on the command line:* `sudo xcode-select -s <PATH_TO_XCODE_9_BETA>/Xcode-beta.app/Contents/Developer`.
 
----
+--------------------------------------------------------------------------------
 
 ``` Ruby
 # Replace YOUR_COCOAPODS_KEY with your own
@@ -198,6 +198,8 @@ Carthage, this produces the following warning:
 ```
 ld: warning: directory not found for option '-F/Users/konstantinbe/Projects/PSPDFKit/PDFXKit/../../../Carthage/Build/iOS'
 ```
+
+--------------------------------------------------------------------------------
 
 **Conflicting gesture recognizers**. Your gesture recognizers might be in
 conflict with some of PSPDFKit's recognizers. If so, implement the
