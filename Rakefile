@@ -105,6 +105,8 @@ end
 
 desc "Compile univeral PDFXKit framework"
 task :compile => ['compile:simulator', 'compile:device'] do
+  # TODO: also create universal dSYM file (either by stripping after lipo or
+  # combining both dSYM files).
   tell "Compiling PSPDFKit framework (universal)"
   run "rm -rf #{DIRECTORY}/PDFXKit.framework"
   run "cp -R #{DIRECTORY}/Xcode/Build/Products/Release-iphoneos/PDFXKit.framework #{DIRECTORY}/"
