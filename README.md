@@ -20,14 +20,16 @@ PSPDFKit on the other hand goes much further offering you a cross-platform
 drop-in solution with many additional UI components, advanced PDF features,
 and first class support directly from the developers.
 
-To simplify migrating a code base from PDFKit to PSPDFKit as much as possible,
-we provide a wrapper called [PDFXKit][]. It is a drop-in replacement with little
-or no changes required allowing you to program against the PDFKit API while
-using PSPDFKit under the hood.
+Migrating the full code base to PSPDFKit can be a major undertaking and a deal
+breaker for many developers. This is where PDFXKit comes in. It is a drop-in
+replacement giving you the same API as PDFKit while using PSPDFKit under the
+hood.
 
 For more details, please consult the
+[announcement blog post](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
+as well as the
 [Migrating from Apple PDFKit](https://pspdfkit.com/guides/ios/current/migration-guides/migrating-from-apple-pdfkit/)
-migration guide.
+guide.
 
 ## Getting Started
 
