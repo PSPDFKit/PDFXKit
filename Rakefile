@@ -51,8 +51,8 @@ VERBOSE = ENV['verbose'] || false
 
 # ------------------------------------------------------------- Constants ------
 
-SDK_SIM = "iphoneos11"
-SDK_IOS = "iphonesimulator11"
+SDK_SIM = "iphonesimulator11.0"
+SDK_IOS = "iphoneos11.0"
 XCODE_FLAGS = "-configuration Release -scheme PDFXKit -derivedDataPath \"#{DIRECTORY}/Xcode\""
 
 # ---------------------------------------------------------------- Colors ------
@@ -84,7 +84,7 @@ task :check do
   """
 
   tell "Checking whether iOS SDK 11 present"
-  assert `xcodebuild -showsdks | grep iphoneos11`.to_s.strip.length > 0, """
+  assert `xcrun xcodebuild -showsdks | grep iphoneos11`.to_s.strip.length > 0, """
   #{ERROR} couldn't find iOS 11 SDK. Please make sure you have the appropriate
   version of Xcode installed and use xcode-select to make it the default on
   the command line.
@@ -94,13 +94,13 @@ end
 desc "Compile PDFXKit framework (simulator)"
 task 'compile:simulator' => [:prepare, :check] do
   tell "Compiling PSPDFKit framework (simulator)"
-  run "xcrun -sdk #{SDK_SIM} xcodebuild #{XCODE_FLAGS}", :time => true, :quiet => true
+  run "xcrun xcodebuild -sdk #{SDK_SIM} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Compile PDFXKit framework (device)"
 task 'compile:device' => [:prepare, :check] do
   tell "Compiling PSPDFKit framework (device)"
-  run "xcrun -sdk #{SDK_IOS} xcodebuild #{XCODE_FLAGS}", :time => true, :quiet => true
+  run "xcrun xcodebuild -sdk #{SDK_IOS} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Compile univeral PDFXKit framework"
