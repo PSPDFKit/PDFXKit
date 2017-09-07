@@ -162,7 +162,7 @@ annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
 If you want to work on PDFXKit, perform the following steps:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Copy `PSPDFKit.framework` from the release DMG into `PDFXKit/Frameworks`
+* Copy `PSPDFKit.framework` into `PDFXKit/Frameworks`
 * Open `PDFXKit.xcodeproj` in Xcode >= 9
 * Build & run `PDFXKitExample` (iOS)
 
