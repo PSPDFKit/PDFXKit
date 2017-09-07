@@ -69,8 +69,8 @@ a dependency to your `Cartfile`.
 
 ---
 
-PDFXKit supports Xcode 9 only, which is currently in Beta. Therefore, you'll
-have to set Xcode 9 to be used on the command line: `sudo xcode-select -s <PATH_TO_XCODE_9_BETA>/Xcode-beta.app/Contents/Developer`.
+*PDFXKit supports Xcode 9 only, which is currently in Beta. Therefore, you'll
+have to set Xcode 9 to be used on the command line:* `sudo xcode-select -s <PATH_TO_XCODE_9_BETA>/Xcode-beta.app/Contents/Developer`.
 
 ---
 
