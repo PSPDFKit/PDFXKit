@@ -6,6 +6,8 @@ leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
 version requires [PSPDFKit 6.9 for
 iOS](https://pspdfkit.com/blog/2017/pspdfkit-ios-6-9/) and Xcode 9.
 
+![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-d6c93578.png)
+
 **Note**: [PSPDFKit](http://pspdfkit.com) is a *commercial* product and requires
 a [paid license](https://pspdfkit.com/sales/). Please sign up for a [free trial](http://pspdfkit.com/try)
 to receive an evaluation license if you haven't a production license yet.
@@ -160,7 +162,7 @@ for the conflicting gesture recognizer and return `true`.
 
 ## Limitations
 
-PDFXKit is alpha software, many parts aren't implemented yet. Please take a
+PDFXKit is beta software, many parts aren't implemented yet. Please take a
 look at the headers, all unimplemented or only partially implemented symbols are
 annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
 `PDFX_PARTIALLY_IMPLEMENTED_PRIORITY_...` macros.
