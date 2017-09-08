@@ -38,9 +38,9 @@ guide.
 Make sure you have access to PSPDFKit either as a customer or by signing up for
 a [free trial](https://pspdfkit.com/try/).
 
-### Using Cocoapods
+### Using CocoaPods
 
-We assume you are familiar with [Cocoapods](https://cocoapods.org), otherwise
+We assume you are familiar with [CocoaPods](https://cocoapods.org), otherwise
 please consult the documentation first. You'll have to add PSPDFKit as well as
 PDFXKit as a dependency to your `Podfile`.
 
@@ -98,7 +98,7 @@ Next you'll have to adapt your project to use PDFXKit as described in Section
 ### Manual Set-Up
 
 **Note:** manual set-up is only for experts, we assume you know what you are
-doing. If you are unsure, please use Cocoapods or Carthage instead.
+doing. If you are unsure, please use CocoaPods or Carthage instead.
 
 First, build the PDFXKit framework:
 
