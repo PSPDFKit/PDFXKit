@@ -176,7 +176,7 @@ If you want to work on PDFXKit, perform the following steps:
 * Open `PDFXKit.xcodeproj` in Xcode >= 9
 * Build & run `PDFXKitExample` (iOS)
 
-Please ensure [you signed our CLA](https://pspdfkit.com/guides/web/current/miscellaneous/contributing/) so we can accept your contributions.
+Please [sign our CLA agreement](https://pspdfkit.com/guides/web/current/miscellaneous/contributing/) so we can accept your pull requests.
 
 Technical notes:
 
