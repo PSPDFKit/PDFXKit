@@ -176,6 +176,8 @@ If you want to work on PDFXKit, perform the following steps:
 * Open `PDFXKit.xcodeproj` in Xcode >= 9
 * Build & run `PDFXKitExample` (iOS)
 
+Please ensure [you signed our CLA](https://pspdfkit.com/guides/web/current/miscellaneous/contributing/) so we can accept your contributions.
+
 Technical notes:
 
 * All PDFXKit source files live in the `Sources` directory, no nesting.
