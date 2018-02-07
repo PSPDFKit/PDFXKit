@@ -3,8 +3,8 @@
 PDFXKit is a drop-in replacement for [Apple
 PDFKit](https://developer.apple.com/documentation/pdfkit) using the industry
 leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
-version requires [PSPDFKit 6.9 for
-iOS](https://pspdfkit.com/blog/2017/pspdfkit-ios-6-9/) and Xcode 9.
+version requires [PSPDFKit 7 for
+iOS](https://pspdfkit.com/blog/2017/pspdfkit-ios-7-0/) and Xcode 9.
 
 [![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-d6c93578.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
 
@@ -73,8 +73,7 @@ a dependency to your `Cartfile`.
 
 --------------------------------------------------------------------------------
 
-*PDFXKit supports Xcode 9 only, which is currently in Beta. Therefore, you'll
-have to set Xcode 9 to be used on the command line:* `sudo xcode-select -s <PATH_TO_XCODE_9_BETA>/Xcode-beta.app/Contents/Developer`.
+*PDFXKit requires Xcode 9 and later.*
 
 --------------------------------------------------------------------------------
 
@@ -90,7 +89,7 @@ portal](https://customers.pspdfkit.com/) or by requesting an
 [evaluation license](https://pspdfkit.com/try/).
 
 Now follow the regular [Carthage setup routine](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
-to add `PSPDFKit.framework` and `PDFXKit.framework` as a dependency to your
+to add `PSPDFKit.framework`, `PSPDFKitUI.framework`, and `PDFXKit.framework` as a dependency to your
 project. Afterwards you should be able to build your project without errors.
 Next you'll have to adapt your project to use PDFXKit as described in Section
 [Switch to PDFXKit](#switch-to-pdfxkit).
@@ -103,12 +102,12 @@ doing. If you are unsure, please use CocoaPods or Carthage instead.
 First, build the PDFXKit framework:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Copy `PSPDFKit.framework` into `PDFXKit/Frameworks`
+* Copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
 * Open the terminal and `cd` into the `PDFXKit` directory
 * Run `rake compile`
 
 You should now have the `PDFXFKit.framework` in the `Build` folder. Next, add
-the `PSPDFKit.framework` and `PDFXKit.framework` to your project:
+the `PSPDFKit.framework`, `PSPDFKitUI.framework`, and `PDFXKit.framework` to your project:
 
 * Follow the [*Getting Started*](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/) instructions for PSPDFKit.
 
@@ -172,8 +171,8 @@ annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
 If you want to work on PDFXKit, perform the following steps:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Copy `PSPDFKit.framework` into `PDFXKit/Frameworks`
-* Open `PDFXKit.xcodeproj` in Xcode >= 9
+* Copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
+* Open `PDFXKit.xcodeproj` in Xcode
 * Build & run `PDFXKitExample` (iOS)
 
 Please [sign our CLA agreement](https://pspdfkit.com/guides/web/current/miscellaneous/contributing/) so we can accept your pull requests.
