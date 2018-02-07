@@ -625,7 +625,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "PSPDFKit GmbH";
 				TargetAttributes = {
 					B36273141F3AF0A200459783 = {

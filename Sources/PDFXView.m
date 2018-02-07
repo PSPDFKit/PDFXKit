@@ -119,7 +119,7 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
 }
 
 - (IBAction)goToNextPage:(nullable id)sender {
-    [self.pspdfViewController scrollToNextPageAnimated:YES];
+    [self.pspdfViewController.documentViewController scrollToNextSpreadAnimated:YES];
 }
 
 - (BOOL)canGoToPreviousPage {
@@ -128,7 +128,7 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
 }
 
 - (IBAction)goToPreviousPage:(nullable id)sender {
-    [self.pspdfViewController scrollToPreviousPageAnimated:YES];
+    [self.pspdfViewController.documentViewController scrollToPreviousSpreadAnimated:YES];
 }
 
 - (BOOL)canGoToFirstPage {
@@ -213,7 +213,7 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
 - (void)goToRect:(PDFXRect)rect onPage:(PDFXPage *)page {
     let pageIndex = [self.document indexForPage:page];
     if (pageIndex != NSNotFound) {
-        [self.pspdfViewController zoomToRect:rect pageIndex:pageIndex animated:YES];
+        [self.pspdfViewController.documentViewController zoomToPDFRect:rect forPageAtIndex:pageIndex animated:YES];
     }
 }
 
@@ -337,14 +337,14 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
 #pragma mark - Configuring Scaling
 
 - (BOOL)autoScales {
-    let fitToWidthEnabled = self.pspdfViewController.configuration.fitToWidthEnabled;
-    return fitToWidthEnabled == PSPDFAdaptiveConditionalYES || fitToWidthEnabled == PSPDFAdaptiveConditionalAdaptive;
+    let spreadFitting = self.pspdfViewController.configuration.spreadFitting;
+    return spreadFitting == PSPDFConfigurationSpreadFittingFill || spreadFitting == PSPDFConfigurationSpreadFittingAdaptive;
 }
 
 - (void)setAutoScales:(BOOL)autoScales {
     // TODO: check if we need to massage this a bit more.
     [self.pspdfViewController updateConfigurationWithBuilder:^(PSPDFConfigurationBuilder *builder) {
-        builder.fitToWidthEnabled = autoScales ? PSPDFAdaptiveConditionalAdaptive : PSPDFAdaptiveConditionalNO;
+        builder.spreadFitting = autoScales ? PSPDFConfigurationSpreadFittingAdaptive : PSPDFConfigurationSpreadFittingFit;
     }];
 }
 
@@ -530,7 +530,7 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
         builder.pageMode = PSPDFPageModeSingle;
         builder.pageTransition = PSPDFPageTransitionScrollContinuous;
         builder.scrollDirection = PSPDFScrollDirectionVertical;
-        builder.HUDViewMode = PSPDFHUDViewModeAutomatic;
+        builder.userInterfaceViewMode = PSPDFUserInterfaceViewModeAutomatic;
         builder.thumbnailBarMode = PSPDFThumbnailBarModeNone;
         builder.documentLabelEnabled = NO;
         builder.pageLabelEnabled = NO;
@@ -545,7 +545,7 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
 - (void)PSPDFPageMode:(PSPDFPageMode *)pspdfPageMode andPSPDFPageTransition:(PSPDFPageTransition *)pspdfPageTransition fromDisplayMode:(PDFXDisplayMode)displayMode {
     if (displayMode == kPDFXDisplaySinglePage) {
         *pspdfPageMode = PSPDFPageModeSingle;
-        *pspdfPageTransition = PSPDFPageTransitionScrollPerPage;
+        *pspdfPageTransition = PSPDFPageTransitionScrollPerSpread;
         return;
     }
 
@@ -557,7 +557,7 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
 
     if (displayMode == kPDFXDisplayTwoUp) {
         *pspdfPageMode = PSPDFPageModeDouble;
-        *pspdfPageTransition = PSPDFPageTransitionScrollPerPage;
+        *pspdfPageTransition = PSPDFPageTransitionScrollPerSpread;
         return;
     }
 

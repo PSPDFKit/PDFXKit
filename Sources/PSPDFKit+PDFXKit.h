@@ -7,5 +7,6 @@
 //
 
 #import <PSPDFKit/PSPDFKit.h>
+#import <PSPDFKitUI/PSPDFKitUI.h>
 
 // TODO: add any PSPDFKit extensions here.
