@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8461A7AE202E13D20087809E /* PSPDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8461A7A8202E13BC0087809E /* PSPDFKit.framework */; };
+		8461A7AF202E13D20087809E /* PSPDFKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8461A7A8202E13BC0087809E /* PSPDFKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8461A7B0202E13D20087809E /* PSPDFKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8461A7A9202E13BC0087809E /* PSPDFKitUI.framework */; };
+		8461A7B1202E13D20087809E /* PSPDFKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8461A7A9202E13BC0087809E /* PSPDFKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B33361B81F5D0C7500A3F726 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33361B71F5D0C7500A3F726 /* PDFKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B335CBDD1F5714E40079F177 /* PDFs in Resources */ = {isa = PBXBuildFile; fileRef = B335CBDC1F5714DA0079F177 /* PDFs */; };
 		B340BCD91F3F8F08001D4992 /* PDFXDocumentDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B340BCD21F3F8E54001D4992 /* PDFXDocumentDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -137,6 +141,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B3DF8BE41F55907100D53379 /* PDFXKit.framework in Embed Frameworks */,
+				8461A7AF202E13D20087809E /* PSPDFKit.framework in Embed Frameworks */,
+				8461A7B1202E13D20087809E /* PSPDFKitUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +150,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8461A7A8202E13BC0087809E /* PSPDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PSPDFKit.framework; sourceTree = "<group>"; };
+		8461A7A9202E13BC0087809E /* PSPDFKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PSPDFKitUI.framework; sourceTree = "<group>"; };
 		B33361B71F5D0C7500A3F726 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		B335CBDC1F5714DA0079F177 /* PDFs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PDFs; sourceTree = "<group>"; };
 		B340BCD21F3F8E54001D4992 /* PDFXDocumentDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFXDocumentDelegate.h; sourceTree = "<group>"; };
@@ -266,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36273281F3AF0F000459783 /* PDFXKit.framework in Frameworks */,
+				8461A7AE202E13D20087809E /* PSPDFKit.framework in Frameworks */,
+				8461A7B0202E13D20087809E /* PSPDFKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +478,8 @@
 			isa = PBXGroup;
 			children = (
 				B33361B71F5D0C7500A3F726 /* PDFKit.framework */,
+				8461A7A8202E13BC0087809E /* PSPDFKit.framework */,
+				8461A7A9202E13BC0087809E /* PSPDFKitUI.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
