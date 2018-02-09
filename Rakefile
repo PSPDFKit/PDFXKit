@@ -51,8 +51,8 @@ VERBOSE = ENV['verbose'] || false
 
 # ------------------------------------------------------------- Constants ------
 
-SDK_SIM = "iphonesimulator11.0"
-SDK_IOS = "iphoneos11.0"
+SDK_SIM = "iphonesimulator11.2"
+SDK_IOS = "iphoneos11.2"
 XCODE_FLAGS = "-configuration Release -scheme PDFXKit -derivedDataPath \"#{DIRECTORY}/Xcode\""
 
 # ---------------------------------------------------------------- Colors ------
@@ -79,6 +79,13 @@ task :check do
   tell "Checking whether PSPDFKit.framework present"
   assert File.directory?("Frameworks/PSPDFKit.framework"), """
     #{ERROR} couldn't find #{BOLD}PSPDFKit.framework#{RESET}. Please download the
+    PSPDFKit framework and copy it into the #{BOLD}Frameworks/#{RESET} folder.
+    https://pspdfkit.com
+  """
+
+  tell "Checking whether PSPDFKitUI.framework present"
+  assert File.directory?("Frameworks/PSPDFKitUI.framework"), """
+    #{ERROR} couldn't find #{BOLD}PSPDFKitUI.framework#{RESET}. Please download the
     PSPDFKit framework and copy it into the #{BOLD}Frameworks/#{RESET} folder.
     https://pspdfkit.com
   """

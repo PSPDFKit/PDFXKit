@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2017 PSPDFKit GmbH. All rights reserved.
+//  Copyright (c) 2017-2018 PSPDFKit GmbH. All rights reserved.
 //
 //  The PSPDFKit Sample applications are licensed with a modified BSD license.
 //  Please see License for details. This notice may not be removed from
@@ -52,17 +52,17 @@ PDFXDocumentWriteOption PDFXDocumentUserPasswordOption = @"PDFDocumentUserPasswo
 #pragma mark - Initializing Documents
 
 - (instancetype)init {
-    let pspdfDocument = [PSPDFDocument document];
+    let pspdfDocument = [[PSPDFDocument alloc] init];
     return [self initWithPSPDFDocument:pspdfDocument];
 }
 
 - (nullable instancetype)initWithURL:(NSURL *)url {
-    let pspdfDocument = [PSPDFDocument documentWithURL:url];
+    let pspdfDocument = [[PSPDFDocument alloc] initWithURL:url];
     return pspdfDocument ? [self initWithPSPDFDocument:pspdfDocument] : nil;
 }
 
 - (nullable instancetype)initWithData:(NSData *)data {
-    let pspdfDocument = [PSPDFDocument documentWithData:data];
+    let pspdfDocument = [[PSPDFDocument alloc] initWithDataProviders:@[[[PSPDFDataContainerProvider alloc] initWithData: data]]];
     return pspdfDocument ? [self initWithPSPDFDocument:pspdfDocument] : nil;
 }
 
