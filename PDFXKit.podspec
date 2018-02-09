@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2017 PSPDFKit GmbH. All rights reserved.
+# Copyright (c) 2017-2018 PSPDFKit GmbH. All rights reserved.
 #
 # The PDFXKit is licensed with a modified BSD license. Please see License for
 # details. This notice may not be removed from this file.
@@ -7,7 +7,7 @@
 
 Pod::Spec.new do |spec|
   spec.name = "PDFXKit"
-  spec.version = "0.0.1"
+  spec.version = "0.0.2"
   spec.summary = "Apple PDFKit source-compatible wrapper for PSPDFKit."
   spec.documentation_url = 'https://pspdfkit.com/guides/ios/current/migration-guides/migrating-from-apple-pdfkit/'
 
