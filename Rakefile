@@ -107,7 +107,7 @@ end
 desc "Compile PDFXKit framework (device)"
 task 'compile:device' => [:prepare, :check] do
   tell "Compiling PSPDFKit framework (device)"
-  run "xcrun xcodebuild -sdk #{SDK_IOS} #{XCODE_FLAGS}", :time => true, :quiet => false
+  run "xcrun xcodebuild -sdk #{SDK_IOS} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Compile univeral PDFXKit framework"
