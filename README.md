@@ -3,8 +3,8 @@
 PDFXKit is a drop-in replacement for [Apple
 PDFKit](https://developer.apple.com/documentation/pdfkit) using the industry
 leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
-version requires [PSPDFKit 7 for
-iOS](https://pspdfkit.com/blog/2017/pspdfkit-ios-7-0/) and Xcode 9.
+version requires [PSPDFKit 8 for
+iOS](https://pspdfkit.com/blog/2018/pspdfkit-ios-8-0/) and Xcode 10.
 
 [![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-d6c93578.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
 
@@ -73,7 +73,7 @@ a dependency to your `Cartfile`.
 
 --------------------------------------------------------------------------------
 
-*PDFXKit requires Xcode 9 and later.*
+*PDFXKit requires Xcode 10 and later.*
 
 --------------------------------------------------------------------------------
 
