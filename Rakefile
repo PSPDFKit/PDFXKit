@@ -51,8 +51,8 @@ VERBOSE = ENV['verbose'] || false
 
 # ------------------------------------------------------------- Constants ------
 
-SDK_SIM = "iphonesimulator12.0"
-SDK_IOS = "iphoneos12.0"
+SDK_SIM = "iphonesimulator12.1"
+SDK_IOS = "iphoneos12.1"
 XCODE_FLAGS = "-configuration Release -scheme PDFXKit -derivedDataPath \"#{DIRECTORY}/Xcode\""
 
 # ---------------------------------------------------------------- Colors ------
