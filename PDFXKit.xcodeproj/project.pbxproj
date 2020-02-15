@@ -767,7 +767,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -798,7 +798,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
