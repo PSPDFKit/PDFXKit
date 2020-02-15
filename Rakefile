@@ -51,9 +51,10 @@ VERBOSE = ENV['verbose'] || false
 
 # ------------------------------------------------------------- Constants ------
 
-SDK_SIM = "iphonesimulator12.2"
-SDK_IOS = "iphoneos12.2"
-XCODE_FLAGS = "-configuration Release -scheme PDFXKit -derivedDataPath \"#{DIRECTORY}/Xcode\""
+XCODE_FLAGS = "-configuration Release -scheme PDFXKit archive SKIP_INSTALL=NO"
+ARCHIVE_PATH_SIMULATOR = "\"#{DIRECTORY}\"/Archives/PDFXKit.framework-iphonesimulator.xcarchive"
+ARCHIVE_PATH_DEVICE = "\"#{DIRECTORY}\"/Archives/PDFXKit.framework-iphoneos.xcarchive"
+ARCHIVE_PATH_MAC_CATALYST = "\"#{DIRECTORY}\"/Archives/PDFXKit.framework-catalyst.xcarchive"
 
 # ---------------------------------------------------------------- Colors ------
 
@@ -76,49 +77,46 @@ WARNING = YELLOW + "Warning:" + RESET
 
 desc "Check prerequisites"
 task :check do
-  tell "Checking whether PSPDFKit.framework present"
-  assert File.directory?("Frameworks/PSPDFKit.framework"), """
-    #{ERROR} couldn't find #{BOLD}PSPDFKit.framework#{RESET}. Please download the
+  tell "Checking whether PSPDFKit.xcframework present"
+  assert File.directory?("Frameworks/PSPDFKit.xcframework"), """
+    #{ERROR} couldn't find #{BOLD}PSPDFKit.xcframework#{RESET}. Please download the
     PSPDFKit framework and copy it into the #{BOLD}Frameworks/#{RESET} folder.
     https://pspdfkit.com
   """
 
-  tell "Checking whether PSPDFKitUI.framework present"
-  assert File.directory?("Frameworks/PSPDFKitUI.framework"), """
+  tell "Checking whether PSPDFKitUI.xcframework present"
+  assert File.directory?("Frameworks/PSPDFKitUI.xcframework"), """
     #{ERROR} couldn't find #{BOLD}PSPDFKitUI.framework#{RESET}. Please download the
     PSPDFKit framework and copy it into the #{BOLD}Frameworks/#{RESET} folder.
     https://pspdfkit.com
-  """
-
-  tell "Checking whether iOS SDK 12 present"
-  assert `xcrun xcodebuild -showsdks | grep iphoneos12`.to_s.strip.length > 0, """
-  #{ERROR} couldn't find iOS 12 SDK. Please make sure you have the appropriate
-  version of Xcode installed and use xcode-select to make it the default on
-  the command line.
   """
 end
 
 desc "Compile PDFXKit framework (simulator)"
 task 'compile:simulator' => [:prepare, :check] do
   tell "Compiling PSPDFKit framework (simulator)"
-  run "xcrun xcodebuild -sdk #{SDK_SIM} #{XCODE_FLAGS}", :time => true, :quiet => true
+  run "xcrun xcodebuild -destination 'generic/platform=iOS' -archivePath #{ARCHIVE_PATH_SIMULATOR} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Compile PDFXKit framework (device)"
 task 'compile:device' => [:prepare, :check] do
   tell "Compiling PSPDFKit framework (device)"
-  run "xcrun xcodebuild -sdk #{SDK_IOS} #{XCODE_FLAGS}", :time => true, :quiet => true
+  run "xcrun xcodebuild -destination 'generic/platform=iOS Simulator' -archivePath #{ARCHIVE_PATH_DEVICE} #{XCODE_FLAGS}", :time => true, :quiet => true
+end
+
+desc "Compile PDFXKit framework (Mac Catalyst)"
+task 'compile:catalyst' => [:prepare, :check] do
+  tell "Compiling PSPDFKit framework (Mac Catalyst)"
+  run "xcrun xcodebuild -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' -archivePath #{ARCHIVE_PATH_MAC_CATALYST} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Compile univeral PDFXKit framework"
-task :compile => ['compile:simulator', 'compile:device'] do
+task :compile => ['compile:simulator', 'compile:device', 'compile:catalyst'] do
   # TODO: also create universal dSYM file (either by stripping after lipo or
   # combining both dSYM files).
   tell "Compiling PSPDFKit framework (universal)"
-  run "rm -rf #{DIRECTORY}/PDFXKit.framework"
-  run "cp -R #{DIRECTORY}/Xcode/Build/Products/Release-iphoneos/PDFXKit.framework #{DIRECTORY}/"
-  run "cp -R #{DIRECTORY}/Xcode/Build/Products/Release-iphonesimulator/PDFXKit.framework/Modules/ #{DIRECTORY}/PDFXKit.framework/Modules/"
-  run %{lipo -create -output "#{DIRECTORY}/PDFXKit.framework/PDFXKit" "#{DIRECTORY}/Xcode/Build/Products/Release-iphonesimulator/PDFXKit.framework/PDFXKit" "#{DIRECTORY}/Xcode/Build/Products/Release-iphoneos/PDFXKit.framework/PDFXKit"}
+  run "rm -rf #{DIRECTORY}/PDFXKit.xcframework"
+  run "xcodebuild -create-xcframework -framework #{ARCHIVE_PATH_SIMULATOR}/Products/Library/Frameworks/PDFXKit.framework -framework #{ARCHIVE_PATH_DEVICE}/Products/Library/Frameworks/PDFXKit.framework -framework #{ARCHIVE_PATH_MAC_CATALYST}/Products/Library/Frameworks/PDFXKit.framework -output #{DIRECTORY}/PDFXKit.xcframework"
 end
 
 desc "show help"
