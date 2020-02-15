@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2017-2018 PSPDFKit GmbH. All rights reserved.
+# Copyright (c) 2017-2020 PSPDFKit GmbH. All rights reserved.
 #
 # The PDFXKit is licensed with a modified BSD license. Please see License for
 # details. This notice may not be removed from this file.
