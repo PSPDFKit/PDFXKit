@@ -102,7 +102,8 @@ doing. If you are unsure, please use CocoaPods or Carthage instead.
 First, build the PDFXKit framework:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
+* Replace `COCOAPODS_KEY` with your key and download the following the fat frameworks from here: https://customers.pspdfkit.com/cocoapods/COCOAPODS_KEY/pspdfkit/9.2.1.zip
+* Extract the zip file you downloaded and copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
 * Open the terminal and `cd` into the `PDFXKit` directory
 * Run `rake compile`
 
@@ -171,7 +172,7 @@ annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
 If you want to work on PDFXKit, perform the following steps:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Replace `COCOAPODS_KEY` with your key and download the following the fat frameworks from here: https://customers.pspdfkit.com/cocoapods/COCOAPODS_KEY/pspdfkit/latest.zip
+* Replace `COCOAPODS_KEY` with your key and download the following the fat frameworks from here: https://customers.pspdfkit.com/cocoapods/COCOAPODS_KEY/pspdfkit/9.2.1.zip
 * Extract the zip file you downloaded and copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
 * Open `PDFXKit.xcodeproj` in Xcode
 * Build & Run `PDFXKitExample` (iOS)
