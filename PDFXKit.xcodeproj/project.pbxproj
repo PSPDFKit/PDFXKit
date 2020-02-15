@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843F386B23F8947B00E0F579 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843F386A23F8947B00E0F579 /* PDFKit.framework */; };
 		8498909E23F86EAC006AAD59 /* PSPDFKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498909B23F86DB3006AAD59 /* PSPDFKit.xcframework */; };
 		8498909F23F86EAC006AAD59 /* PSPDFKitUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498909A23F86DB3006AAD59 /* PSPDFKitUI.xcframework */; };
-		849890A023F86F21006AAD59 /* PSPDFKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498909B23F86DB3006AAD59 /* PSPDFKit.xcframework */; };
-		849890A123F86F21006AAD59 /* PSPDFKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8498909B23F86DB3006AAD59 /* PSPDFKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		849890A223F86F23006AAD59 /* PSPDFKitUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498909A23F86DB3006AAD59 /* PSPDFKitUI.xcframework */; };
-		849890A323F86F23006AAD59 /* PSPDFKitUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8498909A23F86DB3006AAD59 /* PSPDFKitUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B33361B81F5D0C7500A3F726 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33361B71F5D0C7500A3F726 /* PDFKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		B335CBDD1F5714E40079F177 /* PDFs in Resources */ = {isa = PBXBuildFile; fileRef = B335CBDC1F5714DA0079F177 /* PDFs */; };
 		B340BCD91F3F8F08001D4992 /* PDFXDocumentDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B340BCD21F3F8E54001D4992 /* PDFXDocumentDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B343B5241F4578030040B726 /* PDFXDocument+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B343B4FE1F4575820040B726 /* PDFXDocument+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B343B5361F4579550040B726 /* PDFXAction+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B343B5291F45794D0040B726 /* PDFXAction+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,17 +66,8 @@
 		B34D11D21F3E426A00F3337E /* PDFXViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11B71F3E425100F3337E /* PDFXViewTests.swift */; };
 		B34D11E01F3E53F500F3337E /* PDFXKitObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B34D11DF1F3E53F500F3337E /* PDFXKitObjectiveCTests.m */; };
 		B35FCCE71F42D3E400F5313A /* PDFXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B39445051F3CF08D00620E45 /* PDFXBorder.m */; };
-		B36273181F3AF0A200459783 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36273171F3AF0A200459783 /* AppController.swift */; };
-		B362731A1F3AF0A200459783 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36273191F3AF0A200459783 /* MainController.swift */; };
-		B362731D1F3AF0A200459783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B362731B1F3AF0A200459783 /* Main.storyboard */; };
-		B36273221F3AF0A200459783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36273201F3AF0A200459783 /* LaunchScreen.storyboard */; };
-		B36273281F3AF0F000459783 /* PDFXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AC203F1F3AE6C500D46641 /* PDFXKit.framework */; };
 		B38DD7081F3B2A3B00C435A8 /* PDFXCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = B38DD7071F3B282C00C435A8 /* PDFXCompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B39445591F3CF3C700620E45 /* PDFXCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39445581F3CF3C700620E45 /* PDFXCompatibility.swift */; };
-		B395B17E1F5961DB008F6959 /* combine-binaries.sh in Resources */ = {isa = PBXBuildFile; fileRef = B395B17A1F5961D8008F6959 /* combine-binaries.sh */; };
-		B395B17F1F5961DD008F6959 /* split-binary.sh in Resources */ = {isa = PBXBuildFile; fileRef = B395B17B1F5961D8008F6959 /* split-binary.sh */; };
-		B395B1801F5961E0008F6959 /* strip-bitcode.sh in Resources */ = {isa = PBXBuildFile; fileRef = B395B17C1F5961D8008F6959 /* strip-bitcode.sh */; };
-		B395B1811F5961E2008F6959 /* strip-framework.sh in Resources */ = {isa = PBXBuildFile; fileRef = B395B17D1F5961D8008F6959 /* strip-framework.sh */; };
 		B3AC20491F3AE6C500D46641 /* PDFXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AC203F1F3AE6C500D46641 /* PDFXKit.framework */; };
 		B3AC20501F3AE6C500D46641 /* PDFXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AC20421F3AE6C500D46641 /* PDFXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3AE89A91F3F5624001464C7 /* PDFXPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AE89A21F3F557A001464C7 /* PDFXPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,7 +106,6 @@
 		B3D17AFE1F419EC900526C56 /* PDFXView.m in Sources */ = {isa = PBXBuildFile; fileRef = B38DD6FD1F3B20D000C435A8 /* PDFXView.m */; };
 		B3D17B031F41F29200526C56 /* PDFXAnnotationPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D17AFF1F41F19B00526C56 /* PDFXAnnotationPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3D17B041F41F2D300526C56 /* PDFXAnnotationPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D17B011F41F19C00526C56 /* PDFXAnnotationPopup.m */; };
-		B3DF8BE41F55907100D53379 /* PDFXKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3AC203F1F3AE6C500D46641 /* PDFXKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3EB3D6A1F456E650077C884 /* PDFXPlatform+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EB3D691F456D770077C884 /* PDFXPlatform+Private.h */; };
 		B3EB3D6B1F456E690077C884 /* PDFXSelection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C124591F448DC0006DD6A6 /* PDFXSelection+Private.h */; };
 /* End PBXBuildFile section */
@@ -135,27 +120,11 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		B3DF8BE11F55905300D53379 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				849890A323F86F23006AAD59 /* PSPDFKitUI.xcframework in Embed Frameworks */,
-				849890A123F86F21006AAD59 /* PSPDFKit.xcframework in Embed Frameworks */,
-				B3DF8BE41F55907100D53379 /* PDFXKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		843F386A23F8947B00E0F579 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/PDFKit.framework; sourceTree = DEVELOPER_DIR; };
 		8498909A23F86DB3006AAD59 /* PSPDFKitUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PSPDFKitUI.xcframework; sourceTree = "<group>"; };
 		8498909B23F86DB3006AAD59 /* PSPDFKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PSPDFKit.xcframework; sourceTree = "<group>"; };
 		B33361B71F5D0C7500A3F726 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
-		B335CBDC1F5714DA0079F177 /* PDFs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PDFs; sourceTree = "<group>"; };
 		B340BCD21F3F8E54001D4992 /* PDFXDocumentDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFXDocumentDelegate.h; sourceTree = "<group>"; };
 		B343B4FE1F4575820040B726 /* PDFXDocument+Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXDocument+Swift.h"; sourceTree = "<group>"; };
 		B343B5251F45794C0040B726 /* PDFXView+Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXView+Swift.h"; sourceTree = "<group>"; };
@@ -194,12 +163,6 @@
 		B34D11C11F3E425200F3337E /* PDFXPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXPageTests.swift; sourceTree = "<group>"; };
 		B34D11C21F3E425200F3337E /* PDFXSelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXSelectionTests.swift; sourceTree = "<group>"; };
 		B34D11DF1F3E53F500F3337E /* PDFXKitObjectiveCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFXKitObjectiveCTests.m; sourceTree = "<group>"; };
-		B36273151F3AF0A200459783 /* PDFXKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFXKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B36273171F3AF0A200459783 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
-		B36273191F3AF0A200459783 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-		B362731C1F3AF0A200459783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B36273211F3AF0A200459783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B36273231F3AF0A200459783 /* PDFXKitExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDFXKitExample-Info.plist"; sourceTree = "<group>"; };
 		B38DD6FD1F3B20D000C435A8 /* PDFXView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFXView.m; sourceTree = "<group>"; };
 		B38DD7011F3B263300C435A8 /* PDFXKit+PSPDFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXKit+PSPDFKit.h"; sourceTree = "<group>"; };
 		B38DD7031F3B26BA00C435A8 /* PDFXDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFXDocument.m; sourceTree = "<group>"; };
@@ -234,10 +197,6 @@
 		B39445051F3CF08D00620E45 /* PDFXBorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFXBorder.m; sourceTree = "<group>"; };
 		B39445061F3CF08D00620E45 /* PDFXActionResetForm+PSPDFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXActionResetForm+PSPDFKit.h"; sourceTree = "<group>"; };
 		B39445581F3CF3C700620E45 /* PDFXCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXCompatibility.swift; sourceTree = "<group>"; };
-		B395B17A1F5961D8008F6959 /* combine-binaries.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "combine-binaries.sh"; sourceTree = "<group>"; };
-		B395B17B1F5961D8008F6959 /* split-binary.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "split-binary.sh"; sourceTree = "<group>"; };
-		B395B17C1F5961D8008F6959 /* strip-bitcode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "strip-bitcode.sh"; sourceTree = "<group>"; };
-		B395B17D1F5961D8008F6959 /* strip-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "strip-framework.sh"; sourceTree = "<group>"; };
 		B3AC203F1F3AE6C500D46641 /* PDFXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PDFXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AC20421F3AE6C500D46641 /* PDFXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFXKit.h; sourceTree = "<group>"; };
 		B3AC20431F3AE6C500D46641 /* PDFXKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDFXKit-Info.plist"; sourceTree = "<group>"; };
@@ -266,28 +225,17 @@
 		B3D17AFF1F41F19B00526C56 /* PDFXAnnotationPopup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFXAnnotationPopup.h; sourceTree = "<group>"; };
 		B3D17B001F41F19C00526C56 /* PDFXAnnotationPopup+PSPDFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXAnnotationPopup+PSPDFKit.h"; sourceTree = "<group>"; };
 		B3D17B011F41F19C00526C56 /* PDFXAnnotationPopup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFXAnnotationPopup.m; sourceTree = "<group>"; };
-		B3DF8BE71F55A86900D53379 /* CopyFrameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CopyFrameworks.sh; sourceTree = "<group>"; };
 		B3EB3D691F456D770077C884 /* PDFXPlatform+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXPlatform+Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B36273121F3AF0A200459783 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				849890A223F86F23006AAD59 /* PSPDFKitUI.xcframework in Frameworks */,
-				B36273281F3AF0F000459783 /* PDFXKit.framework in Frameworks */,
-				849890A023F86F21006AAD59 /* PSPDFKit.xcframework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3AC203B1F3AE6C500D46641 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843F386B23F8947B00E0F579 /* PDFKit.framework in Frameworks */,
 				8498909E23F86EAC006AAD59 /* PSPDFKit.xcframework in Frameworks */,
 				8498909F23F86EAC006AAD59 /* PSPDFKitUI.xcframework in Frameworks */,
-				B33361B81F5D0C7500A3F726 /* PDFKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,53 +365,18 @@
 			isa = PBXGroup;
 			children = (
 				B3AC20431F3AE6C500D46641 /* PDFXKit-Info.plist */,
-				B36273231F3AF0A200459783 /* PDFXKitExample-Info.plist */,
 				B3AC204F1F3AE6C500D46641 /* PDFXKitTests-Info.plist */,
 			);
 			path = InfoPlists;
 			sourceTree = "<group>";
 		};
-		B36273101F3AF06B00459783 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				B36273171F3AF0A200459783 /* AppController.swift */,
-				B36273191F3AF0A200459783 /* MainController.swift */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		B36273271F3AF0C600459783 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				B36273201F3AF0A200459783 /* LaunchScreen.storyboard */,
-				B362731B1F3AF0A200459783 /* Main.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		B395B1791F5961D8008F6959 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B395B17A1F5961D8008F6959 /* combine-binaries.sh */,
-				B395B17B1F5961D8008F6959 /* split-binary.sh */,
-				B395B17C1F5961D8008F6959 /* strip-bitcode.sh */,
-				B395B17D1F5961D8008F6959 /* strip-framework.sh */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		B3AC20351F3AE6C400D46641 = {
 			isa = PBXGroup;
 			children = (
-				B395B1791F5961D8008F6959 /* Resources */,
-				B36273101F3AF06B00459783 /* Example */,
+				B36272F21F3AE76E00459783 /* Sources */,
 				B3AD77561F4CA5040002E789 /* Frameworks */,
 				B36272F61F3AE79800459783 /* InfoPlists */,
-				B335CBDC1F5714DA0079F177 /* PDFs */,
 				B3AC20401F3AE6C500D46641 /* Products */,
-				B3DF8BE61F55A86900D53379 /* Scripts */,
-				B36272F21F3AE76E00459783 /* Sources */,
-				B36273271F3AF0C600459783 /* Storyboards */,
 				B36272F31F3AE77500459783 /* Tests */,
 			);
 			sourceTree = "<group>";
@@ -473,7 +386,6 @@
 			children = (
 				B3AC203F1F3AE6C500D46641 /* PDFXKit.framework */,
 				B3AC20481F3AE6C500D46641 /* PDFXKitTests.xctest */,
-				B36273151F3AF0A200459783 /* PDFXKitExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -482,18 +394,11 @@
 			isa = PBXGroup;
 			children = (
 				B33361B71F5D0C7500A3F726 /* PDFKit.framework */,
+				843F386A23F8947B00E0F579 /* PDFKit.framework */,
 				8498909B23F86DB3006AAD59 /* PSPDFKit.xcframework */,
 				8498909A23F86DB3006AAD59 /* PSPDFKitUI.xcframework */,
 			);
 			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		B3DF8BE61F55A86900D53379 /* Scripts */ = {
-			isa = PBXGroup;
-			children = (
-				B3DF8BE71F55A86900D53379 /* CopyFrameworks.sh */,
-			);
-			path = Scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,25 +476,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B36273141F3AF0A200459783 /* PDFXKitExample */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B36273241F3AF0A200459783 /* Build configuration list for PBXNativeTarget "PDFXKitExample" */;
-			buildPhases = (
-				B36273111F3AF0A200459783 /* Sources */,
-				B36273121F3AF0A200459783 /* Frameworks */,
-				B36273131F3AF0A200459783 /* Resources */,
-				B3C722921F55CD92009F5BE0 /* Copy Frameworks */,
-				B3DF8BE11F55905300D53379 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PDFXKitExample;
-			productName = PDFXKitExample;
-			productReference = B36273151F3AF0A200459783 /* PDFXKitExample.app */;
-			productType = "com.apple.product-type.application";
-		};
 		B3AC203E1F3AE6C500D46641 /* PDFXKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3AC20531F3AE6C500D46641 /* Build configuration list for PBXNativeTarget "PDFXKit" */;
@@ -597,7 +483,6 @@
 				B3AC203A1F3AE6C500D46641 /* Sources */,
 				B3AC203B1F3AE6C500D46641 /* Frameworks */,
 				B3AC203C1F3AE6C500D46641 /* Headers */,
-				B3AC203D1F3AE6C500D46641 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -636,11 +521,6 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "PSPDFKit GmbH";
 				TargetAttributes = {
-					B36273141F3AF0A200459783 = {
-						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = YARQNYSS42;
-						LastSwiftMigration = 1020;
-					};
 					B3AC203E1F3AE6C500D46641 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = YARQNYSS42;
@@ -670,33 +550,11 @@
 			targets = (
 				B3AC203E1F3AE6C500D46641 /* PDFXKit */,
 				B3AC20471F3AE6C500D46641 /* PDFXKitTests */,
-				B36273141F3AF0A200459783 /* PDFXKitExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B36273131F3AF0A200459783 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B335CBDD1F5714E40079F177 /* PDFs in Resources */,
-				B36273221F3AF0A200459783 /* LaunchScreen.storyboard in Resources */,
-				B362731D1F3AF0A200459783 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B3AC203D1F3AE6C500D46641 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B395B1811F5961E2008F6959 /* strip-framework.sh in Resources */,
-				B395B17F1F5961DD008F6959 /* split-binary.sh in Resources */,
-				B395B17E1F5961DB008F6959 /* combine-binaries.sh in Resources */,
-				B395B1801F5961E0008F6959 /* strip-bitcode.sh in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3AC20461F3AE6C500D46641 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -706,33 +564,7 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		B3C722921F55CD92009F5BE0 /* Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# See comments within the script for a details.\n$PROJECT_DIR/Scripts/CopyFrameworks.sh";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		B36273111F3AF0A200459783 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B362731A1F3AF0A200459783 /* MainController.swift in Sources */,
-				B36273181F3AF0A200459783 /* AppController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3AC203A1F3AE6C500D46641 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -792,96 +624,7 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		B362731B1F3AF0A200459783 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B362731C1F3AF0A200459783 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B36273201F3AF0A200459783 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B36273211F3AF0A200459783 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		B36273251F3AF0A200459783 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = YARQNYSS42;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "InfoPlists/PDFXKitExample-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKitExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B36273261F3AF0A200459783 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = YARQNYSS42;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "InfoPlists/PDFXKitExample-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKitExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		B3AC20511F3AE6C500D46641 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1100,15 +843,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B36273241F3AF0A200459783 /* Build configuration list for PBXNativeTarget "PDFXKitExample" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B36273251F3AF0A200459783 /* Debug */,
-				B36273261F3AF0A200459783 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B3AC20391F3AE6C400D46641 /* Build configuration list for PBXProject "PDFXKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
