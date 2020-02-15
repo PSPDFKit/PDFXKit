@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2017 PSPDFKit GmbH. All rights reserved.
+# Copyright (c) 2017-2020 PSPDFKit GmbH. All rights reserved.
 #
 # The PDFXKit is licensed with a modified BSD license. Please see License for
 # details. This notice may not be removed from this file.
@@ -51,8 +51,8 @@ VERBOSE = ENV['verbose'] || false
 
 # ------------------------------------------------------------- Constants ------
 
-SDK_SIM = "iphonesimulator12.2"
-SDK_IOS = "iphoneos12.2"
+SDK_SIM = "iphonesimulator13.2"
+SDK_IOS = "iphoneos13.2"
 XCODE_FLAGS = "-configuration Release -scheme PDFXKit -derivedDataPath \"#{DIRECTORY}/Xcode\""
 
 # ---------------------------------------------------------------- Colors ------
@@ -90,8 +90,8 @@ task :check do
     https://pspdfkit.com
   """
 
-  tell "Checking whether iOS SDK 12 present"
-  assert `xcrun xcodebuild -showsdks | grep iphoneos12`.to_s.strip.length > 0, """
+  tell "Checking whether iOS SDK 13 present"
+  assert `xcrun xcodebuild -showsdks | grep iphoneos13`.to_s.strip.length > 0, """
   #{ERROR} couldn't find iOS 12 SDK. Please make sure you have the appropriate
   version of Xcode installed and use xcode-select to make it the default on
   the command line.
