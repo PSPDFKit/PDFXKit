@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2017 PSPDFKit GmbH. All rights reserved.
+# Copyright (c) 2017-2020 PSPDFKit GmbH. All rights reserved.
 #
 # The PDFXKit is licensed with a modified BSD license. Please see License for
 # details. This notice may not be removed from this file.
@@ -92,29 +92,29 @@ task :check do
   """
 end
 
-desc "Compile PDFXKit framework (simulator)"
+desc "Archive PDFXKit (simulator)"
 task 'compile:simulator' => [:prepare, :check] do
-  tell "Compiling PSPDFKit framework (simulator)"
+  tell "Archiving PSPDFKit (simulator)"
   run "xcrun xcodebuild -destination 'generic/platform=iOS' -archivePath #{ARCHIVE_PATH_SIMULATOR} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
-desc "Compile PDFXKit framework (device)"
+desc "Archive PDFXKit (device)"
 task 'compile:device' => [:prepare, :check] do
-  tell "Compiling PSPDFKit framework (device)"
+  tell "Archiving PSPDFKit (device)"
   run "xcrun xcodebuild -destination 'generic/platform=iOS Simulator' -archivePath #{ARCHIVE_PATH_DEVICE} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
-desc "Compile PDFXKit framework (Mac Catalyst)"
+desc "Archive PDFXKit (Mac Catalyst)"
 task 'compile:catalyst' => [:prepare, :check] do
-  tell "Compiling PSPDFKit framework (Mac Catalyst)"
+  tell "Archiving PSPDFKit (Mac Catalyst)"
   run "xcrun xcodebuild -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' -archivePath #{ARCHIVE_PATH_MAC_CATALYST} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
-desc "Compile univeral PDFXKit framework"
+desc "Creating the PDFXKit XCFramework"
 task :compile => ['compile:simulator', 'compile:device', 'compile:catalyst'] do
   # TODO: also create universal dSYM file (either by stripping after lipo or
   # combining both dSYM files).
-  tell "Compiling PSPDFKit framework (universal)"
+  tell "Creating PDFXKit XCFramework (universal)"
   run "rm -rf #{DIRECTORY}/PDFXKit.xcframework"
   run "xcodebuild -create-xcframework -framework #{ARCHIVE_PATH_SIMULATOR}/Products/Library/Frameworks/PDFXKit.framework -framework #{ARCHIVE_PATH_DEVICE}/Products/Library/Frameworks/PDFXKit.framework -framework #{ARCHIVE_PATH_MAC_CATALYST}/Products/Library/Frameworks/PDFXKit.framework -output #{DIRECTORY}/PDFXKit.xcframework"
 end
