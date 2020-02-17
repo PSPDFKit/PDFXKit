@@ -3,8 +3,8 @@
 PDFXKit is a drop-in replacement for [Apple
 PDFKit](https://developer.apple.com/documentation/pdfkit) using the industry
 leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
-version requires [PSPDFKit 8 for
-iOS](https://pspdfkit.com/blog/2018/pspdfkit-ios-8-0/) and Xcode 10.
+version requires [PSPDFKit 9 for
+iOS](https://pspdfkit.com/blog/2019/pspdfkit-ios-9/) and Xcode 11.
 
 [![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-d6c93578.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
 
@@ -73,7 +73,7 @@ a dependency to your `Cartfile`.
 
 --------------------------------------------------------------------------------
 
-*PDFXKit requires Xcode 10 and later.*
+*PDFXKit requires Xcode 11 and later.*
 
 --------------------------------------------------------------------------------
 
@@ -94,15 +94,16 @@ project. Afterwards you should be able to build your project without errors.
 Next you'll have to adapt your project to use PDFXKit as described in Section
 [Switch to PDFXKit](#switch-to-pdfxkit).
 
-### Manual Set-Up
+### Manual Setup
 
-**Note:** manual set-up is only for experts, we assume you know what you are
+**Note:** manual setup is only for experts, we assume you know what you are
 doing. If you are unsure, please use CocoaPods or Carthage instead.
 
 First, build the PDFXKit framework:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
+* Replace `COCOAPODS_KEY` with your key and download the following the fat frameworks from here: https://customers.pspdfkit.com/cocoapods/COCOAPODS_KEY/pspdfkit/9.2.1.zip
+* Extract the zip file you downloaded and copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
 * Open the terminal and `cd` into the `PDFXKit` directory
 * Run `rake compile`
 
@@ -171,9 +172,10 @@ annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
 If you want to work on PDFXKit, perform the following steps:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
+* Replace `COCOAPODS_KEY` with your key and download the following the fat frameworks from here: https://customers.pspdfkit.com/cocoapods/COCOAPODS_KEY/pspdfkit/9.2.1.zip
+* Extract the zip file you downloaded and copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
 * Open `PDFXKit.xcodeproj` in Xcode
-* Build & run `PDFXKitExample` (iOS)
+* Build & Run `PDFXKitExample` (iOS)
 
 Please [sign our CLA agreement](https://pspdfkit.com/guides/web/current/miscellaneous/contributing/) so we can accept your pull requests.
 
