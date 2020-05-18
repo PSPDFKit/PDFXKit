@@ -6,7 +6,7 @@ leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
 version requires [PSPDFKit 9 for
 iOS](https://pspdfkit.com/blog/2019/pspdfkit-ios-9/) and Xcode 11.
 
-[![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-d6c93578.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
+[![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-7b7a75f5.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
 
 **Note**: [PSPDFKit](http://pspdfkit.com) is a *commercial* product and requires
 a [paid license](https://pspdfkit.com/sales/). Please sign up for a [free trial](http://pspdfkit.com/try)
