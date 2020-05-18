@@ -33,6 +33,12 @@ as well as the
 [Migrating from Apple PDFKit](https://pspdfkit.com/guides/ios/current/migration-guides/migrating-from-apple-pdfkit/)
 guide.
 
+## Support, Issues and License Questions
+
+PSPDFKit offers support for customers with an active SDK license via https://pspdfkit.com/support/request/
+
+Are you [evaluating our SDK](https://pspdfkit.com/try/)? That's great, we're happy to help out! To make sure this is fast, please use a work email and have someone from your company fill out our sales form: https://pspdfkit.com/sales/
+
 ## Getting Started
 
 Make sure you have access to PSPDFKit either as a customer or by signing up for
