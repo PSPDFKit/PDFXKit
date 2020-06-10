@@ -32,7 +32,7 @@ Pod::Spec.new do |spec|
   spec.public_header_files = "Sources/**/*.h"
 
   spec.requires_arc = true
-
+  spec.swift_version = '5.0'
   spec.frameworks = "PDFKit"
   spec.dependency "PSPDFKit"
 end
