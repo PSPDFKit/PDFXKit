@@ -24,8 +24,8 @@ Pod::Spec.new do |spec|
   spec.author = { "PSPDFKit GmbH" => "info@pspdfkit.com" }
   spec..social_media_url = "http://twitter.com/pspdfkit"
 
-  spec.platform = :ios, "11.0"
-  spec.ios.deployment_target = "9.0"
+  spec.platform = :ios, "12.0"
+  spec.ios.deployment_target = "12.0"
 
   spec.source = { :git => "git@github.com:PSPDFKit/PDFXKit.git", :branch => "master" }
   spec.source_files = "Sources", "Sources/**/*.{h,m,swift}"
