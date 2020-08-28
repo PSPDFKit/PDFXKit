@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		843F386C23F894DA00E0F579 /* PDFXKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3758B23F889D400844C6C /* PDFXKit.xcframework */; };
-		843F386D23F894DA00E0F579 /* PDFXKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3758B23F889D400844C6C /* PDFXKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		842147D524F98AFE00B939BC /* PDFXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842147CF24F98A7800B939BC /* PDFXKit.framework */; };
+		842147D624F98AFE00B939BC /* PDFXKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 842147CF24F98A7800B939BC /* PDFXKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84B3755A23F8857700844C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3755823F8857700844C6C /* Main.storyboard */; };
 		84B3755C23F8857800844C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B3755B23F8857800844C6C /* Assets.xcassets */; };
 		84B3755F23F8857800844C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3755D23F8857800844C6C /* LaunchScreen.storyboard */; };
@@ -21,6 +21,23 @@
 		84B3757723F8865300844C6C /* PDFs in Resources */ = {isa = PBXBuildFile; fileRef = 84B3757623F8865300844C6C /* PDFs */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		842147CE24F98A7800B939BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842147C924F98A7800B939BC /* PDFXKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B3AC203F1F3AE6C500D46641;
+			remoteInfo = PDFXKit;
+		};
+		842147D024F98A7800B939BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842147C924F98A7800B939BC /* PDFXKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B3AC20481F3AE6C500D46641;
+			remoteInfo = PDFXKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		84B3756F23F8863100844C6C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -30,7 +47,7 @@
 			files = (
 				84B3757523F8863400844C6C /* PSPDFKitUI.xcframework in Embed Frameworks */,
 				84B3757323F8863400844C6C /* PSPDFKit.xcframework in Embed Frameworks */,
-				843F386D23F894DA00E0F579 /* PDFXKit.xcframework in Embed Frameworks */,
+				842147D624F98AFE00B939BC /* PDFXKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		842147C924F98A7800B939BC /* PDFXKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PDFXKit.xcodeproj; path = ../PDFXKit.xcodeproj; sourceTree = "<group>"; };
 		84B3754F23F8857700844C6C /* PDFXKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFXKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3755923F8857700844C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84B3755B23F8857800844C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +68,6 @@
 		84B3757123F8863400844C6C /* PSPDFKitUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PSPDFKitUI.xcframework; path = ../Frameworks/PSPDFKitUI.xcframework; sourceTree = "<group>"; };
 		84B3757623F8865300844C6C /* PDFs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PDFs; path = ../PDFs; sourceTree = "<group>"; };
 		84B3757823F8868900844C6C /* PDFXKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFXKitExample.entitlements; sourceTree = "<group>"; };
-		84B3758B23F889D400844C6C /* PDFXKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PDFXKit.xcframework; path = ../Build/PDFXKit.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,16 +77,26 @@
 			files = (
 				84B3757423F8863400844C6C /* PSPDFKitUI.xcframework in Frameworks */,
 				84B3757223F8863400844C6C /* PSPDFKit.xcframework in Frameworks */,
-				843F386C23F894DA00E0F579 /* PDFXKit.xcframework in Frameworks */,
+				842147D524F98AFE00B939BC /* PDFXKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842147CA24F98A7800B939BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				842147CF24F98A7800B939BC /* PDFXKit.framework */,
+				842147D124F98A7800B939BC /* PDFXKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		84B3754623F8857700844C6C = {
 			isa = PBXGroup;
 			children = (
+				842147C924F98A7800B939BC /* PDFXKit.xcodeproj */,
 				84B3755123F8857700844C6C /* PDFXKitExample */,
 				84B3757623F8865300844C6C /* PDFs */,
 				84B3755023F8857700844C6C /* Products */,
@@ -103,7 +130,6 @@
 		84B3756B23F8863100844C6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				84B3758B23F889D400844C6C /* PDFXKit.xcframework */,
 				84B3757023F8863400844C6C /* PSPDFKit.xcframework */,
 				84B3757123F8863400844C6C /* PSPDFKitUI.xcframework */,
 			);
@@ -138,7 +164,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Rad Azzouz";
 				TargetAttributes = {
 					84B3754E23F8857700844C6C = {
@@ -158,12 +184,35 @@
 			mainGroup = 84B3754623F8857700844C6C;
 			productRefGroup = 84B3755023F8857700844C6C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 842147CA24F98A7800B939BC /* Products */;
+					ProjectRef = 842147C924F98A7800B939BC /* PDFXKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				84B3754E23F8857700844C6C /* PDFXKitExample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		842147CF24F98A7800B939BC /* PDFXKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PDFXKit.framework;
+			remoteRef = 842147CE24F98A7800B939BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		842147D124F98A7800B939BC /* PDFXKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PDFXKitTests.xctest;
+			remoteRef = 842147D024F98A7800B939BC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		84B3754D23F8857700844C6C /* Resources */ = {
@@ -237,6 +286,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -298,6 +348,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

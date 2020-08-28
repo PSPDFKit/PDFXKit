@@ -46,16 +46,15 @@ require 'rubygems'
 # --------------------------------------------------------------- Options ------
 
 NAME = ENV['name'] || ""
-DIRECTORY = ENV['directory'] || "Build"
+DIRECTORY = File.expand_path(ENV['directory'] || "Build")
 VERBOSE = ENV['verbose'] || false
 
 # ------------------------------------------------------------- Constants ------
 
 XCODE_FLAGS = "-configuration Release -scheme PDFXKit archive SKIP_INSTALL=NO"
-ARCHIVE_PATH_SIMULATOR = "\"#{DIRECTORY}\"/Xcode/Archives/PDFXKit.framework-ios-x86_64-simulator.xcarchive"
+ARCHIVE_PATH_SIMULATOR = "\"#{DIRECTORY}\"/Xcode/Archives/PDFXKit.framework-ios-arm64_x86_64-simulator.xcarchive"
 ARCHIVE_PATH_DEVICE = "\"#{DIRECTORY}\"/Xcode/Archives/PDFXKit.framework-ios-arm64.xcarchive"
-ARCHIVE_PATH_MAC_CATALYST = "\"#{DIRECTORY}\"/Xcode/Archives/PDFXKit.framework-ios-x86_64-maccatalyst.xcarchive"
-DSYMS_PATH = "\"#{DIRECTORY}\"/PDFXKit-dSYMs"
+ARCHIVE_PATH_MAC_CATALYST = "\"#{DIRECTORY}\"/Xcode/Archives/PDFXKit.framework-ios-arm64_x86_64-maccatalyst.xcarchive"
 
 # ---------------------------------------------------------------- Colors ------
 
@@ -96,13 +95,13 @@ end
 desc "Archive PDFXKit (simulator)"
 task 'compile:simulator' => [:prepare, :check] do
   tell "Archiving PSPDFKit (simulator)"
-  run "xcrun xcodebuild -destination 'generic/platform=iOS' -archivePath #{ARCHIVE_PATH_SIMULATOR} #{XCODE_FLAGS}", :time => true, :quiet => true
+  run "xcrun xcodebuild -destination 'generic/platform=iOS Simulator' -archivePath #{ARCHIVE_PATH_SIMULATOR} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Archive PDFXKit (device)"
 task 'compile:device' => [:prepare, :check] do
   tell "Archiving PSPDFKit (device)"
-  run "xcrun xcodebuild -destination 'generic/platform=iOS Simulator' -archivePath #{ARCHIVE_PATH_DEVICE} #{XCODE_FLAGS}", :time => true, :quiet => true
+  run "xcrun xcodebuild -destination 'generic/platform=iOS' -archivePath #{ARCHIVE_PATH_DEVICE} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Archive PDFXKit (Mac Catalyst)"
@@ -112,16 +111,12 @@ task 'compile:catalyst' => [:prepare, :check] do
 end
 
 desc "Creating the PDFXKit XCFramework"
-task :compile => ['compile:simulator', 'compile:device', 'compile:catalyst'] do
-  tell "Copying dSYMs"
-  run "rm -rf #{DSYMS_PATH}"
-  run "mkdir #{DSYMS_PATH}"
-  run "cp -r #{ARCHIVE_PATH_SIMULATOR}/dSYMs/PDFXKit.framework.dSYM #{DSYMS_PATH}/PDFXKit.framework.ios-x86_64-simulator.dSYM"
-  run "cp -r #{ARCHIVE_PATH_DEVICE}/dSYMs/PDFXKit.framework.dSYM #{DSYMS_PATH}/PDFXKit.framework.ios-arm64.dSYM"
-  run "cp -r #{ARCHIVE_PATH_MAC_CATALYST}/dSYMs/PDFXKit.framework.dSYM #{DSYMS_PATH}/PDFXKit.framework.ios-x86_64-maccatalyst.dSYM"
+task :compile  => ['clean', 'compile:simulator', 'compile:device', 'compile:catalyst'] do
   tell "Creating the PDFXKit XCFramework"
-  run "rm -rf #{DIRECTORY}/PDFXKit.xcframework"
-  run "xcodebuild -create-xcframework -framework #{ARCHIVE_PATH_SIMULATOR}/Products/Library/Frameworks/PDFXKit.framework -framework #{ARCHIVE_PATH_DEVICE}/Products/Library/Frameworks/PDFXKit.framework -framework #{ARCHIVE_PATH_MAC_CATALYST}/Products/Library/Frameworks/PDFXKit.framework -output #{DIRECTORY}/PDFXKit.xcframework"
+  uuids = uuid("#{ARCHIVE_PATH_DEVICE}/Products/Library/Frameworks/PDFXKit.framework/PDFXKit")
+  uuid = uuids["arm64"]
+  bcsymbolmap = "#{uuid}.bcsymbolmap"
+  run "xcodebuild -create-xcframework -framework #{ARCHIVE_PATH_SIMULATOR}/Products/Library/Frameworks/PDFXKit.framework -debug-symbols #{ARCHIVE_PATH_SIMULATOR}/dSYMs/PDFXKit.framework.dSYM -framework #{ARCHIVE_PATH_DEVICE}/Products/Library/Frameworks/PDFXKit.framework -debug-symbols #{ARCHIVE_PATH_DEVICE}/dSYMs/PDFXKit.framework.dSYM -debug-symbols #{ARCHIVE_PATH_DEVICE}/BCSymbolMaps/#{bcsymbolmap} -framework #{ARCHIVE_PATH_MAC_CATALYST}/Products/Library/Frameworks/PDFXKit.framework -debug-symbols #{ARCHIVE_PATH_MAC_CATALYST}/dSYMs/PDFXKit.framework.dSYM -output #{DIRECTORY}/PDFXKit.xcframework"
 end
 
 desc "show help"
@@ -169,6 +164,21 @@ def run(command, options = {})
 
   puts "Finished in #{duration}" if options[:time]
   success
+end
+
+def uuid(binary)
+  # dwarfdump output:
+  # UUID: 9EF74434-5B52-377F-BE1F-10D2C4F66BD1 (arm64) Build/Xcode/Archives/PDFXKit.framework-ios-arm64.xcarchive/Products/Library/Frameworks/PDFXKit.framework/PDFXKit
+  dwarfdump = %x[dwarfdump -u #{binary}].lines
+  uuids = dwarfdump.map { |line| line.split[1] }
+  archs = dwarfdump.map do |line|
+    archs = line.split[2]
+    # Remove brackets by removing first and last character
+    archs[1..-2]
+  end
+
+  # Use architectures as keys and UUIDs as values
+  Hash[archs.zip(uuids)]
 end
 
 def put(string)
