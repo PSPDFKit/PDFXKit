@@ -54,7 +54,7 @@ VERBOSE = ENV['verbose'] || false
 XCODE_FLAGS = "-configuration Release -scheme PDFXKit archive SKIP_INSTALL=NO"
 ARCHIVE_PATH_SIMULATOR = "\"#{DIRECTORY}\"/Xcode/Archives/PDFXKit.framework-ios-arm64_x86_64-simulator.xcarchive"
 ARCHIVE_PATH_DEVICE = "\"#{DIRECTORY}\"/Xcode/Archives/PDFXKit.framework-ios-arm64.xcarchive"
-ARCHIVE_PATH_MAC_CATALYST = "\"#{DIRECTORY}\"/Xcode/Archives/PDFXKit.framework-ios-arm64_x86_64-maccatalyst.xcarchive"
+ARCHIVE_PATH_MAC_CATALYST = "\"#{DIRECTORY}\"/Xcode/Archives/PDFXKit.framework-ios-x86_64-maccatalyst.xcarchive"
 
 # ---------------------------------------------------------------- Colors ------
 
