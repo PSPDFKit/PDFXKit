@@ -53,9 +53,6 @@ PDFXKit as a dependency to your `Podfile`.
 ``` Ruby
 # Replace `YourAppName` with your app's target name.
 target :YourAppName do
-  use_frameworks!
-
-  pod 'PSPDFKit', podspec: 'https://customers.pspdfkit.com/pspdfkit-ios/latest-framework.podspec'
   pod 'PDFXKit', :git => "git@github.com:PSPDFKit/PDFXKit.git", :branch => "master"
 end
 ```
@@ -85,7 +82,6 @@ the `PSPDFKit.xcframework`, `PSPDFKitUI.xcframework`, and `PDFXKit.xcframework` 
   [Integrating the Dynamic Framework](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/#toc_integrating-the-dynamic-framework),
   and add PDFXKit to your app similar to how you did it with PSPDFKit above. You
   may also want to set up your [test targets](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/#toc_test-targets) accordingly.
-  **Note:** make sure to adapt the path for the "Run Script" build phase for PDFXKit.
 
 You should now be able to build & run your app.
 
