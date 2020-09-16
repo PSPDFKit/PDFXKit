@@ -3,8 +3,8 @@
 PDFXKit is a drop-in replacement for [Apple
 PDFKit](https://developer.apple.com/documentation/pdfkit) using the industry
 leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
-version requires [PSPDFKit 9 for
-iOS](https://pspdfkit.com/blog/2019/pspdfkit-ios-9) and Xcode 11.5.
+version requires [PSPDFKit 10 for
+iOS](https://pspdfkit.com/blog/2020/pspdfkit-10-for-ios-14) and Xcode 12.
 
 [![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-7b7a75f5.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
 
