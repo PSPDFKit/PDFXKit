@@ -136,7 +136,6 @@ annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
 * Copy `PSPDFKit.xcframework` and `PSPDFKitUI.xcframework` into `PDFXKit/Frameworks`
-* Run `rake compile` to create the `PDFXKit.xcframework`
 * Open `Example/PDFXKitExample.xcodeproj` in Xcode
 * Build & Run `PDFXKitExample`
 
