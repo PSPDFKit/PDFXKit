@@ -7,7 +7,7 @@
 
 Pod::Spec.new do |spec|
   spec.name = "PDFXKit"
-  spec.version = "0.0.2"
+  spec.version = "0.1.0"
   spec.summary = "Apple PDFKit source-compatible wrapper for PSPDFKit."
   spec.documentation_url = 'https://pspdfkit.com/guides/ios/current/migration-guides/migrating-from-apple-pdfkit/'
 
