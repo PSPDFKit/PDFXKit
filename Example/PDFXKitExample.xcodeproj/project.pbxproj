@@ -147,6 +147,7 @@
 				84B3754C23F8857700844C6C /* Frameworks */,
 				84B3754D23F8857700844C6C /* Resources */,
 				84B3756F23F8863100844C6C /* Embed Frameworks */,
+				8446F95A25685BE00061B138 /* Clear Quarantine Attribute */,
 			);
 			buildRules = (
 			);
@@ -227,6 +228,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8446F95A25685BE00061B138 /* Clear Quarantine Attribute */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Clear Quarantine Attribute";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# For Mac Catalyst, Xcode is finding the XCFrameworks extracted frameworks in the build directory\n# and trying to link them instead of the signed frameworks in the app bundle.\n# We remove the quarantine attribute that could have been added during download\n# so that this doesn't lead to a warning when the app is launched via Xcode.\nif [ \"${IS_MACCATALYST}\" = \"YES\" ]; then\n    for framework in $TARGET_BUILD_DIR/*.framework; do\n        if [ -d \"$framework\" ]; then\n            xattr -d -r com.apple.quarantine \"$framework\"\n        fi\n    done\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84B3754B23F8857700844C6C /* Sources */ = {
