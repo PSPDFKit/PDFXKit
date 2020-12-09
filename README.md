@@ -47,15 +47,13 @@ a [free trial](https://pspdfkit.com/try/).
 ### Using CocoaPods
 
 We assume you are familiar with [CocoaPods](https://cocoapods.org), otherwise
-please consult the documentation first. You'll have to add PSPDFKit as well as
-PDFXKit as a dependency to your `Podfile`.
+please consult the documentation first. 
+
+First, you'll have to add PDFXKit as a dependency to your `Podfile`:
 
 ``` Ruby
 # Replace `YourAppName` with your app's target name.
 target :YourAppName do
-  use_frameworks!
-
-  pod 'PSPDFKit', podspec: 'https://customers.pspdfkit.com/pspdfkit-ios/latest.podspec'
   pod 'PDFXKit', :git => "git@github.com:PSPDFKit/PDFXKit.git", :branch => "master"
 end
 ```
