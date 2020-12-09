@@ -3,8 +3,8 @@
 PDFXKit is a drop-in replacement for [Apple
 PDFKit](https://developer.apple.com/documentation/pdfkit) using the industry
 leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
-version requires [PSPDFKit 9 for
-iOS](https://pspdfkit.com/blog/2019/pspdfkit-ios-9/) and Xcode 11.5.
+version requires [PSPDFKit 10 for
+iOS](https://pspdfkit.com/blog/2020/pspdfkit-10-for-ios-14) and Xcode 12.
 
 [![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-7b7a75f5.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
 
@@ -47,64 +47,35 @@ a [free trial](https://pspdfkit.com/try/).
 ### Using CocoaPods
 
 We assume you are familiar with [CocoaPods](https://cocoapods.org), otherwise
-please consult the documentation first. You'll have to add PSPDFKit as well as
-PDFXKit as a dependency to your `Podfile`.
+please consult the documentation first. 
+
+First, you'll have to add PDFXKit as a dependency to your `Podfile`:
 
 ``` Ruby
 # Replace `YourAppName` with your app's target name.
 target :YourAppName do
-  use_frameworks!
-
-  pod 'PSPDFKit', podspec: 'https://customers.pspdfkit.com/pspdfkit-ios/latest-framework.podspec'
   pod 'PDFXKit', :git => "git@github.com:PSPDFKit/PDFXKit.git", :branch => "master"
 end
 ```
-
-**Note:** make sure to replace `YourAppName` with your actual app name.
 
 Now run `pod install`. Afterwards you should be able to build & run your project
 without errors. Next you'll have to adapt your project to use PDFXKit as
 described in Section [Switch to PDFXKit](#switch-to-pdfxkit).
 
-### Using Carthage
-
-We assume you are familiar with
-[Carthage](https://github.com/Carthage/Carthage), otherwise please consult the
-Carthage documentation first. You'll have to add PSPDFKit as well as PDFXKit as
-a dependency to your `Cartfile`.
-
---------------------------------------------------------------------------------
-
-*PDFXKit requires Xcode 11.5 and later.*
-
---------------------------------------------------------------------------------
-
-``` Ruby
-binary "https://customers.pspdfkit.com/pspdfkit-ios.json"
-git "git@github.com:PSPDFKit/PDFXKit.git" "master"
-```
-
-Now follow the regular [Carthage setup routine](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
-to add `PSPDFKit.framework`, `PSPDFKitUI.framework`, and `PDFXKit.framework` as a dependency to your
-project. Afterwards you should be able to build your project without errors.
-Next you'll have to adapt your project to use PDFXKit as described in Section
-[Switch to PDFXKit](#switch-to-pdfxkit).
-
 ### Manual Setup
 
 **Note:** manual setup is only for experts, we assume you know what you are
-doing. If you are unsure, please use CocoaPods or Carthage instead.
+doing. If you are unsure, please use CocoaPods instead.
 
 First, build the PDFXKit framework:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Download the PSPDFKit fat frameworks from here: https://customers.pspdfkit.com/pspdfkit-ios/latest-framework.zip
-* Extract the zip file you downloaded and copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
+* Copy `PSPDFKit.xcframework` and `PSPDFKitUI.xcframework` into `PDFXKit/Frameworks`
 * Open the terminal and `cd` into the `PDFXKit` directory
 * Run `rake compile`
 
-You should now have the `PDFXFKit.framework` in the `Build` folder. Next, add
-the `PSPDFKit.framework`, `PSPDFKitUI.framework`, and `PDFXKit.framework` to your project:
+You should now have the `PDFXFKit.xcframework` in the `Build` folder. Next, add
+the `PSPDFKit.xcframework`, `PSPDFKitUI.xcframework`, and `PDFXKit.xcframework` to your project:
 
 * Follow the [*Getting Started*](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/) instructions for PSPDFKit.
 
@@ -112,7 +83,6 @@ the `PSPDFKit.framework`, `PSPDFKitUI.framework`, and `PDFXKit.framework` to you
   [Integrating the Dynamic Framework](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/#toc_integrating-the-dynamic-framework),
   and add PDFXKit to your app similar to how you did it with PSPDFKit above. You
   may also want to set up your [test targets](https://pspdfkit.com/guides/ios/current/getting-started/integrating-pspdfkit/#toc_test-targets) accordingly.
-  **Note:** make sure to adapt the path for the "Run Script" build phase for PDFXKit.
 
 You should now be able to build & run your app.
 
@@ -163,19 +133,18 @@ look at the headers, all unimplemented or only partially implemented symbols are
 annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
 `PDFX_PARTIALLY_IMPLEMENTED_PRIORITY_...` macros.
 
-## Contributing
-
-If you want to work on PDFXKit, perform the following steps:
+## Run the Example Project
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Download the PSPDFKit fat frameworks from here: https://customers.pspdfkit.com/latest-framework.zip
-* Extract the zip file you downloaded and copy `PSPDFKit.framework` and `PSPDFKitUI.framework` into `PDFXKit/Frameworks`
-* Open `PDFXKit.xcodeproj` in Xcode
-* Build & Run `PDFXKitExample` (iOS)
+* Copy `PSPDFKit.xcframework` and `PSPDFKitUI.xcframework` into `PDFXKit/Frameworks`
+* Open `Example/PDFXKitExample.xcodeproj` in Xcode
+* Build & Run `PDFXKitExample`
+
+## Contributing
 
 Please [sign our CLA agreement](https://pspdfkit.com/guides/web/current/miscellaneous/contributing/) so we can accept your pull requests.
 
-Technical notes:
+## Technical notes
 
 * All PDFXKit source files live in the `Sources` directory, no nesting.
 
@@ -192,17 +161,6 @@ Technical notes:
   accessible by `PDFXDocument`.
 
 ## Known Issues
-
-**Linker warning when building without Carthage**. In order to support Carthage
-out-of-the-box with per-customer PSPDFKit URL, we've added the _parent_
-Carthage build folder to the "Framework Search Paths". When building without
-Carthage, this produces the following warning:
-
-```
-ld: warning: directory not found for option '-F/Users/konstantinbe/Projects/PSPDFKit/PDFXKit/../../../Carthage/Build/iOS'
-```
-
---------------------------------------------------------------------------------
 
 **Conflicting gesture recognizers**. Your gesture recognizers might be in
 conflict with some of PSPDFKit's recognizers. If so, implement the
