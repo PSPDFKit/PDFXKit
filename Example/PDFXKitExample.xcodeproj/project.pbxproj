@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		768DF373279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 768DF372279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf */; };
 		842147D524F98AFE00B939BC /* PDFXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842147CF24F98A7800B939BC /* PDFXKit.framework */; };
 		842147D624F98AFE00B939BC /* PDFXKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 842147CF24F98A7800B939BC /* PDFXKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84B3755A23F8857700844C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3755823F8857700844C6C /* Main.storyboard */; };
@@ -18,7 +19,6 @@
 		84B3757323F8863400844C6C /* PSPDFKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3757023F8863400844C6C /* PSPDFKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		84B3757423F8863400844C6C /* PSPDFKitUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3757123F8863400844C6C /* PSPDFKitUI.xcframework */; };
 		84B3757523F8863400844C6C /* PSPDFKitUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3757123F8863400844C6C /* PSPDFKitUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		84B3757723F8865300844C6C /* PDFs in Resources */ = {isa = PBXBuildFile; fileRef = 84B3757623F8865300844C6C /* PDFs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		768DF372279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PSPDFKit 10 QuickStart Guide.pdf"; sourceTree = "<group>"; };
 		842147C924F98A7800B939BC /* PDFXKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PDFXKit.xcodeproj; path = ../PDFXKit.xcodeproj; sourceTree = "<group>"; };
 		84B3754F23F8857700844C6C /* PDFXKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFXKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3755923F8857700844C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		84B3756823F885DE00844C6C /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		84B3757023F8863400844C6C /* PSPDFKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PSPDFKit.xcframework; path = ../Frameworks/PSPDFKit.xcframework; sourceTree = "<group>"; };
 		84B3757123F8863400844C6C /* PSPDFKitUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PSPDFKitUI.xcframework; path = ../Frameworks/PSPDFKitUI.xcframework; sourceTree = "<group>"; };
-		84B3757623F8865300844C6C /* PDFs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PDFs; path = ../PDFs; sourceTree = "<group>"; };
 		84B3757823F8868900844C6C /* PDFXKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFXKitExample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		768DF371279863030079E756 /* PDFs */ = {
+			isa = PBXGroup;
+			children = (
+				768DF372279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf */,
+			);
+			path = PDFs;
+			sourceTree = "<group>";
+		};
 		842147CA24F98A7800B939BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				842147C924F98A7800B939BC /* PDFXKit.xcodeproj */,
+				768DF371279863030079E756 /* PDFs */,
 				84B3755123F8857700844C6C /* PDFXKitExample */,
-				84B3757623F8865300844C6C /* PDFs */,
 				84B3755023F8857700844C6C /* Products */,
 				84B3756B23F8863100844C6C /* Frameworks */,
 			);
@@ -221,8 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B3755F23F8857800844C6C /* LaunchScreen.storyboard in Resources */,
-				84B3757723F8865300844C6C /* PDFs in Resources */,
 				84B3755C23F8857800844C6C /* Assets.xcassets in Resources */,
+				768DF373279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf in Resources */,
 				84B3755A23F8857700844C6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
