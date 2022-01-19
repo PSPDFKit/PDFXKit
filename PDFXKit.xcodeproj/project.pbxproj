@@ -49,22 +49,6 @@
 		B343B5591F457A720040B726 /* PDFXView+PSPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B39444F31F3CF08900620E45 /* PDFXView+PSPDFKit.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B343B55A1F457AC70040B726 /* PDFXAnnotationPopup+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B343B52B1F45794E0040B726 /* PDFXAnnotationPopup+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B343B55F1F458E3B0040B726 /* PSPDFKit+PDFXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B343B55E1F458D1D0040B726 /* PSPDFKit+PDFXKit.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B34D11C31F3E426A00F3337E /* PDFXActionGoToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11BA1F3E425100F3337E /* PDFXActionGoToTests.swift */; };
-		B34D11C41F3E426A00F3337E /* PDFXActionNamedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11B81F3E425100F3337E /* PDFXActionNamedTests.swift */; };
-		B34D11C51F3E426A00F3337E /* PDFXActionRemoteGoToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11BE1F3E425200F3337E /* PDFXActionRemoteGoToTests.swift */; };
-		B34D11C61F3E426A00F3337E /* PDFXActionResetFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11C01F3E425200F3337E /* PDFXActionResetFormTests.swift */; };
-		B34D11C71F3E426A00F3337E /* PDFXActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11B51F3E425100F3337E /* PDFXActionTests.swift */; };
-		B34D11C81F3E426A00F3337E /* PDFXActionURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11B31F3E425100F3337E /* PDFXActionURLTests.swift */; };
-		B34D11C91F3E426A00F3337E /* PDFXAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11BC1F3E425200F3337E /* PDFXAnnotationTests.swift */; };
-		B34D11CA1F3E426A00F3337E /* PDFXAppearanceCharacteristicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11BD1F3E425200F3337E /* PDFXAppearanceCharacteristicsTests.swift */; };
-		B34D11CB1F3E426A00F3337E /* PDFXBorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11B91F3E425100F3337E /* PDFXBorderTests.swift */; };
-		B34D11CC1F3E426A00F3337E /* PDFXDestinationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11B41F3E425100F3337E /* PDFXDestinationTests.swift */; };
-		B34D11CD1F3E426A00F3337E /* PDFXDocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11BB1F3E425200F3337E /* PDFXDocumentTests.swift */; };
-		B34D11CE1F3E426A00F3337E /* PDFXOutlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11BF1F3E425200F3337E /* PDFXOutlineTests.swift */; };
-		B34D11CF1F3E426A00F3337E /* PDFXPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11C11F3E425200F3337E /* PDFXPageTests.swift */; };
-		B34D11D01F3E426A00F3337E /* PDFXSelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11C21F3E425200F3337E /* PDFXSelectionTests.swift */; };
-		B34D11D11F3E426A00F3337E /* PDFXThumbnailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11B61F3E425100F3337E /* PDFXThumbnailViewTests.swift */; };
-		B34D11D21F3E426A00F3337E /* PDFXViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D11B71F3E425100F3337E /* PDFXViewTests.swift */; };
 		B34D11E01F3E53F500F3337E /* PDFXKitObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B34D11DF1F3E53F500F3337E /* PDFXKitObjectiveCTests.m */; };
 		B35FCCE71F42D3E400F5313A /* PDFXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B39445051F3CF08D00620E45 /* PDFXBorder.m */; };
 		B38DD7081F3B2A3B00C435A8 /* PDFXCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = B38DD7071F3B282C00C435A8 /* PDFXCompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -147,22 +131,6 @@
 		B343B5351F4579500040B726 /* PDFXKit+Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXKit+Swift.h"; sourceTree = "<group>"; };
 		B343B55E1F458D1D0040B726 /* PSPDFKit+PDFXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PSPDFKit+PDFXKit.h"; sourceTree = "<group>"; };
 		B34B4BA01F3C94180081DF9B /* PDFXThumbnailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFXThumbnailView.m; sourceTree = "<group>"; };
-		B34D11B31F3E425100F3337E /* PDFXActionURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXActionURLTests.swift; sourceTree = "<group>"; };
-		B34D11B41F3E425100F3337E /* PDFXDestinationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXDestinationTests.swift; sourceTree = "<group>"; };
-		B34D11B51F3E425100F3337E /* PDFXActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXActionTests.swift; sourceTree = "<group>"; };
-		B34D11B61F3E425100F3337E /* PDFXThumbnailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXThumbnailViewTests.swift; sourceTree = "<group>"; };
-		B34D11B71F3E425100F3337E /* PDFXViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXViewTests.swift; sourceTree = "<group>"; };
-		B34D11B81F3E425100F3337E /* PDFXActionNamedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXActionNamedTests.swift; sourceTree = "<group>"; };
-		B34D11B91F3E425100F3337E /* PDFXBorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXBorderTests.swift; sourceTree = "<group>"; };
-		B34D11BA1F3E425100F3337E /* PDFXActionGoToTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXActionGoToTests.swift; sourceTree = "<group>"; };
-		B34D11BB1F3E425200F3337E /* PDFXDocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXDocumentTests.swift; sourceTree = "<group>"; };
-		B34D11BC1F3E425200F3337E /* PDFXAnnotationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXAnnotationTests.swift; sourceTree = "<group>"; };
-		B34D11BD1F3E425200F3337E /* PDFXAppearanceCharacteristicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXAppearanceCharacteristicsTests.swift; sourceTree = "<group>"; };
-		B34D11BE1F3E425200F3337E /* PDFXActionRemoteGoToTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXActionRemoteGoToTests.swift; sourceTree = "<group>"; };
-		B34D11BF1F3E425200F3337E /* PDFXOutlineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXOutlineTests.swift; sourceTree = "<group>"; };
-		B34D11C01F3E425200F3337E /* PDFXActionResetFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXActionResetFormTests.swift; sourceTree = "<group>"; };
-		B34D11C11F3E425200F3337E /* PDFXPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXPageTests.swift; sourceTree = "<group>"; };
-		B34D11C21F3E425200F3337E /* PDFXSelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXSelectionTests.swift; sourceTree = "<group>"; };
 		B34D11DF1F3E53F500F3337E /* PDFXKitObjectiveCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFXKitObjectiveCTests.m; sourceTree = "<group>"; };
 		B38DD6FD1F3B20D000C435A8 /* PDFXView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFXView.m; sourceTree = "<group>"; };
 		B38DD7011F3B263300C435A8 /* PDFXKit+PSPDFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXKit+PSPDFKit.h"; sourceTree = "<group>"; };
@@ -348,22 +316,6 @@
 		B36272F31F3AE77500459783 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B34D11BA1F3E425100F3337E /* PDFXActionGoToTests.swift */,
-				B34D11B81F3E425100F3337E /* PDFXActionNamedTests.swift */,
-				B34D11BE1F3E425200F3337E /* PDFXActionRemoteGoToTests.swift */,
-				B34D11C01F3E425200F3337E /* PDFXActionResetFormTests.swift */,
-				B34D11B51F3E425100F3337E /* PDFXActionTests.swift */,
-				B34D11B31F3E425100F3337E /* PDFXActionURLTests.swift */,
-				B34D11BC1F3E425200F3337E /* PDFXAnnotationTests.swift */,
-				B34D11BD1F3E425200F3337E /* PDFXAppearanceCharacteristicsTests.swift */,
-				B34D11B91F3E425100F3337E /* PDFXBorderTests.swift */,
-				B34D11B41F3E425100F3337E /* PDFXDestinationTests.swift */,
-				B34D11BB1F3E425200F3337E /* PDFXDocumentTests.swift */,
-				B34D11BF1F3E425200F3337E /* PDFXOutlineTests.swift */,
-				B34D11C11F3E425200F3337E /* PDFXPageTests.swift */,
-				B34D11C21F3E425200F3337E /* PDFXSelectionTests.swift */,
-				B34D11B61F3E425100F3337E /* PDFXThumbnailViewTests.swift */,
-				B34D11B71F3E425100F3337E /* PDFXViewTests.swift */,
 				B34D11DF1F3E53F500F3337E /* PDFXKitObjectiveCTests.m */,
 			);
 			path = Tests;
@@ -602,23 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B34D11C51F3E426A00F3337E /* PDFXActionRemoteGoToTests.swift in Sources */,
-				B34D11CD1F3E426A00F3337E /* PDFXDocumentTests.swift in Sources */,
-				B34D11C31F3E426A00F3337E /* PDFXActionGoToTests.swift in Sources */,
-				B34D11C71F3E426A00F3337E /* PDFXActionTests.swift in Sources */,
-				B34D11C41F3E426A00F3337E /* PDFXActionNamedTests.swift in Sources */,
-				B34D11CA1F3E426A00F3337E /* PDFXAppearanceCharacteristicsTests.swift in Sources */,
-				B34D11CE1F3E426A00F3337E /* PDFXOutlineTests.swift in Sources */,
-				B34D11CB1F3E426A00F3337E /* PDFXBorderTests.swift in Sources */,
-				B34D11CC1F3E426A00F3337E /* PDFXDestinationTests.swift in Sources */,
-				B34D11C61F3E426A00F3337E /* PDFXActionResetFormTests.swift in Sources */,
-				B34D11C91F3E426A00F3337E /* PDFXAnnotationTests.swift in Sources */,
-				B34D11C81F3E426A00F3337E /* PDFXActionURLTests.swift in Sources */,
-				B34D11D11F3E426A00F3337E /* PDFXThumbnailViewTests.swift in Sources */,
-				B34D11D01F3E426A00F3337E /* PDFXSelectionTests.swift in Sources */,
 				B34D11E01F3E53F500F3337E /* PDFXKitObjectiveCTests.m in Sources */,
-				B34D11D21F3E426A00F3337E /* PDFXViewTests.swift in Sources */,
-				B34D11CF1F3E426A00F3337E /* PDFXPageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
