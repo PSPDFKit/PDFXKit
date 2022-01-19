@@ -15,15 +15,15 @@ class MainController: UIViewController {
 
         pdfView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pdfView)
-        NSLayoutConstraint.activate([
-                    pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                    pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                    pdfView.topAnchor.constraint(equalTo: view.topAnchor),
-                    pdfView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-                ])
+
+        pdfView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        pdfView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
         let sampleDocumentURL = Bundle.main.url(forResource: "PSPDFKit 10 QuickStart Guide", withExtension: "pdf", subdirectory: "PDFs")!
         let sampleDocument = PDFDocument(url: sampleDocumentURL)
+
         pdfView.document = sampleDocument
     }
 
