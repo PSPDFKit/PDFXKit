@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		768DF379279864690079E756 /* PDFXCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768DF378279864690079E756 /* PDFXCompatibility.swift */; };
 		843F386B23F8947B00E0F579 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843F386A23F8947B00E0F579 /* PDFKit.framework */; };
 		8498909E23F86EAC006AAD59 /* PSPDFKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498909B23F86DB3006AAD59 /* PSPDFKit.xcframework */; };
 		8498909F23F86EAC006AAD59 /* PSPDFKitUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498909A23F86DB3006AAD59 /* PSPDFKitUI.xcframework */; };
@@ -67,7 +68,6 @@
 		B34D11E01F3E53F500F3337E /* PDFXKitObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B34D11DF1F3E53F500F3337E /* PDFXKitObjectiveCTests.m */; };
 		B35FCCE71F42D3E400F5313A /* PDFXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B39445051F3CF08D00620E45 /* PDFXBorder.m */; };
 		B38DD7081F3B2A3B00C435A8 /* PDFXCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = B38DD7071F3B282C00C435A8 /* PDFXCompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B39445591F3CF3C700620E45 /* PDFXCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39445581F3CF3C700620E45 /* PDFXCompatibility.swift */; };
 		B3AC20491F3AE6C500D46641 /* PDFXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AC203F1F3AE6C500D46641 /* PDFXKit.framework */; };
 		B3AC20501F3AE6C500D46641 /* PDFXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AC20421F3AE6C500D46641 /* PDFXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3AE89A91F3F5624001464C7 /* PDFXPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = B3AE89A21F3F557A001464C7 /* PDFXPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,6 +121,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		768DF378279864690079E756 /* PDFXCompatibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFXCompatibility.swift; sourceTree = "<group>"; };
 		843F386A23F8947B00E0F579 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/PDFKit.framework; sourceTree = DEVELOPER_DIR; };
 		8498909A23F86DB3006AAD59 /* PSPDFKitUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PSPDFKitUI.xcframework; sourceTree = "<group>"; };
 		8498909B23F86DB3006AAD59 /* PSPDFKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PSPDFKit.xcframework; sourceTree = "<group>"; };
@@ -196,7 +197,6 @@
 		B39445021F3CF08C00620E45 /* PDFXBorder+PSPDFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXBorder+PSPDFKit.h"; sourceTree = "<group>"; };
 		B39445051F3CF08D00620E45 /* PDFXBorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFXBorder.m; sourceTree = "<group>"; };
 		B39445061F3CF08D00620E45 /* PDFXActionResetForm+PSPDFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDFXActionResetForm+PSPDFKit.h"; sourceTree = "<group>"; };
-		B39445581F3CF3C700620E45 /* PDFXCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFXCompatibility.swift; sourceTree = "<group>"; };
 		B3AC203F1F3AE6C500D46641 /* PDFXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PDFXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AC20421F3AE6C500D46641 /* PDFXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFXKit.h; sourceTree = "<group>"; };
 		B3AC20431F3AE6C500D46641 /* PDFXKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDFXKit-Info.plist"; sourceTree = "<group>"; };
@@ -250,9 +250,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		768DF377279864690079E756 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				768DF378279864690079E756 /* PDFXCompatibility.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		B36272F21F3AE76E00459783 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				768DF377279864690079E756 /* Swift */,
 				B3B4A1051F3CA1D600E73645 /* PDFXAction.h */,
 				B39444DB1F3CF08400620E45 /* PDFXAction.m */,
 				B39444E41F3CF08600620E45 /* PDFXAction+PSPDFKit.h */,
@@ -294,7 +303,6 @@
 				B39445021F3CF08C00620E45 /* PDFXBorder+PSPDFKit.h */,
 				B343B52D1F45794E0040B726 /* PDFXBorder+Swift.h */,
 				B38DD7071F3B282C00C435A8 /* PDFXCompatibility.h */,
-				B39445581F3CF3C700620E45 /* PDFXCompatibility.swift */,
 				B3B4A1031F3CA1D500E73645 /* PDFXDestination.h */,
 				B39444E51F3CF08600620E45 /* PDFXDestination.m */,
 				B39444DC1F3CF08400620E45 /* PDFXDestination+PSPDFKit.h */,
@@ -569,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768DF379279864690079E756 /* PDFXCompatibility.swift in Sources */,
 				B3D17AF51F419EC900526C56 /* PDFXAnnotation.m in Sources */,
 				B3D17B041F41F2D300526C56 /* PDFXAnnotationPopup.m in Sources */,
 				B3D17AF41F419EC900526C56 /* PDFXActionURL.m in Sources */,
@@ -577,7 +586,6 @@
 				B3D17AFC1F419EC900526C56 /* PDFXSelection.m in Sources */,
 				B3D17AF81F419EC900526C56 /* PDFXDestination.m in Sources */,
 				B3D17AF11F419EC900526C56 /* PDFXActionNamed.m in Sources */,
-				B39445591F3CF3C700620E45 /* PDFXCompatibility.swift in Sources */,
 				B3D17AFB1F419EC900526C56 /* PDFXPage.m in Sources */,
 				B3D17AF31F419EC900526C56 /* PDFXActionResetForm.m in Sources */,
 				B3D17AF61F419EC900526C56 /* PDFXAppearanceCharacteristics.m in Sources */,
