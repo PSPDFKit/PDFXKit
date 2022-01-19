@@ -37,14 +37,16 @@ NSNotificationName const PDFXThumbnailViewDocumentEditedNotification = @"PDFXThu
     [_pspdfScrubberBar.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
     [_pspdfScrubberBar.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
     [_pspdfScrubberBar.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
+
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(spreadIndexDidChange:) name:PSPDFDocumentViewControllerSpreadIndexDidChangeNotification object:nil];
 }
 
 #pragma mark - Miscellaneous
 
-- (void)setPDFView:(PDFXView *)PDFView {
-    if (_PDFView != PDFView) {
-        _PDFView = PDFView;
-        self.pspdfScrubberBar.dataSource = PDFView.pspdfViewController;
+- (void)setPdfView:(PDFXView *)pdfView {
+    if (_pdfView != pdfView) {
+        _pdfView = pdfView;
+        self.pspdfScrubberBar.dataSource = pdfView.pspdfViewController;
     }
 }
 
@@ -69,16 +71,27 @@ NSNotificationName const PDFXThumbnailViewDocumentEditedNotification = @"PDFXThu
     [super encodeWithCoder:coder];
 }
 
+#pragma mark - Spread Index Notification
+
+- (void)spreadIndexDidChange:(NSNotification *)notification {
+    PSPDFDocumentViewController * documentViewController = (PSPDFDocumentViewController *)notification.object;
+    if (_pdfView.pspdfViewController.documentViewController == documentViewController) {
+        let spreadIndex = documentViewController.spreadIndex;
+        let pageIndex = [documentViewController.layout pageRangeForSpreadAtIndex:spreadIndex].location;
+        self.pspdfScrubberBar.pageIndex = pageIndex;
+    }
+}
+
 #pragma mark - PSPDFScrubberBarDelegate
 
 - (void)scrubberBar:(PSPDFScrubberBar *)scrubberBar didSelectPageAtIndex:(NSUInteger)pageIndex {
-    let document = self.PDFView.document;
+    let document = self.pdfView.document;
     if (document == nil) { return; }
 
-    let page = [self.PDFView.document pageAtIndex:pageIndex];
+    let page = [self.pdfView.document pageAtIndex:pageIndex];
     if (page == nil) { return; }
 
-    [self.PDFView goToPage:page];
+    [self.pdfView goToPage:page];
 
     // HACK: the scrubber bar doesn't update itself which might be a bug as
     // described in issue #11842. Until this is resolved, we'll mark this as

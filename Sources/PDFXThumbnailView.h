@@ -22,7 +22,7 @@ PDFX_EXTERN NSNotificationName const PDFXThumbnailViewDocumentEditedNotification
 
 @interface PDFXThumbnailView :  PDFXPlatformView <NSCoding>
 
-@property (nonatomic, strong, nullable) PDFXView *PDFView PDFX_NOT_IMPLEMENTED_PRIORITY_UNKNOWN;
+@property (nonatomic, strong, nullable) PDFXView *pdfView PDFX_NOT_IMPLEMENTED_PRIORITY_UNKNOWN;
 
 @property (nonatomic) PDFXSize thumbnailSize PDFX_NOT_IMPLEMENTED_PRIORITY_UNKNOWN;
 @property (nonatomic, copy, nullable) PDFXColor *backgroundColor PDFX_NOT_IMPLEMENTED_PRIORITY_UNKNOWN;
