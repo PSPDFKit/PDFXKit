@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		76168AAC2798687000DBFA42 /* PDFXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76168AAB2798687000DBFA42 /* PDFXKit.framework */; };
-		768DF373279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 768DF372279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf */; };
+		76168AAE27986E4500DBFA42 /* PDFs in Resources */ = {isa = PBXBuildFile; fileRef = 76168AAD27986E4500DBFA42 /* PDFs */; };
 		84B3755A23F8857700844C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3755823F8857700844C6C /* Main.storyboard */; };
 		84B3755C23F8857800844C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B3755B23F8857800844C6C /* Assets.xcassets */; };
 		84B3755F23F8857800844C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3755D23F8857800844C6C /* LaunchScreen.storyboard */; };
@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		76168AAB2798687000DBFA42 /* PDFXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PDFXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		768DF372279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PSPDFKit 10 QuickStart Guide.pdf"; sourceTree = "<group>"; };
+		76168AAD27986E4500DBFA42 /* PDFs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PDFs; path = ../../../PDFXKit/PDFs; sourceTree = "<group>"; };
 		768DF37B2798656D0079E756 /* PDFXKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PDFXKit; path = ..; sourceTree = "<group>"; };
 		84B3754F23F8857700844C6C /* PDFXKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFXKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3755923F8857700844C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,14 +64,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		768DF371279863030079E756 /* PDFs */ = {
-			isa = PBXGroup;
-			children = (
-				768DF372279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf */,
-			);
-			path = PDFs;
-			sourceTree = "<group>";
-		};
 		768DF37A2798656D0079E756 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				768DF37A2798656D0079E756 /* Packages */,
-				768DF371279863030079E756 /* PDFs */,
+				76168AAD27986E4500DBFA42 /* PDFs */,
 				84B3755123F8857700844C6C /* PDFXKitExample */,
 				84B3755023F8857700844C6C /* Products */,
 				76168AAA2798687000DBFA42 /* Frameworks */,
@@ -176,8 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B3755F23F8857800844C6C /* LaunchScreen.storyboard in Resources */,
+				76168AAE27986E4500DBFA42 /* PDFs in Resources */,
 				84B3755C23F8857800844C6C /* Assets.xcassets in Resources */,
-				768DF373279863030079E756 /* PSPDFKit 10 QuickStart Guide.pdf in Resources */,
 				84B3755A23F8857700844C6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

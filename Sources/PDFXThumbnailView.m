@@ -37,8 +37,6 @@ NSNotificationName const PDFXThumbnailViewDocumentEditedNotification = @"PDFXThu
     [_pspdfScrubberBar.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
     [_pspdfScrubberBar.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
     [_pspdfScrubberBar.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
-
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(spreadIndexDidChange:) name:PSPDFDocumentViewControllerSpreadIndexDidChangeNotification object:nil];
 }
 
 #pragma mark - Miscellaneous
@@ -69,17 +67,6 @@ NSNotificationName const PDFXThumbnailViewDocumentEditedNotification = @"PDFXThu
 
 - (void)encodeWithCoder:(NSCoder *)coder {
     [super encodeWithCoder:coder];
-}
-
-#pragma mark - Spread Index Notification
-
-- (void)spreadIndexDidChange:(NSNotification *)notification {
-    PSPDFDocumentViewController * documentViewController = (PSPDFDocumentViewController *)notification.object;
-    if (_pdfView.pspdfViewController.documentViewController == documentViewController) {
-        let spreadIndex = documentViewController.spreadIndex;
-        let pageIndex = [documentViewController.layout pageRangeForSpreadAtIndex:spreadIndex].location;
-        self.pspdfScrubberBar.pageIndex = pageIndex;
-    }
 }
 
 #pragma mark - PSPDFScrubberBarDelegate
