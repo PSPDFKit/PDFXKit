@@ -101,3 +101,7 @@ Cordova
 
 # PSPDFKit frameworks
 Frameworks/PSPDF*
+
+# Swift Package Manager
+.swiftpm
+Package.resolved
