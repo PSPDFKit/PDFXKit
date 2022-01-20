@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "PDFXKit",
-            targets: ["PDFXKitObjC", "PDFXKit"]),
+            targets: ["PDFXKit", "PDFXKitObjC"]),
     ],
     dependencies: [
         .package(url: "https://github.com/PSPDFKit/PSPDFKit-SP", from: "11.2.0"),

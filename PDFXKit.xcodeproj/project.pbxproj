@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		768DF379279864690079E756 /* PDFXCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768DF378279864690079E756 /* PDFXCompatibility.swift */; };
+		76CD34882799B8EE00ABB8F0 /* PSPDFKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76CD34862799B8EE00ABB8F0 /* PSPDFKit.xcframework */; };
+		76CD34892799B8EE00ABB8F0 /* PSPDFKitUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76CD34872799B8EE00ABB8F0 /* PSPDFKitUI.xcframework */; };
 		843F386B23F8947B00E0F579 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843F386A23F8947B00E0F579 /* PDFKit.framework */; };
 		B340BCD91F3F8F08001D4992 /* PDFXDocumentDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B340BCD21F3F8E54001D4992 /* PDFXDocumentDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B343B5241F4578030040B726 /* PDFXDocument+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B343B4FE1F4575820040B726 /* PDFXDocument+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -105,6 +107,8 @@
 /* Begin PBXFileReference section */
 		761995F62799923D00BD8C10 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		768DF378279864690079E756 /* PDFXCompatibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFXCompatibility.swift; sourceTree = "<group>"; };
+		76CD34862799B8EE00ABB8F0 /* PSPDFKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PSPDFKit.xcframework; sourceTree = "<group>"; };
+		76CD34872799B8EE00ABB8F0 /* PSPDFKitUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PSPDFKitUI.xcframework; sourceTree = "<group>"; };
 		843F386A23F8947B00E0F579 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/PDFKit.framework; sourceTree = DEVELOPER_DIR; };
 		B33361B71F5D0C7500A3F726 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		B340BCD21F3F8E54001D4992 /* PDFXDocumentDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFXDocumentDelegate.h; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CD34892799B8EE00ABB8F0 /* PSPDFKitUI.xcframework in Frameworks */,
+				76CD34882799B8EE00ABB8F0 /* PSPDFKit.xcframework in Frameworks */,
 				843F386B23F8947B00E0F579 /* PDFKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +355,8 @@
 		B3AD77561F4CA5040002E789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76CD34862799B8EE00ABB8F0 /* PSPDFKit.xcframework */,
+				76CD34872799B8EE00ABB8F0 /* PSPDFKitUI.xcframework */,
 				B33361B71F5D0C7500A3F726 /* PDFKit.framework */,
 				843F386A23F8947B00E0F579 /* PDFKit.framework */,
 			);
@@ -677,7 +685,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -703,7 +712,11 @@
 				INFOPLIST_FILE = "InfoPlists/PDFXKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
@@ -730,7 +743,11 @@
 				INFOPLIST_FILE = "InfoPlists/PDFXKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
@@ -745,7 +762,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YARQNYSS42;
 				INFOPLIST_FILE = "InfoPlists/PDFXKitTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -760,7 +781,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YARQNYSS42;
 				INFOPLIST_FILE = "InfoPlists/PDFXKitTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pspdfkit.PDFXKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
