@@ -6,20 +6,20 @@
 //  this file.
 //
 
-#import <PDFXKit/PDFXAction+Swift.h>
-#import <PDFXKit/PDFXActionGoTo+Swift.h>
-#import <PDFXKit/PDFXActionNamed+Swift.h>
-#import <PDFXKit/PDFXActionResetForm+Swift.h>
-#import <PDFXKit/PDFXActionRemoteGoTo+Swift.h>
-#import <PDFXKit/PDFXActionURL+Swift.h>
-#import <PDFXKit/PDFXAnnotation+Swift.h>
-#import <PDFXKit/PDFXAnnotationPopup+Swift.h>
-#import <PDFXKit/PDFXAppearanceCharacteristics+Swift.h>
-#import <PDFXKit/PDFXBorder+Swift.h>
-#import <PDFXKit/PDFXDestination+Swift.h>
-#import <PDFXKit/PDFXDocument+Swift.h>
-#import <PDFXKit/PDFXOutline+Swift.h>
-#import <PDFXKit/PDFXPage+Swift.h>
-#import <PDFXKit/PDFXSelection+Swift.h>
-#import <PDFXKit/PDFXThumbnailView+Swift.h>
-#import <PDFXKit/PDFXView+Swift.h>
+#import "PDFXAction+Swift.h"
+#import "PDFXActionGoTo+Swift.h"
+#import "PDFXActionNamed+Swift.h"
+#import "PDFXActionResetForm+Swift.h"
+#import "PDFXActionRemoteGoTo+Swift.h"
+#import "PDFXActionURL+Swift.h"
+#import "PDFXAnnotation+Swift.h"
+#import "PDFXAnnotationPopup+Swift.h"
+#import "PDFXAppearanceCharacteristics+Swift.h"
+#import "PDFXBorder+Swift.h"
+#import "PDFXDestination+Swift.h"
+#import "PDFXDocument+Swift.h"
+#import "PDFXOutline+Swift.h"
+#import "PDFXPage+Swift.h"
+#import "PDFXSelection+Swift.h"
+#import "PDFXThumbnailView+Swift.h"
+#import "PDFXView+Swift.h"

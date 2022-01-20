@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#import <PDFXKit/PDFXPlatform.h>
-#import <PDFXKit/PDFXViewDelegate.h>
-#import <PDFXKit/PDFXDocument.h>
-#import <PDFXKit/PDFXPage.h>
+#import "PDFXPlatform.h"
+#import "PDFXViewDelegate.h"
+#import "PDFXDocument.h"
+#import "PDFXPage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

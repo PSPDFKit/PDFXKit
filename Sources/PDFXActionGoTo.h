@@ -6,8 +6,8 @@
 //  this file.
 //
 
-#import <PDFXKit/PDFXPlatform.h>
-#import <PDFXKit/PDFXAction.h>
+#import "PDFXPlatform.h"
+#import "PDFXAction.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -6,8 +6,9 @@
 //  this file.
 //
 
-#import <PDFXKit/PDFXThumbnailView.h>
-#import <PDFXKit/PSPDFKit+PDFXKit.h>
+#import "PDFXThumbnailView.h"
+#import "PSPDFKit+PDFXKit.h"
+#import "PDFXPlatform.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

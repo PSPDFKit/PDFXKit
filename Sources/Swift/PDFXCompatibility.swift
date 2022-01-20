@@ -8,6 +8,10 @@
 
 import Foundation
 
+#if SWIFT_PACKAGE
+import PDFXKitObjC
+#endif
+
 // MARK: - Classes
 
 public typealias PDFAction = PDFXAction

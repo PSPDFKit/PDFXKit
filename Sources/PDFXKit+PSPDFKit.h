@@ -6,19 +6,19 @@
 //  this file.
 //
 
-#import <PDFXKit/PDFXAction+PSPDFKit.h>
-#import <PDFXKit/PDFXActionGoTo+PSPDFKit.h>
-#import <PDFXKit/PDFXActionNamed+PSPDFKit.h>
-#import <PDFXKit/PDFXActionResetForm+PSPDFKit.h>
-#import <PDFXKit/PDFXActionRemoteGoTo+PSPDFKit.h>
-#import <PDFXKit/PDFXActionURL+PSPDFKit.h>
-#import <PDFXKit/PDFXAnnotation+PSPDFKit.h>
-#import <PDFXKit/PDFXAppearanceCharacteristics+PSPDFKit.h>
-#import <PDFXKit/PDFXBorder+PSPDFKit.h>
-#import <PDFXKit/PDFXDestination+PSPDFKit.h>
-#import <PDFXKit/PDFXDocument+PSPDFKit.h>
-#import <PDFXKit/PDFXOutline+PSPDFKit.h>
-#import <PDFXKit/PDFXPage+PSPDFKit.h>
-#import <PDFXKit/PDFXSelection+PSPDFKit.h>
-#import <PDFXKit/PDFXThumbnailView+PSPDFKit.h>
-#import <PDFXKit/PDFXView+PSPDFKit.h>
+#import "PDFXAction+PSPDFKit.h"
+#import "PDFXActionGoTo+PSPDFKit.h"
+#import "PDFXActionNamed+PSPDFKit.h"
+#import "PDFXActionResetForm+PSPDFKit.h"
+#import "PDFXActionRemoteGoTo+PSPDFKit.h"
+#import "PDFXActionURL+PSPDFKit.h"
+#import "PDFXAnnotation+PSPDFKit.h"
+#import "PDFXAppearanceCharacteristics+PSPDFKit.h"
+#import "PDFXBorder+PSPDFKit.h"
+#import "PDFXDestination+PSPDFKit.h"
+#import "PDFXDocument+PSPDFKit.h"
+#import "PDFXOutline+PSPDFKit.h"
+#import "PDFXPage+PSPDFKit.h"
+#import "PDFXSelection+PSPDFKit.h"
+#import "PDFXThumbnailView+PSPDFKit.h"
+#import "PDFXView+PSPDFKit.h"

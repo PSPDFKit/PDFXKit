@@ -6,7 +6,11 @@
 //  this file.
 //
 
-#import <PDFXKit/PDFXPlatform.h>
+#if SWIFT_PACKAGE
+#import "PDFXPlatform.h"
+#else
+#import "PDFXPlatform.h"
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

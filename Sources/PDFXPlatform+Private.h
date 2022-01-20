@@ -6,7 +6,7 @@
 //  this file.
 //
 
-#import <PDFXKit/PDFXPlatform.h>
+#import "PDFXPlatform.h"
 
 #define var __auto_type
 #define let var const

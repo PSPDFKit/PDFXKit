@@ -6,7 +6,7 @@
 //  this file.
 //
 
-#import <PDFXKit/PDFXPlatform.h>
+#import "PDFXPlatform.h"
 
 @class PDFXView;
 @class PDFXActionRemoteGoTo;
