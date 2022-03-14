@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76107FEF27BBF75200EAE9DA /* PDFXActionURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FDE27BBF75200EAE9DA /* PDFXActionURL.m */; };
+		76107FF027BBF75200EAE9DA /* PDFXAppearanceCharacteristics.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FDF27BBF75200EAE9DA /* PDFXAppearanceCharacteristics.m */; };
+		76107FF127BBF75200EAE9DA /* PDFXOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE027BBF75200EAE9DA /* PDFXOutline.m */; };
+		76107FF227BBF75200EAE9DA /* PDFXDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE127BBF75200EAE9DA /* PDFXDestination.m */; };
+		76107FF327BBF75200EAE9DA /* PDFXAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE227BBF75200EAE9DA /* PDFXAction.m */; };
+		76107FF427BBF75200EAE9DA /* PDFXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE327BBF75200EAE9DA /* PDFXView.m */; };
+		76107FF527BBF75200EAE9DA /* PDFXActionNamed.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE427BBF75200EAE9DA /* PDFXActionNamed.m */; };
+		76107FF627BBF75200EAE9DA /* PDFXActionResetForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE527BBF75200EAE9DA /* PDFXActionResetForm.m */; };
+		76107FF727BBF75200EAE9DA /* PDFXPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE627BBF75200EAE9DA /* PDFXPage.m */; };
+		76107FF827BBF75200EAE9DA /* PDFXActionRemoteGoTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE727BBF75200EAE9DA /* PDFXActionRemoteGoTo.m */; };
+		76107FF927BBF75200EAE9DA /* PDFXAnnotationPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE827BBF75200EAE9DA /* PDFXAnnotationPopup.m */; };
+		76107FFA27BBF75200EAE9DA /* PDFXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FE927BBF75200EAE9DA /* PDFXDocument.m */; };
+		76107FFB27BBF75200EAE9DA /* PDFXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FEA27BBF75200EAE9DA /* PDFXBorder.m */; };
+		76107FFC27BBF75200EAE9DA /* PDFXSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FEB27BBF75200EAE9DA /* PDFXSelection.m */; };
+		76107FFD27BBF75200EAE9DA /* PDFXThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FEC27BBF75200EAE9DA /* PDFXThumbnailView.m */; };
+		76107FFE27BBF75200EAE9DA /* PDFXAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FED27BBF75200EAE9DA /* PDFXAnnotation.m */; };
+		76107FFF27BBF75200EAE9DA /* PDFXActionGoTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 76107FEE27BBF75200EAE9DA /* PDFXActionGoTo.m */; };
 		7615B47027A341D5003477DE /* PDFXDocumentDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B41C27A341D5003477DE /* PDFXDocumentDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7615B47127A341D5003477DE /* PDFXSelection+PSPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B41D27A341D5003477DE /* PDFXSelection+PSPDFKit.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7615B47227A341D5003477DE /* PDFXAnnotationPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B41E27A341D5003477DE /* PDFXAnnotationPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,7 +67,6 @@
 		7615B49827A341D5003477DE /* PDFXDestination.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B44427A341D5003477DE /* PDFXDestination.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7615B49927A341D5003477DE /* PDFXDocument+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B44527A341D5003477DE /* PDFXDocument+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7615B49A27A341D5003477DE /* PDFXActionRemoteGoTo+PSPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B44627A341D5003477DE /* PDFXActionRemoteGoTo+PSPDFKit.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7615B49B27A341D5003477DE /* PDFXThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B44727A341D5003477DE /* PDFXThumbnailView.m */; };
 		7615B49C27A341D5003477DE /* PDFXPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B44827A341D5003477DE /* PDFXPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7615B49D27A341D5003477DE /* PDFXViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B44927A341D5003477DE /* PDFXViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7615B49E27A341D5003477DE /* PDFXDestination+PSPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B44A27A341D5003477DE /* PDFXDestination+PSPDFKit.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -67,25 +83,9 @@
 		7615B4A927A341D5003477DE /* PDFXActionRemoteGoTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B45527A341D5003477DE /* PDFXActionRemoteGoTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7615B4AA27A341D5003477DE /* PDFXAppearanceCharacteristics+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B45627A341D5003477DE /* PDFXAppearanceCharacteristics+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7615B4AB27A341D5003477DE /* PDFXOutline+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B45727A341D5003477DE /* PDFXOutline+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7615B4AC27A341D5003477DE /* PDFXPage+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B45927A341D5003477DE /* PDFXPage+Private.h */; };
-		7615B4AD27A341D5003477DE /* PDFXPlatform+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B45A27A341D5003477DE /* PDFXPlatform+Private.h */; };
-		7615B4AE27A341D5003477DE /* PDFXSelection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B45B27A341D5003477DE /* PDFXSelection+Private.h */; };
-		7615B4AF27A341D5003477DE /* PDFXActionURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B45D27A341D5003477DE /* PDFXActionURL.m */; };
-		7615B4B027A341D5003477DE /* PDFXAppearanceCharacteristics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B45E27A341D5003477DE /* PDFXAppearanceCharacteristics.m */; };
-		7615B4B127A341D5003477DE /* PDFXOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B45F27A341D5003477DE /* PDFXOutline.m */; };
-		7615B4B227A341D5003477DE /* PDFXDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46027A341D5003477DE /* PDFXDestination.m */; };
-		7615B4B327A341D5003477DE /* PDFXAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46127A341D5003477DE /* PDFXAction.m */; };
-		7615B4B427A341D5003477DE /* PDFXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46227A341D5003477DE /* PDFXView.m */; };
-		7615B4B527A341D5003477DE /* PDFXActionNamed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46327A341D5003477DE /* PDFXActionNamed.m */; };
-		7615B4B627A341D5003477DE /* PDFXActionResetForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46427A341D5003477DE /* PDFXActionResetForm.m */; };
-		7615B4B727A341D5003477DE /* PDFXPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46527A341D5003477DE /* PDFXPage.m */; };
-		7615B4B827A341D5003477DE /* PDFXActionRemoteGoTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46627A341D5003477DE /* PDFXActionRemoteGoTo.m */; };
-		7615B4B927A341D5003477DE /* PDFXAnnotationPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46727A341D5003477DE /* PDFXAnnotationPopup.m */; };
-		7615B4BA27A341D5003477DE /* PDFXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46827A341D5003477DE /* PDFXDocument.m */; };
-		7615B4BB27A341D5003477DE /* PDFXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46927A341D5003477DE /* PDFXBorder.m */; };
-		7615B4BC27A341D5003477DE /* PDFXSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46A27A341D5003477DE /* PDFXSelection.m */; };
-		7615B4BD27A341D5003477DE /* PDFXAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46B27A341D5003477DE /* PDFXAnnotation.m */; };
-		7615B4BE27A341D5003477DE /* PDFXActionGoTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46C27A341D5003477DE /* PDFXActionGoTo.m */; };
+		7615B4AC27A341D5003477DE /* PDFXPage+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B45927A341D5003477DE /* PDFXPage+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7615B4AD27A341D5003477DE /* PDFXPlatform+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B45A27A341D5003477DE /* PDFXPlatform+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7615B4AE27A341D5003477DE /* PDFXSelection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7615B45B27A341D5003477DE /* PDFXSelection+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7615B4BF27A341D5003477DE /* PDFXCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615B46F27A341D5003477DE /* PDFXCompatibility.swift */; };
 		76CD34882799B8EE00ABB8F0 /* PSPDFKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76CD34862799B8EE00ABB8F0 /* PSPDFKit.xcframework */; };
 		76CD34892799B8EE00ABB8F0 /* PSPDFKitUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76CD34872799B8EE00ABB8F0 /* PSPDFKitUI.xcframework */; };
@@ -105,6 +105,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76107FDE27BBF75200EAE9DA /* PDFXActionURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionURL.m; sourceTree = "<group>"; };
+		76107FDF27BBF75200EAE9DA /* PDFXAppearanceCharacteristics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXAppearanceCharacteristics.m; sourceTree = "<group>"; };
+		76107FE027BBF75200EAE9DA /* PDFXOutline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXOutline.m; sourceTree = "<group>"; };
+		76107FE127BBF75200EAE9DA /* PDFXDestination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXDestination.m; sourceTree = "<group>"; };
+		76107FE227BBF75200EAE9DA /* PDFXAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXAction.m; sourceTree = "<group>"; };
+		76107FE327BBF75200EAE9DA /* PDFXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXView.m; sourceTree = "<group>"; };
+		76107FE427BBF75200EAE9DA /* PDFXActionNamed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionNamed.m; sourceTree = "<group>"; };
+		76107FE527BBF75200EAE9DA /* PDFXActionResetForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionResetForm.m; sourceTree = "<group>"; };
+		76107FE627BBF75200EAE9DA /* PDFXPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXPage.m; sourceTree = "<group>"; };
+		76107FE727BBF75200EAE9DA /* PDFXActionRemoteGoTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionRemoteGoTo.m; sourceTree = "<group>"; };
+		76107FE827BBF75200EAE9DA /* PDFXAnnotationPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXAnnotationPopup.m; sourceTree = "<group>"; };
+		76107FE927BBF75200EAE9DA /* PDFXDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXDocument.m; sourceTree = "<group>"; };
+		76107FEA27BBF75200EAE9DA /* PDFXBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXBorder.m; sourceTree = "<group>"; };
+		76107FEB27BBF75200EAE9DA /* PDFXSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXSelection.m; sourceTree = "<group>"; };
+		76107FEC27BBF75200EAE9DA /* PDFXThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXThumbnailView.m; sourceTree = "<group>"; };
+		76107FED27BBF75200EAE9DA /* PDFXAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXAnnotation.m; sourceTree = "<group>"; };
+		76107FEE27BBF75200EAE9DA /* PDFXActionGoTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionGoTo.m; sourceTree = "<group>"; };
 		7615B41C27A341D5003477DE /* PDFXDocumentDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFXDocumentDelegate.h; sourceTree = "<group>"; };
 		7615B41D27A341D5003477DE /* PDFXSelection+PSPDFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDFXSelection+PSPDFKit.h"; sourceTree = "<group>"; };
 		7615B41E27A341D5003477DE /* PDFXAnnotationPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFXAnnotationPopup.h; sourceTree = "<group>"; };
@@ -148,7 +165,6 @@
 		7615B44427A341D5003477DE /* PDFXDestination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFXDestination.h; sourceTree = "<group>"; };
 		7615B44527A341D5003477DE /* PDFXDocument+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDFXDocument+Swift.h"; sourceTree = "<group>"; };
 		7615B44627A341D5003477DE /* PDFXActionRemoteGoTo+PSPDFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDFXActionRemoteGoTo+PSPDFKit.h"; sourceTree = "<group>"; };
-		7615B44727A341D5003477DE /* PDFXThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXThumbnailView.m; sourceTree = "<group>"; };
 		7615B44827A341D5003477DE /* PDFXPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFXPage.h; sourceTree = "<group>"; };
 		7615B44927A341D5003477DE /* PDFXViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFXViewDelegate.h; sourceTree = "<group>"; };
 		7615B44A27A341D5003477DE /* PDFXDestination+PSPDFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDFXDestination+PSPDFKit.h"; sourceTree = "<group>"; };
@@ -168,22 +184,6 @@
 		7615B45927A341D5003477DE /* PDFXPage+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDFXPage+Private.h"; sourceTree = "<group>"; };
 		7615B45A27A341D5003477DE /* PDFXPlatform+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDFXPlatform+Private.h"; sourceTree = "<group>"; };
 		7615B45B27A341D5003477DE /* PDFXSelection+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDFXSelection+Private.h"; sourceTree = "<group>"; };
-		7615B45D27A341D5003477DE /* PDFXActionURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionURL.m; sourceTree = "<group>"; };
-		7615B45E27A341D5003477DE /* PDFXAppearanceCharacteristics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXAppearanceCharacteristics.m; sourceTree = "<group>"; };
-		7615B45F27A341D5003477DE /* PDFXOutline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXOutline.m; sourceTree = "<group>"; };
-		7615B46027A341D5003477DE /* PDFXDestination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXDestination.m; sourceTree = "<group>"; };
-		7615B46127A341D5003477DE /* PDFXAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXAction.m; sourceTree = "<group>"; };
-		7615B46227A341D5003477DE /* PDFXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXView.m; sourceTree = "<group>"; };
-		7615B46327A341D5003477DE /* PDFXActionNamed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionNamed.m; sourceTree = "<group>"; };
-		7615B46427A341D5003477DE /* PDFXActionResetForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionResetForm.m; sourceTree = "<group>"; };
-		7615B46527A341D5003477DE /* PDFXPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXPage.m; sourceTree = "<group>"; };
-		7615B46627A341D5003477DE /* PDFXActionRemoteGoTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionRemoteGoTo.m; sourceTree = "<group>"; };
-		7615B46727A341D5003477DE /* PDFXAnnotationPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXAnnotationPopup.m; sourceTree = "<group>"; };
-		7615B46827A341D5003477DE /* PDFXDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXDocument.m; sourceTree = "<group>"; };
-		7615B46927A341D5003477DE /* PDFXBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXBorder.m; sourceTree = "<group>"; };
-		7615B46A27A341D5003477DE /* PDFXSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXSelection.m; sourceTree = "<group>"; };
-		7615B46B27A341D5003477DE /* PDFXAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXAnnotation.m; sourceTree = "<group>"; };
-		7615B46C27A341D5003477DE /* PDFXActionGoTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFXActionGoTo.m; sourceTree = "<group>"; };
 		7615B46F27A341D5003477DE /* PDFXCompatibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFXCompatibility.swift; sourceTree = "<group>"; };
 		761995F62799923D00BD8C10 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		76CD34862799B8EE00ABB8F0 /* PSPDFKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PSPDFKit.xcframework; sourceTree = "<group>"; };
@@ -219,12 +219,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76107FDD27BBF75200EAE9DA /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				76107FDE27BBF75200EAE9DA /* PDFXActionURL.m */,
+				76107FDF27BBF75200EAE9DA /* PDFXAppearanceCharacteristics.m */,
+				76107FE027BBF75200EAE9DA /* PDFXOutline.m */,
+				76107FE127BBF75200EAE9DA /* PDFXDestination.m */,
+				76107FE227BBF75200EAE9DA /* PDFXAction.m */,
+				76107FE327BBF75200EAE9DA /* PDFXView.m */,
+				76107FE427BBF75200EAE9DA /* PDFXActionNamed.m */,
+				76107FE527BBF75200EAE9DA /* PDFXActionResetForm.m */,
+				76107FE627BBF75200EAE9DA /* PDFXPage.m */,
+				76107FE727BBF75200EAE9DA /* PDFXActionRemoteGoTo.m */,
+				76107FE827BBF75200EAE9DA /* PDFXAnnotationPopup.m */,
+				76107FE927BBF75200EAE9DA /* PDFXDocument.m */,
+				76107FEA27BBF75200EAE9DA /* PDFXBorder.m */,
+				76107FEB27BBF75200EAE9DA /* PDFXSelection.m */,
+				76107FEC27BBF75200EAE9DA /* PDFXThumbnailView.m */,
+				76107FED27BBF75200EAE9DA /* PDFXAnnotation.m */,
+				76107FEE27BBF75200EAE9DA /* PDFXActionGoTo.m */,
+			);
+			path = ObjC;
+			sourceTree = "<group>";
+		};
 		7615B41A27A341D5003477DE /* PDFXKitObjC */ = {
 			isa = PBXGroup;
 			children = (
+				76107FDD27BBF75200EAE9DA /* ObjC */,
 				7615B41B27A341D5003477DE /* Public */,
 				7615B45827A341D5003477DE /* Private */,
-				7615B45C27A341D5003477DE /* ObjC */,
 			);
 			path = PDFXKitObjC;
 			sourceTree = "<group>";
@@ -303,30 +327,6 @@
 				7615B45B27A341D5003477DE /* PDFXSelection+Private.h */,
 			);
 			path = Private;
-			sourceTree = "<group>";
-		};
-		7615B45C27A341D5003477DE /* ObjC */ = {
-			isa = PBXGroup;
-			children = (
-				7615B44727A341D5003477DE /* PDFXThumbnailView.m */,
-				7615B45D27A341D5003477DE /* PDFXActionURL.m */,
-				7615B45E27A341D5003477DE /* PDFXAppearanceCharacteristics.m */,
-				7615B45F27A341D5003477DE /* PDFXOutline.m */,
-				7615B46027A341D5003477DE /* PDFXDestination.m */,
-				7615B46127A341D5003477DE /* PDFXAction.m */,
-				7615B46227A341D5003477DE /* PDFXView.m */,
-				7615B46327A341D5003477DE /* PDFXActionNamed.m */,
-				7615B46427A341D5003477DE /* PDFXActionResetForm.m */,
-				7615B46527A341D5003477DE /* PDFXPage.m */,
-				7615B46627A341D5003477DE /* PDFXActionRemoteGoTo.m */,
-				7615B46727A341D5003477DE /* PDFXAnnotationPopup.m */,
-				7615B46827A341D5003477DE /* PDFXDocument.m */,
-				7615B46927A341D5003477DE /* PDFXBorder.m */,
-				7615B46A27A341D5003477DE /* PDFXSelection.m */,
-				7615B46B27A341D5003477DE /* PDFXAnnotation.m */,
-				7615B46C27A341D5003477DE /* PDFXActionGoTo.m */,
-			);
-			path = ObjC;
 			sourceTree = "<group>";
 		};
 		7615B46E27A341D5003477DE /* PDFXKit */ = {
@@ -459,11 +459,11 @@
 				7615B4A527A341D5003477DE /* PDFXView+PSPDFKit.h in Headers */,
 				7615B4A227A341D5003477DE /* PDFXPage+PSPDFKit.h in Headers */,
 				7615B48627A341D5003477DE /* PDFXActionNamed+PSPDFKit.h in Headers */,
-				7615B49427A341D5003477DE /* PDFXActionGoTo+PSPDFKit.h in Headers */,
-				7615B49A27A341D5003477DE /* PDFXActionRemoteGoTo+PSPDFKit.h in Headers */,
 				7615B4AC27A341D5003477DE /* PDFXPage+Private.h in Headers */,
 				7615B4AE27A341D5003477DE /* PDFXSelection+Private.h in Headers */,
 				7615B4AD27A341D5003477DE /* PDFXPlatform+Private.h in Headers */,
+				7615B49427A341D5003477DE /* PDFXActionGoTo+PSPDFKit.h in Headers */,
+				7615B49A27A341D5003477DE /* PDFXActionRemoteGoTo+PSPDFKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,24 +563,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76107FF227BBF75200EAE9DA /* PDFXDestination.m in Sources */,
+				76107FF527BBF75200EAE9DA /* PDFXActionNamed.m in Sources */,
+				76107FF827BBF75200EAE9DA /* PDFXActionRemoteGoTo.m in Sources */,
+				76107FF027BBF75200EAE9DA /* PDFXAppearanceCharacteristics.m in Sources */,
+				76107FFC27BBF75200EAE9DA /* PDFXSelection.m in Sources */,
+				76107FF627BBF75200EAE9DA /* PDFXActionResetForm.m in Sources */,
+				76107FFF27BBF75200EAE9DA /* PDFXActionGoTo.m in Sources */,
+				76107FFB27BBF75200EAE9DA /* PDFXBorder.m in Sources */,
+				76107FF927BBF75200EAE9DA /* PDFXAnnotationPopup.m in Sources */,
 				7615B4BF27A341D5003477DE /* PDFXCompatibility.swift in Sources */,
-				7615B4BE27A341D5003477DE /* PDFXActionGoTo.m in Sources */,
-				7615B4B227A341D5003477DE /* PDFXDestination.m in Sources */,
-				7615B4B527A341D5003477DE /* PDFXActionNamed.m in Sources */,
-				7615B4B827A341D5003477DE /* PDFXActionRemoteGoTo.m in Sources */,
-				7615B4B027A341D5003477DE /* PDFXAppearanceCharacteristics.m in Sources */,
-				7615B4BC27A341D5003477DE /* PDFXSelection.m in Sources */,
-				7615B4B627A341D5003477DE /* PDFXActionResetForm.m in Sources */,
-				7615B4BB27A341D5003477DE /* PDFXBorder.m in Sources */,
-				7615B4B927A341D5003477DE /* PDFXAnnotationPopup.m in Sources */,
-				7615B4BD27A341D5003477DE /* PDFXAnnotation.m in Sources */,
-				7615B49B27A341D5003477DE /* PDFXThumbnailView.m in Sources */,
-				7615B4B427A341D5003477DE /* PDFXView.m in Sources */,
-				7615B4BA27A341D5003477DE /* PDFXDocument.m in Sources */,
-				7615B4B727A341D5003477DE /* PDFXPage.m in Sources */,
-				7615B4B327A341D5003477DE /* PDFXAction.m in Sources */,
-				7615B4B127A341D5003477DE /* PDFXOutline.m in Sources */,
-				7615B4AF27A341D5003477DE /* PDFXActionURL.m in Sources */,
+				76107FF427BBF75200EAE9DA /* PDFXView.m in Sources */,
+				76107FFA27BBF75200EAE9DA /* PDFXDocument.m in Sources */,
+				76107FFE27BBF75200EAE9DA /* PDFXAnnotation.m in Sources */,
+				76107FF727BBF75200EAE9DA /* PDFXPage.m in Sources */,
+				76107FF327BBF75200EAE9DA /* PDFXAction.m in Sources */,
+				76107FF127BBF75200EAE9DA /* PDFXOutline.m in Sources */,
+				76107FEF27BBF75200EAE9DA /* PDFXActionURL.m in Sources */,
+				76107FFD27BBF75200EAE9DA /* PDFXThumbnailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

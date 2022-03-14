@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXThumbnailView.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXThumbnailView.h>
+#else
+#import "PDFXThumbnailView.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

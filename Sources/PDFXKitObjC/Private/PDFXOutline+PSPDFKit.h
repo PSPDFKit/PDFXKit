@@ -6,11 +6,7 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
 #import "PDFXOutline.h"
-#else
-#import <PDFXKit/PDFXOutline.h>
-#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

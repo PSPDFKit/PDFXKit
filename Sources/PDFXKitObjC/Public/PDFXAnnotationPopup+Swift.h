@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXAnnotationPopup.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXAnnotationPopup.h>
+#else
+#import "PDFXAnnotationPopup.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

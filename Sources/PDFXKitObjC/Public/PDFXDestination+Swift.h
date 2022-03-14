@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXDestination.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXDestination.h>
+#else
+#import "PDFXDestination.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXSelection.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXSelection.h>
+#else
+#import "PDFXSelection.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

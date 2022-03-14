@@ -6,7 +6,11 @@
 //  this file.
 //
 
+#if FRAMEWORK_BUILD
+#import <PDFXKit/PDFXActionGoTo.h>
+#else
 #import "PDFXActionGoTo.h"
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

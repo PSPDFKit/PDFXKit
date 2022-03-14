@@ -6,11 +6,7 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
 #import "PDFXPage.h"
-#else
-#import <PDFXKit/PDFXPage.h>
-#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

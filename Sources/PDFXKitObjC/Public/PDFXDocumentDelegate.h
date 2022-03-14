@@ -6,11 +6,11 @@
 //  this file.
 //
 
-//#if FRAMEWORK_BUILD
-//#import "PDFXPlatform.h"
-//#else
-//#import <PDFXKit/PDFXPlatform.h>
-//#endif
+#if FRAMEWORK_BUILD
+#import <PDFXKit/PDFXPlatform.h>
+#else
+#import "PDFXPlatform.h"
+#endif
 
 @class PDFXDocument;
 @class PDFXSelection;

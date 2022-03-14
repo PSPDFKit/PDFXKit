@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXActionURL.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXActionURL.h>
+#else
+#import "PDFXActionURL.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

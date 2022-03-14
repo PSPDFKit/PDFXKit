@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXActionRemoteGoTo.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXActionRemoteGoTo.h>
+#else
+#import "PDFXActionRemoteGoTo.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

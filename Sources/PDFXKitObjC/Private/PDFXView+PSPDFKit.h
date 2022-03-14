@@ -6,13 +6,8 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXView.h"
-#import "PSPDFKit+PDFXKit.h"
-#else
-#import <PDFXKit/PDFXView.h>
-#import <PDFXKit/PSPDFKit+PDFXKit.h>
-#endif
+#import <PDFXView.h>
+#import <PSPDFKit+PDFXKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

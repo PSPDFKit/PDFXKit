@@ -24,8 +24,7 @@ let package = Package(
             path: "Sources/PDFXKitObjC",
             publicHeadersPath: "Public",
             cSettings: [
-                .headerSearchPath("Private"),
-                .define("SPM_BUILD")
+                .headerSearchPath("Private")
             ]
         ),
         .target(

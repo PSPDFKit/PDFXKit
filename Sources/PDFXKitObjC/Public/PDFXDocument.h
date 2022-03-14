@@ -6,12 +6,12 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXPlatform.h"
-#import "PDFXDocumentDelegate.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXPlatform.h>
 #import <PDFXKit/PDFXDocumentDelegate.h>
+#else
+#import "PDFXPlatform.h"
+#import "PDFXDocumentDelegate.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

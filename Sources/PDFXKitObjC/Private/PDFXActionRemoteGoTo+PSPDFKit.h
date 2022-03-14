@@ -6,11 +6,7 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
 #import "PDFXActionRemoteGoTo.h"
-#else
-#import <PDFXKit/PDFXActionRemoteGoTo.h>
-#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

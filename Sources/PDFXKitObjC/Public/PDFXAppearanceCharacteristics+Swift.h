@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXAppearanceCharacteristics.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXAppearanceCharacteristics.h>
+#else
+#import "PDFXAppearanceCharacteristics.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

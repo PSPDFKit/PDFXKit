@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXActionResetForm.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXActionResetForm.h>
+#else
+#import "PDFXActionResetForm.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

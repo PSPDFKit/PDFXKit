@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXBorder.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXBorder.h>
+#else
+#import "PDFXBorder.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

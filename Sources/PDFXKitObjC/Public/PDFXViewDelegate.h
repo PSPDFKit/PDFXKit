@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXPlatform.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXPlatform.h>
+#else
+#import "PDFXPlatform.h"
 #endif
 
 @class PDFXView;

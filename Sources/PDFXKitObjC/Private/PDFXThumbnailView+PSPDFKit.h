@@ -6,15 +6,9 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXThumbnailView.h"
-#import "PSPDFKit+PDFXKit.h"
-#import "PDFXPlatform.h"
-#else
-#import <PDFXKit/PDFXThumbnailView.h>
-#import <PDFXKit/PSPDFKit+PDFXKit.h>
-#import <PDFXKit/PDFXPlatform.h>
-#endif
+#import <PDFXThumbnailView.h>
+#import <PSPDFKit+PDFXKit.h>
+#import <PDFXPlatform.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
