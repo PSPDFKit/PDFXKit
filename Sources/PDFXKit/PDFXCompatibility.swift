@@ -9,7 +9,7 @@
 import Foundation
 
 #if SWIFT_PACKAGE
-import _PDFXKitObjC
+import PDFXKitObjC
 #endif
 
 // MARK: - Classes

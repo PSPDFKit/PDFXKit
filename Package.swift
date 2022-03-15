@@ -17,7 +17,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "_PDFXKitObjC",
+            name: "PDFXKitObjC",
             dependencies: [
                 .product(name: "PSPDFKit", package: "PSPDFKit-SP")
             ],
@@ -29,7 +29,7 @@ let package = Package(
         ),
         .target(
             name: "PDFXKit",
-            dependencies: ["_PDFXKitObjC"],
+            dependencies: ["PDFXKitObjC"],
             path: "Sources/PDFXKit"),
         .testTarget(
             name: "PDFXKitTests",
