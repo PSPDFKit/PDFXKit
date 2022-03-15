@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#if !FRAMEWORK_BUILD
-#import "PDFXView.h"
-#else
+#if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXView.h>
+#else
+#import "PDFXView.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
