@@ -13,10 +13,6 @@ class MainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        - (instancetype)initWithDocument:(PDFXDocument *)document page:(nullable PDFXPage *)page range:(NSRange)range string:(nullable NSString *)string;
-//        PDFXSelection(document: "test")
-        //let selection = PDFSelection(document: PDFDocument(data: Data())!)
-
         pdfView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pdfView)
 
