@@ -46,7 +46,7 @@ For production use and licensing please refer to the previous section.
 ### Using Swift Package Manager
 
 Add PDFXKit Swift Package to your project:
-- In Xcode 13 or higher, go to File / Add Packages… and enter the following package repository URL to the search field: `https://github.com/PSPDFKit/PDFXKit`.
+- In Xcode 13 or higher, go to File / Add Packages… and enter the following package repository URL into the search field: `https://github.com/PSPDFKit/PDFXKit`.
 - Select the master branch and follow the instructions to finish the setup
 
 ### Using CocoaPods
