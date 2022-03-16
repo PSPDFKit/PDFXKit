@@ -6,8 +6,8 @@
 //  this file.
 //
 
-#import <PDFXDocument.h>
-#import <PSPDFKit+PDFXKit.h>
+#import "PDFXDocument.h"
+#import "PSPDFKit+PDFXKit.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
