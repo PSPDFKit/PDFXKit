@@ -6,10 +6,10 @@
 //  this file.
 //
 
-#import <PDFXThumbnailView+PSPDFKit.h>
-#import <PDFXView+PSPDFKit.h>
-#import <PDFXPlatform+Private.h>
-#import <PSPDFKit+PDFXKit.h>
+#import "PDFXThumbnailView+PSPDFKit.h"
+#import "PDFXView+PSPDFKit.h"
+#import "PDFXPlatform+Private.h"
+#import "PSPDFKit+PDFXKit.h"
 
 @implementation PDFXThumbnailView
 
