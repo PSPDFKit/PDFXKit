@@ -8,7 +8,7 @@
 
 #if FRAMEWORK_BUILD
 #import <PDFXKit/PDFXPlatform.h>
-#import <PDFXPage.h>
+#import <PDFXKit/PDFXPage.h>
 #else
 #import "PDFXPlatform.h"
 #import "PDFXPage.h"
