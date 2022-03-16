@@ -6,12 +6,13 @@
 //  this file.
 //
 
-#import <PDFKit/PDFKit.h>
-
 #import "PDFXDestination+PSPDFKit.h"
 #import "PDFXPage+PSPDFKit.h"
+
 #import "PDFXPlatform+Private.h"
 #import "PSPDFKit+PDFXKit.h"
+
+#import <PDFKit/PDFKit.h>
 
 CGFloat const kPDFXDestinationUnspecifiedValue = 3.4028234663852886e+38;
 
