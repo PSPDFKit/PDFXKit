@@ -41,10 +41,10 @@ NSNotificationName const PDFXThumbnailViewDocumentEditedNotification = @"PDFXThu
 
 #pragma mark - Miscellaneous
 
-- (void)setPdfView:(PDFXView *)pdfView {
-    if (_pdfView != pdfView) {
-        _pdfView = pdfView;
-        self.pspdfScrubberBar.dataSource = pdfView.pspdfViewController;
+- (void)setPdfView:(PDFXView *)PDFView {
+    if (_PDFView != PDFView) {
+        _PDFView = PDFView;
+        self.pspdfScrubberBar.dataSource = PDFView.pspdfViewController;
     }
 }
 
@@ -72,13 +72,13 @@ NSNotificationName const PDFXThumbnailViewDocumentEditedNotification = @"PDFXThu
 #pragma mark - PSPDFScrubberBarDelegate
 
 - (void)scrubberBar:(PSPDFScrubberBar *)scrubberBar didSelectPageAtIndex:(NSUInteger)pageIndex {
-    let document = self.pdfView.document;
+    let document = self.PDFView.document;
     if (document == nil) { return; }
 
-    let page = [self.pdfView.document pageAtIndex:pageIndex];
+    let page = [self.PDFView.document pageAtIndex:pageIndex];
     if (page == nil) { return; }
 
-    [self.pdfView goToPage:page];
+    [self.PDFView goToPage:page];
 
     // HACK: the scrubber bar doesn't update itself which might be a bug as
     // described in issue #11842. Until this is resolved, we'll mark this as
