@@ -41,7 +41,7 @@ NSNotificationName const PDFXThumbnailViewDocumentEditedNotification = @"PDFXThu
 
 #pragma mark - Miscellaneous
 
-- (void)setPdfView:(PDFXView *)PDFView {
+- (void)setPDFView:(PDFXView *)PDFView {
     if (_PDFView != PDFView) {
         _PDFView = PDFView;
         self.pspdfScrubberBar.dataSource = PDFView.pspdfViewController;
