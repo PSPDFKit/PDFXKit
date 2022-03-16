@@ -9,8 +9,7 @@ iOS](https://pspdfkit.com/blog/2020/pspdfkit-10-for-ios-14) and Xcode 12.
 [![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-7b7a75f5.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
 
 **Note**: [PSPDFKit](http://pspdfkit.com) is a *commercial* product and requires
-a [paid license](https://pspdfkit.com/sales/). Please sign up for a [free trial](http://pspdfkit.com/try)
-to receive an evaluation license if you haven't a production license yet.
+a [paid license](https://pspdfkit.com/sales/) for production use.
 
 ## Introduction
 
@@ -41,12 +40,14 @@ Are you [evaluating our SDK](https://pspdfkit.com/try/)? That's great, we're hap
 
 ## Getting Started
 
-Make sure you have access to PSPDFKit either as a customer or by signing up for
-a [free trial](https://pspdfkit.com/try/).
+You can freely evaluate PSPDFKit without a license. The framework will display a watermark on the opened PDFs.
+For production use and licensing please refer to the previous section.
 
 ### Using Swift Package Manager
 
-If you are using Xcode 13 or higher, go to File / Add Packages… and enter the following package repository URL to the search field: `https://github.com/PSPDFKit/PDFXKit`. Select the master branch and follow the instructions to finish the setup.
+Add PDFXKit Swift Package to your project:
+- In Xcode 13 or higher, go to File / Add Packages… and enter the following package repository URL to the search field: `https://github.com/PSPDFKit/PDFXKit`.
+- Select the master branch and follow the instructions to finish the setup
 
 ### Using CocoaPods
 
@@ -74,7 +75,6 @@ doing. If you are unsure, please use CocoaPods instead.
 First, build the PDFXKit framework:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Copy `PSPDFKit.xcframework` and `PSPDFKitUI.xcframework` into `PDFXKit/Frameworks`
 * Open the terminal and `cd` into the `PDFXKit` directory
 * Run `rake compile`
 
