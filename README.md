@@ -3,14 +3,13 @@
 PDFXKit is a drop-in replacement for [Apple
 PDFKit](https://developer.apple.com/documentation/pdfkit) using the industry
 leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
-version requires [PSPDFKit 10 for
-iOS](https://pspdfkit.com/blog/2020/pspdfkit-10-for-ios-14) and Xcode 12.
+version requires [PSPDFKit 11.2.4 for
+iOS](https://pspdfkit.com/changelog/ios/#11.3) and Xcode 13.2.1.
 
-[![](https://pspdfkit.com/images/blog/2017/pdfxkit/pdfxkit-7b7a75f5.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
+[![](https://pspdfkit.com/assets/images/blog/2017/pdfxkit/pdfxkit-7b7a75f5.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
 
 **Note**: [PSPDFKit](http://pspdfkit.com) is a *commercial* product and requires
-a [paid license](https://pspdfkit.com/sales/). Please sign up for a [free trial](http://pspdfkit.com/try)
-to receive an evaluation license if you haven't a production license yet.
+a [paid license](https://pspdfkit.com/sales/) for production use.
 
 ## Introduction
 
@@ -41,8 +40,14 @@ Are you [evaluating our SDK](https://pspdfkit.com/try/)? That's great, we're hap
 
 ## Getting Started
 
-Make sure you have access to PSPDFKit either as a customer or by signing up for
-a [free trial](https://pspdfkit.com/try/).
+You can freely evaluate PSPDFKit without a license. The framework will display a watermark on the opened PDFs.
+For production use and licensing please refer to the previous section.
+
+### Using Swift Package Manager
+
+Add PDFXKit Swift Package to your project:
+- In Xcode 13 or higher, go to File / Add Packages… and enter the following package repository URL into the search field: `https://github.com/PSPDFKit/PDFXKit`.
+- Select "Up to Next Major Version" follow the instructions to finish the setup
 
 ### Using CocoaPods
 
@@ -70,7 +75,6 @@ doing. If you are unsure, please use CocoaPods instead.
 First, build the PDFXKit framework:
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Copy `PSPDFKit.xcframework` and `PSPDFKitUI.xcframework` into `PDFXKit/Frameworks`
 * Open the terminal and `cd` into the `PDFXKit` directory
 * Run `rake compile`
 
@@ -136,8 +140,7 @@ annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
 ## Run the Example Project
 
 * Clone `git@github.com:PSPDFKit/PDFXKit.git`
-* Copy `PSPDFKit.xcframework` and `PSPDFKitUI.xcframework` into `PDFXKit/Frameworks`
-* Open `Example/PDFXKitExample.xcodeproj` in Xcode
+* Open `PDFXKit.xcworkspace` and wait for the Swift package manager to download the dependencies
 * Build & Run `PDFXKitExample`
 
 ## Contributing
@@ -146,7 +149,7 @@ Please [sign our CLA agreement](https://pspdfkit.com/guides/web/current/miscella
 
 ## Technical notes
 
-* All PDFXKit source files live in the `Sources` directory, no nesting.
+* All PDFXKit source files live in the `Sources` directory.
 
 * Each class has a `...+Swift.h` header for Swift-only stuff which isn't exposed
   to Objective-C. Example: `PDFXDocument+Swift.h`.

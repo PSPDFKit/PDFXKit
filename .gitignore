@@ -30,38 +30,17 @@ Releases
 Products
 artifacts
 documentation/
-Samples*
-PSPDFKit.framework
-docset-installed.txt
-*.zip
 
 # automated git versioning
 InfoPlist.h
-
-.git2
-.idea
 
 .Rakeconfig
 .Rakeconfig.staging
 .bundle/*
 !.bundle/config
-junit.xml
-Resources/PSPDFKit.dmg
-
-second_curtain_log
 
 # ignore static libraries
-Experimental/*/*.a
 !Extras/SQLCipher/binaries/*.a
-
-PSPDFKit.embeddedframework
-
-#sublime
-pspdfkit.sublime-workspace
-Resources/pstool/coverage-reports/
-Resources/pstool/.bundle
-Resources/pstool/vendor/bundle
-buildlog*
 
 # Address sanitizer
 *.gcda
@@ -90,14 +69,13 @@ coverage
 /doc/
 /.yardoc
 
-# Generated public PSPDFCatalog project
-/PSPDFCatalog.xcodeproj
-
 # Test snapshots
 TestSnapshots
 
-# Cordova directory gets created by `rake cordova`
-Cordova
-
-# PSPDFKit frameworks
-Frameworks/PSPDF*
+# Swift Package Manager
+.swiftpm
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+Package.resolved
+/Packages
+DerivedData/

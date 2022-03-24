@@ -75,37 +75,20 @@ WARNING = YELLOW + "Warning:" + RESET
 
 # ----------------------------------------------------------------- Tasks ------
 
-desc "Check prerequisites"
-task :check do
-  tell "Checking whether PSPDFKit.xcframework is present"
-  assert File.directory?("Frameworks/PSPDFKit.xcframework"), """
-    #{ERROR} couldn't find #{BOLD}PSPDFKit.xcframework#{RESET}. Please download the
-    PSPDFKit framework and copy it into the #{BOLD}Frameworks/#{RESET} folder.
-    https://pspdfkit.com
-  """
-
-  tell "Checking whether PSPDFKitUI.xcframework is present"
-  assert File.directory?("Frameworks/PSPDFKitUI.xcframework"), """
-    #{ERROR} couldn't find #{BOLD}PSPDFKitUI.framework#{RESET}. Please download the
-    PSPDFKit framework and copy it into the #{BOLD}Frameworks/#{RESET} folder.
-    https://pspdfkit.com
-  """
-end
-
 desc "Archive PDFXKit (simulator)"
-task 'compile:simulator' => [:prepare, :check] do
+task 'compile:simulator' => [:prepare] do
   tell "Archiving PSPDFKit (simulator)"
   run "xcrun xcodebuild -destination 'generic/platform=iOS Simulator' -archivePath #{ARCHIVE_PATH_SIMULATOR} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Archive PDFXKit (device)"
-task 'compile:device' => [:prepare, :check] do
+task 'compile:device' => [:prepare] do
   tell "Archiving PSPDFKit (device)"
   run "xcrun xcodebuild -destination 'generic/platform=iOS' -archivePath #{ARCHIVE_PATH_DEVICE} #{XCODE_FLAGS}", :time => true, :quiet => true
 end
 
 desc "Archive PDFXKit (Mac Catalyst)"
-task 'compile:catalyst' => [:prepare, :check] do
+task 'compile:catalyst' => [:prepare] do
   tell "Archiving PSPDFKit (Mac Catalyst)"
   run "xcrun xcodebuild -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' -archivePath #{ARCHIVE_PATH_MAC_CATALYST} #{XCODE_FLAGS}", :time => true, :quiet => true
 end

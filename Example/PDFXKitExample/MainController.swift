@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2017-2020 PSPDFKit GmbH. All rights reserved.
+//  Copyright (c) 2017-2022 PSPDFKit GmbH. All rights reserved.
 //
 //  The PSPDFKit Sample applications are licensed with a modified BSD license.
 //  Please see License for details. This notice may not be removed from
@@ -21,7 +21,7 @@ class MainController: UIViewController {
         pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
-        let sampleDocumentURL = Bundle.main.url(forResource: "PSPDFKit 10 QuickStart Guide", withExtension: "pdf", subdirectory: "PDFs")!
+        let sampleDocumentURL = Bundle.main.url(forResource: "PSPDFKit.11.QuickStart.Guide", withExtension: "pdf", subdirectory: "PDFs")!
         let sampleDocument = PDFDocument(url: sampleDocumentURL)
 
         pdfView.document = sampleDocument
