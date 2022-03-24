@@ -45,8 +45,6 @@ InfoPlist.h
 .Rakeconfig.staging
 .bundle/*
 !.bundle/config
-junit.xml
-Resources/PSPDFKit.dmg
 
 second_curtain_log
 
@@ -90,17 +88,8 @@ coverage
 /doc/
 /.yardoc
 
-# Generated public PSPDFCatalog project
-/PSPDFCatalog.xcodeproj
-
 # Test snapshots
 TestSnapshots
-
-# Cordova directory gets created by `rake cordova`
-Cordova
-
-# PSPDFKit frameworks
-Frameworks/PSPDF*
 
 # Swift Package Manager
 .swiftpm
