@@ -104,4 +104,8 @@ Frameworks/PSPDF*
 
 # Swift Package Manager
 .swiftpm
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 Package.resolved
+/Packages
+DerivedData/
