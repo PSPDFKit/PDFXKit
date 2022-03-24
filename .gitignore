@@ -30,36 +30,17 @@ Releases
 Products
 artifacts
 documentation/
-Samples*
-PSPDFKit.framework
-docset-installed.txt
-*.zip
 
 # automated git versioning
 InfoPlist.h
-
-.git2
-.idea
 
 .Rakeconfig
 .Rakeconfig.staging
 .bundle/*
 !.bundle/config
 
-second_curtain_log
-
 # ignore static libraries
-Experimental/*/*.a
 !Extras/SQLCipher/binaries/*.a
-
-PSPDFKit.embeddedframework
-
-#sublime
-pspdfkit.sublime-workspace
-Resources/pstool/coverage-reports/
-Resources/pstool/.bundle
-Resources/pstool/vendor/bundle
-buildlog*
 
 # Address sanitizer
 *.gcda
