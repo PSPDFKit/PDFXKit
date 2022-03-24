@@ -13,7 +13,7 @@ let package = Package(
             targets: ["PDFXKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/PSPDFKit/PSPDFKit-SP", from: "11.2.0"),
+        .package(url: "https://github.com/PSPDFKit/PSPDFKit-SP", from: "11.2.4"),
     ],
     targets: [
         .target(
