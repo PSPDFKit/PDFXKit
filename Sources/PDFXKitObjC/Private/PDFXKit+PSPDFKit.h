@@ -13,6 +13,7 @@
 #import "PDFXActionRemoteGoTo+PSPDFKit.h"
 #import "PDFXActionURL+PSPDFKit.h"
 #import "PDFXAnnotation+PSPDFKit.h"
+#import "PDFXAnnotationPopup+PSPDFKit.h"
 #import "PDFXAppearanceCharacteristics+PSPDFKit.h"
 #import "PDFXBorder+PSPDFKit.h"
 #import "PDFXDestination+PSPDFKit.h"
