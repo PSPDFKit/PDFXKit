@@ -57,8 +57,6 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
 
 // @private common init used used for regular initialization and NSCoding.
 - (void)PDFXViewLoad {
-    self.translatesAutoresizingMaskIntoConstraints = NO;
-
     _pspdfViewController = [self makePSPDFViewController];
     _pspdfViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
     _pspdfViewController.delegate = self;
