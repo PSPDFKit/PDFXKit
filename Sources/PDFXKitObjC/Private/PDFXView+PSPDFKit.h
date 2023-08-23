@@ -18,8 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (PSPDFViewController *)makePSPDFViewController;
 
-- (void)pspdfViewControllerDidChangePageNotification:(NSNotification *)notification NS_REQUIRES_SUPER;
-
 @end
 
 NS_ASSUME_NONNULL_END
