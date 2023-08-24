@@ -1,10 +1,10 @@
 # PDFXKit
 
-PDFXKit is a drop-in replacement for [Apple
+PDFXKit is a drop-in replacement for [Apple’s
 PDFKit](https://developer.apple.com/documentation/pdfkit) using the industry
-leading [PSPDFKit](http://pspdfkit.com) framework under the hood. The latest
-version requires [PSPDFKit 11.2.4 for
-iOS](https://pspdfkit.com/changelog/ios/#11.3) and Xcode 13.2.1.
+leading [PSPDFKit](http://pspdfkit.com/) framework under the hood. The latest
+version requires [PSPDFKit 11.3 for
+iOS](https://pspdfkit.com/changelog/ios/#11.3.0) and Xcode 13.2.1 or later.
 
 [![](https://pspdfkit.com/assets/images/blog/2017/pdfxkit/pdfxkit-7b7a75f5.png)](https://pspdfkit.com/blog/2017/introducing-pdfxkit/)
 
@@ -13,7 +13,7 @@ a [paid license](https://pspdfkit.com/sales/) for production use.
 
 ## Introduction
 
-Apple's PDFKit provides a great starting point if you need to integrate PDF
+Apple’s PDFKit provides a great starting point if you need to integrate PDF
 support into your macOS or iOS app. It is a system library and as such the
 easiest to integrate.
 
@@ -36,7 +36,7 @@ guide.
 
 PSPDFKit offers support for customers with an active SDK license via https://pspdfkit.com/support/request/
 
-Are you [evaluating our SDK](https://pspdfkit.com/try/)? That's great, we're happy to help out! To make sure this is fast, please use a work email and have someone from your company fill out our sales form: https://pspdfkit.com/sales/
+Are you [evaluating our SDK](https://pspdfkit.com/try/)? That’s great, we’re happy to help out! To make sure this is fast, please use a work email and have someone from your company fill out our [sales form](https://pspdfkit.com/sales/).
 
 ## Getting Started
 
@@ -47,30 +47,30 @@ For production use and licensing please refer to the previous section.
 
 Add PDFXKit Swift Package to your project:
 - In Xcode 13 or higher, go to File / Add Packages… and enter the following package repository URL into the search field: `https://github.com/PSPDFKit/PDFXKit`.
-- Select "Up to Next Major Version" follow the instructions to finish the setup
+- Select “Up to Next Major Version” follow the instructions to finish the setup
 
 ### Using CocoaPods
 
 We assume you are familiar with [CocoaPods](https://cocoapods.org), otherwise
 please consult the documentation first. 
 
-First, you'll have to add PDFXKit as a dependency to your `Podfile`:
+First, you’ll have to add PDFXKit as a dependency to your `Podfile`:
 
 ``` Ruby
-# Replace `YourAppName` with your app's target name.
+# Replace `YourAppName` with your app’s target name.
 target :YourAppName do
   pod 'PDFXKit', :git => "git@github.com:PSPDFKit/PDFXKit.git", :branch => "master"
 end
 ```
 
 Now run `pod install`. Afterwards you should be able to build & run your project
-without errors. Next you'll have to adapt your project to use PDFXKit as
+without errors. Next you’ll have to adapt your project to use PDFXKit as
 described in Section [Switch to PDFXKit](#switch-to-pdfxkit).
 
 ### Manual Setup
 
 **Note:** manual setup is only for experts, we assume you know what you are
-doing. If you are unsure, please use CocoaPods instead.
+doing. If you are unsure, please use Swift Package Manager instead.
 
 First, build the PDFXKit framework:
 
@@ -101,7 +101,7 @@ Now we need to perform a couple of small changes in order to make your project u
 PDFXKit instead of the system PDFKit.
 
 Update all source files to import `PDFXKit` instead of the `PDFKit`
-framework using Xcode's project-wide search & replace:
+framework using Xcode’s project-wide search & replace:
 
 * Open your project in Xcode
 * Bring up the search & replace panel (Menu `Find` -> `Find and Replace in Project...`)
@@ -118,9 +118,9 @@ If you are using storyboards or xibs, update all custom classes:
 
 If you are using Swift:
 
-* Build & run your project, it should produce build erros for every use of a
+* Build & run your project, it should produce build errors for every use of a
   PDFKit notification constant, fix those by adding an `X` to the prefix, i.e.
-  `.PDFViewPageChanged` should be ranamed to `.PDFXViewPageChanged`.
+  `.PDFViewPageChanged` should be renamed to `.PDFXViewPageChanged`.
 
 Build & run your project, your app is now using PDFXKit with PSPDFKit under the
 hood.
@@ -132,7 +132,7 @@ for the conflicting gesture recognizer and return `true`.
 
 ## Limitations
 
-PDFXKit is beta software, many parts aren't implemented yet. Please take a
+PDFXKit is beta software, many parts aren’t implemented yet. Please take a
 look at the headers, all unimplemented or only partially implemented symbols are
 annotated with the `PDFX_NOT_IMPLEMENTED_PRIORITY_...` and
 `PDFX_PARTIALLY_IMPLEMENTED_PRIORITY_...` macros.
@@ -151,7 +151,7 @@ Please [sign our CLA agreement](https://pspdfkit.com/guides/web/current/miscella
 
 * All PDFXKit source files live in the `Sources` directory.
 
-* Each class has a `...+Swift.h` header for Swift-only stuff which isn't exposed
+* Each class has a `...+Swift.h` header for Swift-only stuff which isn’t exposed
   to Objective-C. Example: `PDFXDocument+Swift.h`.
 
 * Each class has a `...+PSPDFKit.h` header for public PSPDFKit stuff, i.e. any
@@ -159,14 +159,14 @@ Please [sign our CLA agreement](https://pspdfkit.com/guides/web/current/miscella
   `PDFXDocument+PSPDFKit.h`.
 
 * Some of the classes have a `...+Private.h` header for internal stuff, i.e.
-  needed by PDFXKit classes internally but shouldn't be exposed publicly.
+  needed by PDFXKit classes internally but shouldn’t be exposed publicly.
   Example: `PDFXPage+Private.h`, exposes properties only allowed to be
   accessible by `PDFXDocument`.
 
 ## Known Issues
 
 **Conflicting gesture recognizers**. Your gesture recognizers might be in
-conflict with some of PSPDFKit's recognizers. If so, implement the
+conflict with some of PSPDFKit’s recognizers. If so, implement the
 `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` delegate method
 for the conflicting gesture recognizer and return `true`.
 

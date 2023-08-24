@@ -27,10 +27,6 @@ NSNotificationName const PDFXViewDisplayModeChangedNotification = @"PDFXViewDisp
 NSNotificationName const PDFXViewDisplayBoxChangedNotification = @"PDFXViewDisplayBoxChanged";
 NSNotificationName const PDFXViewVisiblePagesChangedNotification = @"PDFXViewVisiblePagesChanged";
 
-// HACK: this is a private PSPDFKit notification which will be made public in
-// the near future.
-NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFViewControllerDidChangePageNotification";
-
 @interface PDFXView ()
 
 @property (nonatomic) BOOL shouldApplyHackToSupportStoryboardsAndXibs;
@@ -67,7 +63,7 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
     [_pspdfViewController.view.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
     [_pspdfViewController.view.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
 
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(pspdfViewControllerDidChangePageNotification:) name:PSPDFViewControllerDidChangePageNotification object:_pspdfViewController];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(documentViewControllerSpreadIndexDidChange:) name:PSPDFDocumentViewControllerSpreadIndexDidChangeNotification object:nil];
 }
 
 #pragma mark - Associating a Document
@@ -610,8 +606,11 @@ NSNotificationName const PSPDFViewControllerDidChangePageNotification = @"PSPDFV
 
 #pragma mark - Observing Notifications
 
-- (void)pspdfViewControllerDidChangePageNotification:(NSNotification *)notification {
-    [NSNotificationCenter.defaultCenter postNotificationName:PDFXViewPageChangedNotification object:self];
+- (void)documentViewControllerSpreadIndexDidChange:(NSNotification *)notification {
+    // The documentViewController can be destroyed and recreated so we filter here instead of when setting up the notification.
+    if (notification.object == self.pspdfViewController.documentViewController) {
+        [NSNotificationCenter.defaultCenter postNotificationName:PDFXViewPageChangedNotification object:self];
+    }
 }
 
 #pragma mark - NSCoding
